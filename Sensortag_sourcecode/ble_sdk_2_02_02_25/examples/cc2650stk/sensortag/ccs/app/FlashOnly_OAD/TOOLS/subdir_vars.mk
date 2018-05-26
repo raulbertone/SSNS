@@ -6,11 +6,11 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CFG_SRCS += \
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/config/app_ble.cfg 
+C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/config/app_ble.cfg 
 
 CMD_SRCS += \
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/ccs/cc26xx_app_oad.cmd \
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/config/ccs_linker_defines.cmd 
+C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/common/cc26xx/ccs/cc26xx_app_oad.cmd \
+C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/config/ccs_linker_defines.cmd 
 
 GEN_CMDS += \
 ./configPkg/linker.cmd 
