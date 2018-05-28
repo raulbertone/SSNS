@@ -10,8 +10,8 @@ GEN_OPTS__FLAG := --cmd_file="configPkg/compiler.opt"
 GEN_CMDS__FLAG := -l"configPkg/linker.cmd"
 
 ORDERED_OBJS += \
-"C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/config/ccs_linker_defines.cmd" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/ccs/cc26xx_app_oad.cmd" \
+"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/config/ccs_linker_defines.cmd" \
+"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/common/cc26xx/ccs/cc26xx_app_oad.cmd" \
 "./Application/sensortag.obj" \
 "./Application/sensortag_bar.obj" \
 "./Application/sensortag_batt.obj" \
@@ -71,7 +71,7 @@ ORDERED_OBJS += \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
 -l"C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/driverlib/bin/ccs/driverlib.lib" \
--l"C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/rom/common_rom_releases/03282014/common_rom.symbols" \
+-l"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/rom/common_rom_releases/03282014/common_rom.symbols" \
 
 -include ../makefile.init
 
@@ -228,7 +228,7 @@ all: $(OBJS) $(GEN_CMDS)
 sensortag_cc2650stk_app.out: $(OBJS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM Linker'
-	"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" --cmd_file="C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/app/../../../../../src/config/build_components.opt" --cmd_file="C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/app/../stack/build_config.opt" --cmd_file="C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/app/../config/ccs_compiler_defines.bcfg"  -mv7M3 --code_state=16 --abi=eabi -me -O4 --opt_for_speed=0 --c99 --define=EXCLUDE_OAD --define=Board_BUZZER --define=EXCLUDE_OPT --define=EXCLUDE_BAR --define=EXCLUDE_HUM --define=EXCLUDE_TMP --define=CC2650STK --define=CC26XX --define=Display_DISABLE_ALL --define=EXCLUDE_AUDIO --define=FACTORY_IMAGE --define=FEATURE_OAD --define=GAPROLE_TASK_STACK_SIZE=600 --define=GATT_TI_UUID_128_BIT --define=HEAPMGR_SIZE=0 --define=ICALL_MAX_NUM_ENTITIES=11 --define=ICALL_MAX_NUM_TASKS=8 --define=POWER_SAVING --define=ST_TASK_STACK_SIZE=848 --define=USE_ICALL --define=xdc_runtime_Assert_DISABLE_ALL --define=xdc_runtime_Log_DISABLE_ALL --diag_wrap=off --diag_suppress=48 --diag_warning=225 --display_error_number --gen_func_subsections=on -z -m"sensortag_cc2650stk_app.map" --heap_size=0 --stack_size=256 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --reread_libs --display_error_number --diag_suppress=10247-D --diag_suppress=16002-D --diag_wrap=off --warn_sections --xml_link_info="sensortag_cc2650stk_app_linkInfo.xml" --rom_model --unused_section_elimination=on --compress_dwarf=on -o "sensortag_cc2650stk_app.out" $(ORDERED_OBJS)
+	"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" --cmd_file="C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/app/../../../../../src/config/build_components.opt" --cmd_file="C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/app/../stack/build_config.opt" --cmd_file="C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/app/../config/ccs_compiler_defines.bcfg"  -mv7M3 --code_state=16 --abi=eabi -me -O4 --opt_for_speed=0 --c99 --define=EXCLUDE_OAD --define=Board_BUZZER --define=EXCLUDE_OPT --define=EXCLUDE_BAR --define=EXCLUDE_HUM --define=EXCLUDE_TMP --define=CC2650STK --define=CC26XX --define=Display_DISABLE_ALL --define=EXCLUDE_AUDIO --define=FACTORY_IMAGE --define=FEATURE_OAD --define=GAPROLE_TASK_STACK_SIZE=600 --define=GATT_TI_UUID_128_BIT --define=HEAPMGR_SIZE=0 --define=ICALL_MAX_NUM_ENTITIES=11 --define=ICALL_MAX_NUM_TASKS=8 --define=POWER_SAVING --define=ST_TASK_STACK_SIZE=848 --define=USE_ICALL --define=xdc_runtime_Assert_DISABLE_ALL --define=xdc_runtime_Log_DISABLE_ALL --diag_wrap=off --diag_suppress=48 --diag_warning=225 --display_error_number --gen_func_subsections=on -z -m"sensortag_cc2650stk_app.map" --heap_size=0 --stack_size=256 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --reread_libs --display_error_number --diag_suppress=10247-D --diag_suppress=16002-D --diag_wrap=off --warn_sections --xml_link_info="sensortag_cc2650stk_app_linkInfo.xml" --rom_model --unused_section_elimination=on --compress_dwarf=on -o "sensortag_cc2650stk_app.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	@$(MAKE) --no-print-directory post-build
@@ -252,7 +252,7 @@ clean:
 	-@echo ' '
 
 post-build:
-	-C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armhex -order MS --memwidth=8 --romwidth=8 --intel -o sensortag_cc2650stk_app.hex sensortag_cc2650stk_app.out & C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/app/../../../../../tools/oad/oad_image_tool.exe C:/Users/Raul/Dropbox/UAS/SSNS/workspace/sensortag_cc2650stk_app/FlashOnly_OAD/sensortag_cc2650stk_app.hex -t offchip -i app --imgVer 0 -ob C:/Users/Raul/Dropbox/UAS/SSNS/workspace/sensortag_cc2650stk_app/FlashOnly_OAD/sensortag_cc2650stk_app_oad.bin -m 0x1000 --r 0x1000
+	-C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armhex -order MS --memwidth=8 --romwidth=8 --intel -o sensortag_cc2650stk_app.hex sensortag_cc2650stk_app.out & C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/app/../../../../../tools/oad/oad_image_tool.exe C:/Users/Raul/Dropbox/UAS/SSNS/workspace/sensortag_cc2650stk_app/FlashOnly_OAD/sensortag_cc2650stk_app.hex -t offchip -i app --imgVer 0 -ob C:/Users/Raul/Dropbox/UAS/SSNS/workspace/sensortag_cc2650stk_app/FlashOnly_OAD/sensortag_cc2650stk_app_oad.bin -m 0x1000 --r 0x1000
 	-@echo ' '
 
 .PHONY: all clean dependents
