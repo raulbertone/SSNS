@@ -8,6 +8,7 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Modality;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
@@ -27,9 +28,42 @@ public class MainAppliction extends Application {
 		
 		
 		primaryStage.setScene(scene);	
-		primaryStage.setTitle("Taulanti ");
+		primaryStage.setTitle("Main");
 		primaryStage.show();
 	}
+	
+
+	
+	public void showSettings() throws Exception {
+		AnchorPane sett = (AnchorPane)FXMLLoader.load(getClass().getResource("/com/application/ui/settings.fxml"));
+		
+		Stage settingsStage = new Stage();
+		settingsStage.setTitle("Settings");
+		//settingsStage.initModality(Modality.WINDOW_MODAL);
+		//settingsStage.initOwner(primaryStage);
+		
+		Scene scene = new Scene(sett);
+		
+		settingsStage.setScene(scene);
+		settingsStage.showAndWait();
+		
+	}
+	
+	public void UserInfo() throws Exception {
+		AnchorPane userinfo = (AnchorPane)FXMLLoader.load(getClass().getResource("/com/application/ui/userinfo.fxml"));
+		
+		Stage settingsStage = new Stage();
+		settingsStage.setTitle("User General Information");
+		//settingsStage.initModality(Modality.WINDOW_MODAL);
+		//settingsStage.initOwner(primaryStage);
+		
+		Scene scene = new Scene(userinfo);
+		
+		settingsStage.setScene(scene);
+		settingsStage.showAndWait();
+		
+	}
+	
 	
 	public static void main(String[] args) {
 			launch(args);
