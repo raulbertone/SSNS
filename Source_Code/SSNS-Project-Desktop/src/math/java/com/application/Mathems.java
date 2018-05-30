@@ -1,4 +1,4 @@
-package Math;
+package com.application;
 
 import java.util.ArrayList;
 import java.lang.Math;
@@ -37,12 +37,12 @@ public class Mathems extends Thread { // start thread every 3 new measurments
 		this.add(x, y, z);
 
 		if(this.count_pass_measur == SKIP_MEASUR) // increasing of count_pass_measur in .add method
-			return false;
+			return;
 
 		this.count_pass_measur = 0;
 
 		if(buf_x.size() < count_sec) //if amount of measurments is less than it is need tocover one second
-			return false;
+			return;
 
 		try {
 			this.run();
@@ -53,7 +53,7 @@ public class Mathems extends Thread { // start thread every 3 new measurments
 
 	}
 
-	private void run()  {
+	public void run()  {
 
 		for(int i = 0; i < buf_x.size(); i++) { //first loop goes through all numbers in array
 

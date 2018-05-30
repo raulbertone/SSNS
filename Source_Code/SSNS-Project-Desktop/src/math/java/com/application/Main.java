@@ -1,4 +1,4 @@
-package Math;
+package com.application;
 
 import java.util.ArrayList;
 
@@ -66,7 +66,7 @@ public class Main {
 
 		Mathems maths = new Mathems(buf_x, buf_y, buf_z, 16);
 
-		System.out.println(maths.isFall(1.0, 1.0 , 1.0));
+		//System.out.println(maths.isFall(1.0, 1.0 , 1.0));
 
 	}
 
