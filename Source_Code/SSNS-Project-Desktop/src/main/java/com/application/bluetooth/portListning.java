@@ -1,10 +1,22 @@
 package com.application.bluetooth;
 
-
+/**
+ * @author Elis Haruni 
+ * 
+ * This class was to only read from a serial prot using multirole applicatin we are not using this anymore
+ * 
+ * */
 import java.util.*;
+
+
+import com.google.common.io.BaseEncoding;
+
 import java.io.*;
 import jssc.*;
 public class portListning {
+	
+	private static SerialPort serialPort;
+    
 
 	public static void main(String[] args) throws InterruptedException,
 	IOException,SerialPortException 
@@ -17,27 +29,30 @@ public class portListning {
 			System.out.println(portNames[i]);
 		}
 		
-		SerialPort serialPort = new SerialPort("COM7");
-		
+	     serialPort = new SerialPort("COM7");		
 		serialPort.openPort();
 		serialPort.setParams(115200, 8, 1, 0);
-		
 		//byte[] bytes = serialPort.readBytes();
-		while(true)
-		{
-			String s = serialPort.readString();
-			if(s!=null)
-			{
-				  System.out.println(s);
-			}
-			Thread.sleep(10);
-			
-		}
-		
-	  
-	
+		 serialPort.addEventListener(new PortReader(), SerialPort.MASK_RXCHAR);
+				
 		
 		
-		
-	}
+  }
+	   private static class PortReader implements SerialPortEventListener {
+
+	        @Override
+	        public void serialEvent(SerialPortEvent event) {
+	        	
+	            if(event.isRXCHAR() && event.getEventValue() > 0 ) {
+	                try {
+	                   
+	                    byte[] receivedData = serialPort.readBytes(event.getEventValue());
+	                    System.out.println("Received msg: " +  BaseEncoding.base16().encode(receivedData) + " ||String: " + BaseEncoding.base64().encode(receivedData));
+	                }
+	                catch (SerialPortException ex) {
+	                    System.out.println("Error in receiving response from port: " + ex);
+	                }
+	            }
+	        }
+	    }
 }
