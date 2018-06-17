@@ -27,7 +27,7 @@ public abstract class SendMail {
         message.setContent(message_body, "text/plain");
 
         message.addRecipient(Message.RecipientType.TO,
-             new InternetAddress("lua@emptyingthebuffer.com"));
+             new InternetAddress("fall.detector@emptyingthebuffer.com"));
 
         transport.connect
           (SMTP_HOST_NAME, SMTP_HOST_PORT, SMTP_AUTH_USER, SMTP_AUTH_PWD);
