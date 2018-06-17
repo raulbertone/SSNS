@@ -1,7 +1,7 @@
 package com.application;
 
 import java.util.ArrayList;
-import java.lang.Math;
+
 
 public class Mathems extends Thread {
 
