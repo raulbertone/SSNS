@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import org.apache.commons.math3.analysis.function.Abs;
 
-public class Gyroskope extends Thread{
+public class Gyroskope{
 
 	private ArrayList<Double> buf_x;
 	private ArrayList<Double> buf_y;
@@ -22,30 +22,27 @@ public class Gyroskope extends Thread{
 		this.FALL_ANGLE = FALL_ANGLE;
 	}
 
-	public void run(int fallStart,
-					int fallStop,
-					ArrayList<Double> tmp_buf_x,
-					ArrayList<Double> tmp_buf_y,
-					ArrayList<Double> tmp_buf_z) {
+	public void isGyroFall(int fallStart, int fallStop) {
+
+		if(fallStart == -1) {
+			System.out.println("Error!!! Incorrect FallStart value!!!");
+			return;
+		}
 
 
-		double angle = isGyroFall(fallStart, fallStop, tmp_buf_x, tmp_buf_y, tmp_buf_z);
+		double angle = isFall(fallStart, fallStop);
 
 		if(angle <= this.FALL_ANGLE || angle >= this.FALL_ANGLE)
 			math.isGyroFall = true;
 	}
 
-	private double isGyroFall(int fallStart,
-							  int fallStop,
-							  ArrayList<Double> tmp_buf_x,
-							  ArrayList<Double> tmp_buf_y,
-							  ArrayList<Double> tmp_buf_z) {
+	private double isFall(int fallStart, int fallStop) {
 		double xAngle = 0;
 		double yAngle = 0;
 
 		for(int i = fallStart; i < fallStart; i++ ) {
-			xAngle += Math.abs(tmp_buf_x.get(i) * (1000 / count_sec));
-			yAngle += Math.abs(tmp_buf_y.get(i) * (1000 / count_sec));
+			xAngle += Math.abs(this.buf_x.get(i) * (1000 / count_sec));
+			yAngle += Math.abs(this.buf_y.get(i) * (1000 / count_sec));
 		}
 
 		return (xAngle + yAngle) % 180 - 90;
@@ -56,7 +53,7 @@ public class Gyroskope extends Thread{
 		this.buf_y.remove(0);
 		this.buf_z.remove(0);
 
-		//x = ((x * 1.0) / (65536 / 500)); // convert to g-scale
+		//x = ((x * 1.0) / (65536 / 500)); // convert to angle_speed - scale
 		//y = ((y * 1.0) / (65536 / 500));
 		//z = ((z * 1.0) / (65536 / 500));
 

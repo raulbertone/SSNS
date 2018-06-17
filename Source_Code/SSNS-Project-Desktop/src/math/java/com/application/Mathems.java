@@ -46,10 +46,18 @@ public class Mathems extends Thread {
 			return;
 
 		try {
-			aclr.run();
+			run(aclr, gyro);
 		}catch(Exception e) {
 			System.out.println("Something goes wrong! Thread hasn't started!!!");
 		}
+	}
+
+	public void run(Accelerometer aclr, Gyroskope gyro) {
+		Accelerometer tmp_aclr = aclr;
+		Gyroskope tmp_gyro = gyro;
+
+		tmp_aclr.isAclrFall(tmp_gyro);
+
 	}
 
 

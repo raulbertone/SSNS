@@ -2,7 +2,7 @@ package com.application;
 
 import java.util.ArrayList;
 
-public class Accelerometer extends Thread {
+public class Accelerometer {
 
 	private ArrayList<Double> buf_x;
 	private ArrayList<Double> buf_y;
@@ -22,26 +22,33 @@ public class Accelerometer extends Thread {
 		this.LAYING_POW = LAYING_POW;
 	}
 
-	@SuppressWarnings("deprecation")
-	public void run()  {
+	public void isAclrFall(Gyroskope tmp_gyro)  {
 
-		ArrayList<Double> tmp_buf_x = this.buf_x;
-		ArrayList<Double> tmp_buf_y = this.buf_y;
-		ArrayList<Double> tmp_buf_z = this.buf_z;
+		for(int i = 0; i < this.buf_x.size(); i++) { //first loop goes through all numbers in array
 
-		for(int i = 0; i < tmp_buf_x.size(); i++) { //first loop goes through all numbers in array
-
-			double impact = Math.sqrt( sqr(tmp_buf_x.get(i))
-									 + sqr(tmp_buf_y.get(i))
-									 + sqr(tmp_buf_z.get(i))); // got an impact from fall need to be sure
+			double impact = Math.sqrt( sqr(this.buf_x.get(i))
+									 + sqr(this.buf_y.get(i))
+									 + sqr(this.buf_z.get(i))); // got an impact from fall need to be sure
 
 			if(impact > IMPACT_POW) {
-				math.getGyro().run(); // double check for fall from Gyro
+				isLaying(i);
+				tmp_gyro.isGyroFall(getFallStart(i), i);// double check for fall from Gyro
 
-				isLaying(i, tmp_buf_x, tmp_buf_y, tmp_buf_z);
+
 			}
 		}
-		this.stop();
+	}
+
+	public int getFallStart(int impact) {
+
+		for(int i = impact; i >= 0; i--) {
+			double force_impact = Math.abs(this.buf_z.get(i));
+			if(force_impact <1.1 && force_impact > 0.8) {
+				return i;
+			}
+		}
+
+		return -1;
 	}
 
 	public void add_aclr(double x, double y, double z) {
@@ -62,14 +69,12 @@ public class Accelerometer extends Thread {
 		return this.buf_x.size();
 	}
 
-	private void isLaying(int i, ArrayList<Double> tmp_buf_x,
-								 ArrayList<Double> tmp_buf_y,
-								 ArrayList<Double> tmp_buf_z) {
+	private void isLaying(int i) {
 
 		boolean fall = false;
-		for(int j = i + IMPACT_PASS; j < tmp_buf_x.size(); j++) { // to be sure that there is a fall we pass half of fall time
+		for(int j = i + IMPACT_PASS; j < this.buf_x.size(); j++) { // to be sure that there is a fall we pass half of fall time
 
-			double laying = Math.sqrt( sqr(tmp_buf_x.get(j)) + sqr(tmp_buf_y.get(j)));
+			double laying = Math.sqrt( sqr(this.buf_x.get(j)) + sqr(this.buf_y.get(j)));
 
 			if(laying > LAYING_POW) {
 				fall = true;
