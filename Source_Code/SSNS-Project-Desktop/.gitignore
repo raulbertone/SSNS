@@ -1,4 +1,4 @@
-/.gradle/
-/bin/
-/.classpath
-/.project
+﻿.gradle/
+bin/
+.classpath
+.project
