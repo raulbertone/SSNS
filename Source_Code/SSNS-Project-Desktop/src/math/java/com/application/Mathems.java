@@ -1,78 +1,68 @@
-package Math;
+package com.application;
 
 import java.util.ArrayList;
 import java.lang.Math;
 
-public class Mathems {
+public class Mathems extends Thread {
 
-	private static int impact_pow = 2;
-	private static int impact_pass = (int) 450 / 100; // 225 - half od the fall time, 100 - difference between measurements
-	private static double laying_pow = 0.5;
+	// 25 measurments per second, after each 50 ms
+	// As a fall in 500 ms => 10 measurments
+	private static int SKIP_MEASUR = 10;
+	private static int IMPACT_POW = 2;
+	private static int IMPACT_PASS = (int) 450 / 100; // 225 - half od the fall time, 100 - difference between measurements
+	private static double LAYING_POW = 0.5;
+	private double FALL_ANGLE = 35;
 
+	private int count_sec; // measurments per second
+	private int count_pass_measur; // counter to skip 10 measurments to do not overload CPU
 
-	ArrayList<Double> buf_x;
-	ArrayList<Double> buf_y;
-	ArrayList<Double> buf_z;
-	int count_sec;
+	boolean isAclrFall;
+	boolean isGyroFall;
 
+	private Gyroskope gyro;
+	private Accelerometer aclr;
 
-
-	public Mathems(ArrayList<Double> buf_x, ArrayList<Double> buf_y, ArrayList<Double> buf_z, int count_sec) {
-		this.buf_x = buf_x;
-		this.buf_y = buf_y;
-		this.buf_z = buf_z;
+	public Mathems(int count_sec) {
 		this.count_sec = count_sec;
+		this.isAclrFall = false;
+		this.isGyroFall = false;
+		this.count_pass_measur = 0;
+
+		gyro = new Gyroskope(this, this.count_sec, FALL_ANGLE);
+		aclr = new Accelerometer(this, IMPACT_POW, IMPACT_PASS, LAYING_POW);
 	}
 
-	public boolean isFall(double x, double y, double z) { // int16_t is short
-
+	public void isFall(double x, double y, double z) { // int16_t is short
 		// function to add new values with changes
-		this.add(x, y, z);
+		aclr.add_aclr(x, y, z);
+		gyro.add_gyro(x, y, z);
 
-		if(buf_x.size() < count_sec) //if numbers are less that in one second
-			return false;
+		if(this.count_pass_measur == SKIP_MEASUR) // increasing of count_pass_measur in .add method
+			return;
 
-		for(int i = 0; i < buf_x.size(); i++) { //first loop goes through all numbers in array
+		this.count_pass_measur = 0;
 
-			double impact = Math.sqrt( sqr(buf_x.get(i)) + sqr(buf_y.get(i)) + sqr(buf_z.get(i))); // got an impact from fall need to be sure
+		if(aclr.bufSize() < count_sec) //if amount of measurments is less than it is need tocover one second
+			return;
 
-			if(impact > impact_pow) {
-				boolean fall = false;
-				for(int j = i + impact_pass; j < buf_x.size(); j++) { // to be sure that there is a fall we pass half of fall time
-
-					double laying = Math.sqrt( sqr(buf_x.get(j)) + sqr(buf_y.get(j)));
-
-					if(laying > laying_pow) {
-						fall = true;
-					}
-				}
-
-				return fall;
-			}
+		try {
+			run(aclr, gyro);
+		}catch(Exception e) {
+			System.out.println("Something goes wrong! Thread hasn't started!!!");
 		}
-		return false;
 	}
 
-	private double sqr(double i) {
-		return i*i;
+	public void run(Accelerometer aclr, Gyroskope gyro) {
+		Accelerometer tmp_aclr = aclr;
+		Gyroskope tmp_gyro = gyro;
+
+		tmp_aclr.isAclrFall(tmp_gyro);
+
 	}
 
 
-
-	private void add(double x, double y, double z) {
-
-		this.buf_x.remove(0);
-		this.buf_y.remove(0);
-		this.buf_z.remove(0);
-
-		//x = ((x * 1.0) / (32768/4)); // convert to g-scale
-		//y = ((y * 1.0) / (32768/4));
-		//z = ((z * 1.0) / (32768/4));
-
-		this.buf_x.add(x);
-		this.buf_y.add(y);
-		this.buf_z.add(z);
-
+	public Gyroskope getGyro() {
+		return gyro;
 	}
 
 }
