@@ -15,6 +15,7 @@ public class Configuration {
 	private static String address = "Park Lane 7, New York City, NY";
 	private static String mobileNumber = "555-123456";
 	private static String bloodType = "AB";
+	private static String email = "bertone@stud.fra-uas.de";
 	
 	// helper data
 	private static String helperFirstName = "John";
