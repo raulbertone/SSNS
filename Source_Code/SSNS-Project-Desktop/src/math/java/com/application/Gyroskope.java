@@ -2,7 +2,6 @@ package com.application;
 
 import java.util.ArrayList;
 
-import org.apache.commons.math3.analysis.function.Abs;
 
 public class Gyroskope{
 
