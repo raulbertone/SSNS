@@ -11,7 +11,7 @@ public abstract class SendMail {
     private static final String SMTP_AUTH_USER = "fall.detector@emptyingthebuffer.com";
     private static final String SMTP_AUTH_PWD  = "256rtcw45wf54fs";
 
-    public static void send(String message_body) throws Exception{
+    public static void send(String messageBody, String msgSubject, String toAddress) throws Exception{
         Properties props = new Properties();
 
         props.put("mail.transport.protocol", "smtps");
@@ -23,11 +23,11 @@ public abstract class SendMail {
 
         MimeMessage message = new MimeMessage(mailSession);
         message.setFrom(new InternetAddress(SMTP_AUTH_USER));
-        message.setSubject("!Help! My name is Mr. Fallen and I have fallen!");
-        message.setContent(message_body, "text/plain");
+        message.setSubject(msgSubject);
+        message.setContent(messageBody, "text/plain");
 
         message.addRecipient(Message.RecipientType.TO,
-             new InternetAddress("fall.detector@emptyingthebuffer.com"));
+             new InternetAddress(toAddress));
 
         transport.connect
           (SMTP_HOST_NAME, SMTP_HOST_PORT, SMTP_AUTH_USER, SMTP_AUTH_PWD);
