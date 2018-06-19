@@ -1,18 +1,30 @@
 package com.application.util;
 
 public abstract class ConfigurationStorage {
-	// user data
-	private static String firstName;
-	private static String lastName;
-	private static String gender;
-	private static String address;
-	private static String phoneNumber;
-	private static String bloodType;
+	// user's data
+	private static String firstName = "John";
+	private static String lastName = "Doh";
+	private static String gender = "M";
+	private static String address = "Some Street 5, Onecity";
+	private static String phoneNumber = "555-123456789";
+	private static String bloodType = "AB-";
 
-	// contact person data
-	private static String contactPersonName;
-	private static String contactPersonEmail;
+	// contact person's data
+	private static String contactPersonName = "Good Samaritan";
+	private static String contactPersonEmail = "bert1.raul@gmail.com";
 
+
+	// fall detection algorithm's settings
+
+	// help request settings
+	private static int helpRequestDelay = 5;
+
+	public static int getHelpRequestDelay() {
+		return helpRequestDelay;
+	}
+	public static void setHelpRequestDelay(int helpRequestDelay) {
+		ConfigurationStorage.helpRequestDelay = helpRequestDelay;
+	}
 	public static String getFirstName() {
 		return firstName;
 	}
