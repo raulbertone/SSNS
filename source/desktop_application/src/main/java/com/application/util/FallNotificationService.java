@@ -61,7 +61,7 @@ public class FallNotificationService implements Runnable{
 
 		// wait to see if the user signals a false alarm
 		try {
-			wait(ConfigurationStorage.getHelpRequestDelay());
+			wait(ConfigurationStorage.getHELP_REQUEST_DELAY());
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -86,9 +86,9 @@ public class FallNotificationService implements Runnable{
 
 	// helper method that prepares the email and sends it
 	private void requestHelp() {
-		String messageBody = ConfigurationStorage.getFirstName() + " " + ConfigurationStorage.getLastName() + " living at " + ConfigurationStorage.getAddress() +
+		String messageBody = ConfigurationStorage.getFIRST_NAME() + " " + ConfigurationStorage.getLAST_NAME() + " living at " + ConfigurationStorage.getADDRESS() +
 							 " has fallen and requires assistance";
-		String toAddress = ConfigurationStorage.getContactPersonEmail();
+		String toAddress = ConfigurationStorage.getCONTACT_PERSON_EMAIL();
 
 		try {
 			SendMail.send(messageBody, "Help! I have fallen!", toAddress);
