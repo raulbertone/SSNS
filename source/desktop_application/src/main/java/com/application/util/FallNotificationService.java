@@ -9,7 +9,9 @@ public class FallNotificationService implements Runnable{
 
 	static{
 		instance = new FallNotificationService();
+		
 		(new Thread(instance)).start();
+		
     }
 
 	/*
