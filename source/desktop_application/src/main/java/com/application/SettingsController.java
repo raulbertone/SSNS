@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 
 public class SettingsController {
@@ -23,6 +24,24 @@ public class SettingsController {
 
     @FXML
     private Button btnSave;
+
+    @FXML
+    private TextField OFFSET_TIME;
+    
+    @FXML
+    private TextField FALL_ANGLE;
+
+    @FXML
+    private TextField IMPACT_PASS;
+
+    @FXML
+    private TextField IMPACT_POW;
+
+    @FXML
+    private TextField LAYING_POW;
+
+    @FXML
+    private TextField SKIP_MEASUR;
 
 
     @FXML

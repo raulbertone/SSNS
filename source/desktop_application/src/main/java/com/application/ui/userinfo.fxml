@@ -19,23 +19,23 @@
     <Label layoutX="28.0" layoutY="231.0" text="Blood Type:" />
     <Label layoutX="28.0" layoutY="352.0" text="Contact Person1:" />
     <Label layoutX="28.0" layoutY="397.0" text="Contact E-mail1:" />
-    <Label layoutX="28.0" layoutY="438.0" text="Contact Person1:" />
-    <Label layoutX="28.0" layoutY="483.0" text="Contact E-mail1:" />
+    <Label layoutX="28.0" layoutY="438.0" text="Contact Person2:" />
+    <Label layoutX="28.0" layoutY="483.0" text="Contact E-mail2:" />
     <Label layoutX="28.0" layoutY="25.0" text="User General Information">
       <font>
         <Font size="20.0" />
       </font>
     </Label>
-    <TextField id="txtfieldName" layoutX="166.0" layoutY="67.0" prefWidth="200.0" text="" />
-    <TextField layoutX="166.0" layoutY="270.0" prefWidth="200.0" />
-    <TextField layoutX="166.0" layoutY="349.0" prefWidth="200.0" />
-    <TextField layoutX="166.0" layoutY="394.0" prefWidth="200.0" />
-    <TextField layoutX="166.0" layoutY="435.0" prefWidth="200.0" />
-    <TextField layoutX="166.0" layoutY="480.0" prefWidth="200.0" />
-    <TextField layoutX="166.0" layoutY="228.0" prefWidth="200.0" />
-    <TextField id="txtFieldLastName" layoutX="166.0" layoutY="109.0" prefWidth="200.0" />
-    <TextField layoutX="166.0" layoutY="307.0" prefWidth="200.0" />
-    <ChoiceBox layoutX="166.0" layoutY="192.0" prefWidth="200.0">
+    <TextField id="txtfieldName" fx:id="firstName" layoutX="166.0" layoutY="67.0" prefWidth="200.0" text="" />
+    <TextField fx:id="mobNumber" layoutX="166.0" layoutY="270.0" prefWidth="200.0" />
+    <TextField fx:id="namePerson1" layoutX="166.0" layoutY="349.0" prefWidth="200.0" />
+    <TextField fx:id="emailPerson1" layoutX="166.0" layoutY="394.0" prefWidth="200.0" />
+    <TextField fx:id="namePerson2" layoutX="166.0" layoutY="435.0" prefWidth="200.0" />
+    <TextField fx:id="emailPerson2" layoutX="166.0" layoutY="480.0" prefWidth="200.0" />
+    <TextField fx:id="bloodType" layoutX="166.0" layoutY="228.0" prefWidth="200.0" />
+    <TextField id="txtFieldLastName" fx:id="lastName" layoutX="166.0" layoutY="109.0" prefWidth="200.0" />
+    <TextField fx:id="address" layoutX="166.0" layoutY="307.0" prefWidth="200.0" />
+    <ChoiceBox fx:id="gender" layoutX="166.0" layoutY="192.0" prefWidth="200.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="Item 1" />
@@ -44,7 +44,7 @@
         </FXCollections>
       </items>
     </ChoiceBox>
-    <TextField id="Date" layoutX="166.0" layoutY="149.0" prefWidth="200.0" />
+    <TextField id="Date" fx:id="dateBirth" layoutX="166.0" layoutY="149.0" prefWidth="200.0" />
     <Button fx:id="btnSave" layoutX="307.0" layoutY="516.0" mnemonicParsing="false" onAction="#SaveUserInfo" prefWidth="59.0" text="Save" />
   </children>
 </AnchorPane>
