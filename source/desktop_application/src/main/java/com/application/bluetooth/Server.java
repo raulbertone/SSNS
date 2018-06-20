@@ -8,14 +8,18 @@ import jssc.*;
 
 public class Server {
 
+	public static Server server;
 	public static SerialPort serialPort;
 	public static MsgQueue msg = new MsgQueue(500);
+	private static List<String> sensor1 = new ArrayList();
+	private static List<String> sensor2 = new ArrayList();
+	
 	public static List<String> acc1 = new ArrayList();
 	public static List<String> acc2 = new ArrayList();
 	
 	public static Boolean resetDone = false;
 
-	public Server()
+	private Server()
 	{  
 		// writing to port
         serialPort = new SerialPort("COM7");
@@ -37,22 +41,83 @@ public class Server {
         }
         catch (Exception x)
         {
-        	
+        	System.out.println("can not open the port");
         }
 		
 	}
 
-	
-	
 	/**
 	 * @author Elis
 	 * 
-	 * Listener for reading events
+	 * method to add a value to sensor1 Queue 
+	 * 
 	 * */
-
 	
+	public void addToSensor1(String data)
+	{
+		this.sensor1.add(data);
+	}
+	/**
+	 * @author Elis
+	 * 
+	 * method to add a value to sensor2 Queue 
+	 * 
+	 * */
 	
-	//helping functions
+	public void addToSensor2(String data)
+	{
+		this.sensor2.add(data);
+	}
+	/**
+	 * @author Elis
+	 * 
+	 * method to remove a value from sensor1 Queue 
+	 * 
+	 * */
+	
+	public String getSensor1Data()
+	{
+		String s= sensor1.get(0);
+		sensor1.remove(0);
+		return s;
+	}
+	/**
+	 * @author Elis
+	 * 
+	 * method to remove a value from sensor1 Queue 
+	 * 
+	 * */
+	
+	public String getSensor2Data()
+	{
+		String s= sensor2.get(0);
+		sensor2.remove(0);
+		return s;
+	}
+	/**
+	 * @author Elis
+	 * 
+	 * get Singleton Instance
+	 * */
+	public static Server getInstance()
+	{
+		if(server==null)
+		{
+			synchronized(Server.class)
+			{
+				if(server==null)
+				{
+					server=new Server();
+				}
+			}
+		}
+		return server;
+	}
+	/**
+	 * @author Elis
+	 * 
+	 * method to convert a hex string to integer
+	 * */
 	 public static int hex2decimal(String s) {
 	        String digits = "0123456789ABCDEF";
 	        s = s.toUpperCase();
@@ -71,7 +136,7 @@ public class Server {
 	  * 
 	  * method to write to port from everywhere in application
 	  * */
-	 public  void WriteToPort(String hexCommand)
+	 public void WriteToPort(String hexCommand)
 	 {
 		 try {
 			 serialPort.writeBytes(BaseEncoding.base16().decode(hexCommand));
@@ -84,7 +149,7 @@ public class Server {
 		 }
 		 
 	 }
-	 public static void DeviceInitialization()
+	 public  void DeviceInitialization()
 	    {
 	    	try
 	    	{   		

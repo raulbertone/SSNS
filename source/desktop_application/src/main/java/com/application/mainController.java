@@ -119,7 +119,7 @@ public class mainController {
 
     @FXML
     void initialize() {
-    	Server sr = new Server();
+    	Server sr = Server.getInstance();
 		
 		 new ProcessMessage();
 		

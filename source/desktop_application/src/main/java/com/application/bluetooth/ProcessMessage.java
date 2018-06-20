@@ -2,11 +2,14 @@ package com.application.bluetooth;
 
 import java.io.ByteArrayOutputStream;
 
+import org.apache.commons.lang3.ArrayUtils;
+
 import com.google.common.io.BaseEncoding;
 
 public class ProcessMessage  extends Thread{
 
-	MsgQueue Q = Server.msg;
+	
+	Server server = Server.getInstance();
 	private static int dataLength=0;
 	private static int countAcc1=0;
 	private static int countAcc2=0;
@@ -32,7 +35,7 @@ public void run() {
 	}
 }
 	 
-	 public static void getMsg()
+	 public  void getMsg()
 		{
 			try {
 				
@@ -50,24 +53,16 @@ public void run() {
 						dataLength= Server.msg.remove();
 						String data = getData(dataLength);
 						Message msg = new Message(type,opCode,String.format("%02X", dataLength) ,data);
-						if(data.startsWith("1B050000"))
+						if(data.startsWith("01060004"))
 						{
-							Server.acc1.add(data);
-							if(countAcc1<2)
-							{
-								System.out.println(msg.toString());
-								countAcc1++;
-							}
+							//TODO: show scan results and tell app the scan is done
+							System.out.println("SCAN RESULTS: ");
+							System.out.println(msg.toString());
 						}
-						else if(data.startsWith("1B050001"))
+						else if(data.startsWith("1B05"))
 						{
-							Server.acc2.add(data);
-							if(countAcc2<2)
-							{
-								System.out.println(msg.toString());
-								countAcc2++;
-							}
-						}
+							addToQueue(data);
+						}						
 						else {
 							
 							
@@ -101,7 +96,7 @@ public void run() {
 			}
 		}
 
-	 public static void ShowScanResults()
+ public  void ShowScanResults()
 	 {
 		 try {
 			String type= String.format("%02X", Server.msg.remove());
@@ -118,12 +113,8 @@ public void run() {
 		}
 		 
 	 }
-public static void ShowScanRes()
-{
-	byte[] msss = Server.msg.removeAll();
-	System.out.println("Queue after scan: " + BaseEncoding.base16().encode(msss));
-}
-public static String getData (int length)
+
+public  String getData (int length)
 {
 	ByteArrayOutputStream message = new ByteArrayOutputStream();
 	while (length>0)
@@ -143,5 +134,33 @@ public static String getData (int length)
 	
 	return BaseEncoding.base16().encode(message.toByteArray());
 	}
-	 
+	
+public  void addToQueue(String data)
+{
+	String realValues = data.substring(16, 40);
+	if(data.startsWith("1B050000"))
+	{		
+		server.addToSensor1(reverseHexString(realValues));
+		//System.out.println(reverseHexString(realValues));
+		//System.out.println(realValues);
+	}
+	else if(data.startsWith("1B050001"))
+	{
+		server.addToSensor2(reverseHexString(realValues));		
+	}
+			
+	}
+/**
+ * @author Elis
+ * 
+ * method to reverse the hexadecimal string because we get the low parity bit first
+ * */
+public  String reverseHexString(String data)
+{
+	byte[] dataB = BaseEncoding.base16().decode(data);
+	ArrayUtils.reverse(dataB);
+	return BaseEncoding.base16().encode(dataB);
+	
+}
+
 }
