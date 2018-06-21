@@ -19,6 +19,9 @@ public abstract class ConfigurationStorage {
 	private static double LAYING_POW = 1.0; // double, Laying Acceleration(g)
 	private static int SKIP_MEASURE = 0; // Skipped Measurements(count)
 	private static double FALL_ANGLE = 30.0; // Fall angle(degrees)
+	private static int COUNT_SEC = 10; // amount of meas. per sec
+	private static double FORCE_IMPACT_D = 0.8; // lower and upper limit for force of laying
+	private static double FORCE_IMPACT_U = 1.1 ; //
 
 	// help request settings
 	private static int HELP_REQUEST_DELAY = 5;
@@ -126,6 +129,31 @@ public abstract class ConfigurationStorage {
 	public static void setFALL_ANGLE(double fALL_ANGLE) {
 		FALL_ANGLE = fALL_ANGLE;
 	}
+
+	public static int getCOUNT_SEC() {
+		return COUNT_SEC;
+	}
+
+	public static void setCOUNT_SEC(int cOUNT_SEC) {
+		COUNT_SEC = cOUNT_SEC;
+	}
+
+	public static double getFORCE_IMPACT_D() {
+		return FORCE_IMPACT_D;
+	}
+
+	public static void setFORCE_IMPACT_D(double fORCE_IMPACT_D) {
+		FORCE_IMPACT_D = fORCE_IMPACT_D;
+	}
+
+	public static double getFORCE_IMPACT_U() {
+		return FORCE_IMPACT_U;
+	}
+
+	public static void setFORCE_IMPACT_U(double fORCE_IMPACT_U) {
+		FORCE_IMPACT_U = fORCE_IMPACT_U;
+	}
+
 
 	public static int getHELP_REQUEST_DELAY() {
 		return HELP_REQUEST_DELAY;
