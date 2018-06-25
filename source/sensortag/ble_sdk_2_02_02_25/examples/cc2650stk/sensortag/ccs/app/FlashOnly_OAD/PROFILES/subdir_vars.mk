@@ -6,23 +6,23 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/barometerservice.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/batt/cc26xx/battservice.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/ccservice.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/dev_info/cc26xx/devinfoservice.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/host/gatt_uuid.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/host/gattservapp_util.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/humidityservice.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/ioservice.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/irtempservice.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/movementservice.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/oad/cc26xx/oad.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/oad/cc26xx/oad_target_external_flash.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/opticservice.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/roles/cc26xx/peripheral.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/registerservice.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/keys/cc26xx/simplekeys.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/st_util.c 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/barometerservice.c \
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/batt/cc26xx/battservice.c \
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/ccservice.c \
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/dev_info/cc26xx/devinfoservice.c \
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/host/gatt_uuid.c \
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/host/gattservapp_util.c \
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/humidityservice.c \
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/ioservice.c \
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/irtempservice.c \
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/movementservice.c \
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/oad/cc26xx/oad.c \
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/oad/cc26xx/oad_target_external_flash.c \
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/opticservice.c \
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/roles/cc26xx/peripheral.c \
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/registerservice.c \
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/keys/cc26xx/simplekeys.c \
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/st_util.c 
 
 C_DEPS += \
 ./PROFILES/barometerservice.d \
@@ -101,22 +101,22 @@ C_DEPS__QUOTED += \
 "PROFILES\st_util.d" 
 
 C_SRCS__QUOTED += \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/barometerservice.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/batt/cc26xx/battservice.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/ccservice.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/dev_info/cc26xx/devinfoservice.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/host/gatt_uuid.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/host/gattservapp_util.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/humidityservice.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/ioservice.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/irtempservice.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/movementservice.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/oad/cc26xx/oad.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/oad/cc26xx/oad_target_external_flash.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/opticservice.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/roles/cc26xx/peripheral.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/registerservice.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/keys/cc26xx/simplekeys.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/st_util.c" 
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/barometerservice.c" \
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/batt/cc26xx/battservice.c" \
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/ccservice.c" \
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/dev_info/cc26xx/devinfoservice.c" \
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/host/gatt_uuid.c" \
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/host/gattservapp_util.c" \
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/humidityservice.c" \
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/ioservice.c" \
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/irtempservice.c" \
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/movementservice.c" \
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/oad/cc26xx/oad.c" \
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/oad/cc26xx/oad_target_external_flash.c" \
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/opticservice.c" \
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/roles/cc26xx/peripheral.c" \
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/registerservice.c" \
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/keys/cc26xx/simplekeys.c" \
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/st_util.c" 
 
 

@@ -1,7 +1,7 @@
 ******************************************************************************
                   TI ARM Linker PC v16.9.1                     
 ******************************************************************************
->> Linked Fri May 25 13:38:41 2018
+>> Linked Mon Jun 25 21:55:38 2018
 
 OUTPUT FILE NAME:   <sensortag_cc2650stk_app.out>
 ENTRY POINT SYMBOL: "ResetISR"  address: 000094b9
@@ -944,8 +944,8 @@ vtable_ram
 *          0    00000000    00000008     DSECT
                   00000000    00000008     boot.aem3 : boot.oem3 (.bootVecs)
 
-xdc.meta   0    00000000    00000126     COPY SECTION
-                  00000000    00000126     app_ble_pem3.oem3 (xdc.meta)
+xdc.meta   0    00000000    00000116     COPY SECTION
+                  00000000    00000116     app_ble_pem3.oem3 (xdc.meta)
 
 xdc.noload 
 *          0    00000000    00000000     COPY SECTION
@@ -1052,11 +1052,11 @@ MODULE SUMMARY
        Total:                            222     304       48     
                                                                   
     C:\Users\Raul\AppData\Local\Temp\
-       010602                            0       0         701    
+       047082                            0       0         701    
     +--+---------------------------------+-------+---------+---------+
        Total:                            0       0         701    
                                                                   
-    C:\Users\Raul\Dropbox\UAS\SSNS\workspace\ble_sdk_2_02_02_25\examples\cc2650stk\sensortag\ccs\app\FlashOnly_OAD\configPkg\package\cfg\
+    D:\SSNS\source\sensortag\ble_sdk_2_02_02_25\examples\cc2650stk\sensortag\ccs\app\FlashOnly_OAD\configPkg\package\cfg\
        app_ble_pem3.oem3                 1468    1099      3326   
     +--+---------------------------------+-------+---------+---------+
        Total:                            1468    1099      3326   
@@ -1095,14 +1095,6 @@ MODULE SUMMARY
     +--+---------------------------------+-------+---------+---------+
        Total:                            4       0         0      
                                                                   
-    C:\Users\Raul\Dropbox\UAS\SSNS\workspace\ble_sdk_2_02_02_25\examples\cc2650stk\sensortag\ccs\config\src\sysbios\sysbios.aem3
-       BIOS.obj                          6142    0         0      
-       m3_Hwi_asm.obj                    258     0         0      
-       m3_TaskSupport_asm.obj            108     0         0      
-       m3_Hwi_asm_switch.obj             102     0         0      
-    +--+---------------------------------+-------+---------+---------+
-       Total:                            6610    0         0      
-                                                                  
     C:\ti\ccsv7\tools\compiler\ti-cgt-arm_16.9.1.LTS\lib\rtsv7M3_T_le_eabi.lib
        ull_div_t2.obj                    500     0         0      
        memcpy_t2.obj                     156     0         0      
@@ -1130,6 +1122,14 @@ MODULE SUMMARY
        boot.oem3                         68      0         0      
     +--+---------------------------------+-------+---------+---------+
        Total:                            68      0         0      
+                                                                  
+    D:\SSNS\source\sensortag\ble_sdk_2_02_02_25\examples\cc2650stk\sensortag\ccs\config\src\sysbios\sysbios.aem3
+       BIOS.obj                          6142    0         0      
+       m3_Hwi_asm.obj                    258     0         0      
+       m3_TaskSupport_asm.obj            108     0         0      
+       m3_Hwi_asm_switch.obj             102     0         0      
+    +--+---------------------------------+-------+---------+---------+
+       Total:                            6610    0         0      
                                                                   
        Stack:                            0       0         512    
        Linker Generated:                 0       1246      0      
@@ -1497,12 +1497,12 @@ UNDEFED   SHT$$INIT_ARRAY$$Limit
 0000c289  Util_stopClock                                             
 10015a85  ZERO                                                       
 00000000  __ASM__                                                    
-000000a0  __ISA__                                                    
-000000b2  __PLAT__                                                   
+00000090  __ISA__                                                    
+000000a2  __PLAT__                                                   
 20004400  __STACK_END                                                
 00000200  __STACK_SIZE                                               
 20004400  __STACK_TOP                                                
-000000d9  __TARG__                                                   
+000000c9  __TARG__                                                   
 0000d100  __TI_CINIT_Base                                            
 0000d130  __TI_CINIT_Limit                                           
 0000d0cc  __TI_Handler_Table_Base                                    
@@ -1518,7 +1518,7 @@ ffffffff  __TI_prof_data_size
 ffffffff  __TI_prof_data_start                                       
 0000cc50  __TI_static_base__                                         
 0000bff1  __TI_zero_init                                             
-000000fe  __TRDR__                                                   
+000000ee  __TRDR__                                                   
 0000b9e9  __aeabi_lmul                                               
 0000737d  __aeabi_memclr                                             
 0000737d  __aeabi_memclr4                                            
@@ -2044,10 +2044,10 @@ address   name
 00000000  __ASM__                                                    
 00000001  xdc_runtime_Startup__EXECFXN__C                            
 00000001  xdc_runtime_Startup__RESETFXN__C                           
-000000a0  __ISA__                                                    
-000000b2  __PLAT__                                                   
-000000d9  __TARG__                                                   
-000000fe  __TRDR__                                                   
+00000090  __ISA__                                                    
+000000a2  __PLAT__                                                   
+000000c9  __TARG__                                                   
+000000ee  __TRDR__                                                   
 00000200  __STACK_SIZE                                               
 00001000  _imgHdr                                                    
 00001010  ti_sysbios_family_arm_m3_Hwi_resetVectors                  
