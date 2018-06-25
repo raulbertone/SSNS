@@ -6,8 +6,8 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/icall/src/icall.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/icall/src/icall_cc2650.c 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/icall/src/icall.c \
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/icall/src/icall_cc2650.c 
 
 C_DEPS += \
 ./ICall/icall.d \
@@ -26,7 +26,7 @@ C_DEPS__QUOTED += \
 "ICall\icall_cc2650.d" 
 
 C_SRCS__QUOTED += \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/icall/src/icall.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/icall/src/icall_cc2650.c" 
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/icall/src/icall.c" \
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/icall/src/icall_cc2650.c" 
 
 

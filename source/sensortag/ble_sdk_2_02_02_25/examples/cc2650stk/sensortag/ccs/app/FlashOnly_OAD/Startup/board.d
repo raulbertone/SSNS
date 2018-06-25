@@ -1,14 +1,14 @@
 # FIXED
 
-Startup/board.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/target/board.c
-Startup/board.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/target/./cc2650st/cc2650st_board.c
-Startup/board.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/Board.h
+Startup/board.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/board.c
+Startup/board.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/./cc2650st/cc2650st_board.c
+Startup/board.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/Board.h
 Startup/board.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/Power.h
 Startup/board.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdint.h
 Startup/board.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/utils/List.h
 Startup/board.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdbool.h
 Startup/board.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stddef.h
-Startup/board.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/CC2650STK.h
+Startup/board.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/CC2650STK.h
 Startup/board.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/PIN.h
 Startup/board.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/std.h
 Startup/board.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdarg.h
@@ -31,7 +31,7 @@ Startup/board.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_2
 Startup/board.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/driverlib/rom.h
 Startup/board.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/driverlib/gpio.h
 Startup/board.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_gpio.h
-Startup/board.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/CC2650STK.c
+Startup/board.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/CC2650STK.c
 Startup/board.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/System.h
 Startup/board.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/xdc.h
 Startup/board.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
@@ -283,17 +283,17 @@ Startup/board.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13
 Startup/board.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/assert.h
 Startup/board.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/mw/display/DisplayUart.h
 Startup/board.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Semaphore.h
-Startup/board.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/TRNGCC26XX.h
+Startup/board.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/TRNGCC26XX.h
 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/target/board.c: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/target/./cc2650st/cc2650st_board.c: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/Board.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/board.c: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/./cc2650st/cc2650st_board.c: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/Board.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/Power.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdint.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/utils/List.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdbool.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stddef.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/CC2650STK.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/CC2650STK.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/PIN.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/std.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdarg.h: 
@@ -316,7 +316,7 @@ C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_c
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/driverlib/rom.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/driverlib/gpio.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_gpio.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/CC2650STK.c: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/CC2650STK.c: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/System.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/xdc.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
@@ -568,4 +568,4 @@ C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_0
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/assert.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/mw/display/DisplayUart.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Semaphore.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/TRNGCC26XX.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/TRNGCC26XX.h: 

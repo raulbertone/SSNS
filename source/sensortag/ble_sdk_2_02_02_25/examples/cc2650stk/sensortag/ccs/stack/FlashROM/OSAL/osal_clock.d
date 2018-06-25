@@ -1,15 +1,15 @@
 # FIXED
 
-OSAL/osal_clock.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_clock.c
-OSAL/osal_clock.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/comdef.h
-OSAL/osal_clock.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
-OSAL/osal_clock.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/../_common/cc26xx/_hal_types.h
+OSAL/osal_clock.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_clock.c
+OSAL/osal_clock.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/comdef.h
+OSAL/osal_clock.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
+OSAL/osal_clock.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/../_common/cc26xx/_hal_types.h
 OSAL/osal_clock.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdint.h
-OSAL/osal_clock.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_defs.h
-OSAL/osal_clock.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_board.h
-OSAL/osal_clock.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_board_cfg.h
-OSAL/osal_clock.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_mcu.h
-OSAL/osal_clock.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
+OSAL/osal_clock.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_defs.h
+OSAL/osal_clock.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_board.h
+OSAL/osal_clock.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_board_cfg.h
+OSAL/osal_clock.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_mcu.h
+OSAL/osal_clock.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
 OSAL/osal_clock.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_nvic.h
 OSAL/osal_clock.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_ints.h
 OSAL/osal_clock.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_types.h
@@ -32,30 +32,30 @@ OSAL/osal_clock.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2
 OSAL/osal_clock.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_fcfg1.h
 OSAL/osal_clock.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/driverlib/ioc.h
 OSAL/osal_clock.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_ioc.h
-OSAL/osal_clock.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/icall/src/inc/ICall.h
+OSAL/osal_clock.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/icall/src/inc/ICall.h
 OSAL/osal_clock.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdlib.h
 OSAL/osal_clock.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/linkage.h
-OSAL/osal_clock.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_assert.h
-OSAL/osal_clock.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
-OSAL/osal_clock.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
-OSAL/osal_clock.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/onboard.h
-OSAL/osal_clock.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_sleep.h
-OSAL/osal_clock.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal.h
+OSAL/osal_clock.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_assert.h
+OSAL/osal_clock.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
+OSAL/osal_clock.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
+OSAL/osal_clock.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/onboard.h
+OSAL/osal_clock.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_sleep.h
+OSAL/osal_clock.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal.h
 OSAL/osal_clock.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/limits.h
-OSAL/osal_clock.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Memory.h
-OSAL/osal_clock.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Timers.h
-OSAL/osal_clock.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal_clock.h
+OSAL/osal_clock.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Memory.h
+OSAL/osal_clock.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Timers.h
+OSAL/osal_clock.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal_clock.h
 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_clock.c: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/comdef.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/../_common/cc26xx/_hal_types.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_clock.c: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/comdef.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/../_common/cc26xx/_hal_types.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdint.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_defs.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_board.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_board_cfg.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_mcu.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_defs.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_board.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_board_cfg.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_mcu.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_nvic.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_ints.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_types.h: 
@@ -78,16 +78,16 @@ C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_a
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_fcfg1.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/driverlib/ioc.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_ioc.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/icall/src/inc/ICall.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/icall/src/inc/ICall.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdlib.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/linkage.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_assert.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/onboard.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_sleep.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_assert.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/onboard.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_sleep.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/limits.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Memory.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Timers.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal_clock.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Memory.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Timers.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal_clock.h: 
