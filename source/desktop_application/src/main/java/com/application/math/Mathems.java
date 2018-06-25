@@ -1,5 +1,8 @@
 package com.application.math;
 
+import java.rmi.server.ServerCloneException;
+import java.text.DecimalFormat;
+
 import com.application.bluetooth.Server;
 import com.application.util.ConfigurationStorage;
 import com.application.util.FallNotificationService;
@@ -20,7 +23,9 @@ public class Mathems extends Thread {
 
 	private Server server;
 
-	public Mathems(Server server) {
+	public static Mathems mathems;
+
+	private Mathems(Server server) {
 		this.isAclrFall = false;
 		this.isGyroFall = false;
 
@@ -33,13 +38,34 @@ public class Mathems extends Thread {
 
 		gyro_2 = new Gyroskope(this);
 		aclr_2 = new Accelerometer(this);
+
+		try {
+			this.setName("Math_Thread");
+			this.start();
+		}catch(Exception e) {
+			System.out.println("Something goes wrong! Thread hasn't started!!!");
+		}
+
 	}
 
-	public static void main() {//String[] arg) {
-		Server server = null;
+	public static void getInstance(Server server){
+		if(mathems==null)
+		{
+			synchronized(Mathems.class)
+			{
+				if(mathems == null)
+				{
+					mathems = new Mathems(server);
+				}
+			}
+		}
+	}
+
+	public static void main() {
+		Server server = Server.getInstance();
 		Mathems math = new Mathems(server);
 
-		math.add_measurments("210800AE011E008900C6FEB8");
+		math.add_measurments("F06800A2003FFEC000AD008E");
 
 		System.out.println("Hi!! I'm here using WhatsApp!!");
 
@@ -48,29 +74,38 @@ public class Mathems extends Thread {
 	public void isFall() {
 		// function to add new values with changes
 		try {
-			run();
+			this.setName("Math_Thread");
+			this.start();
 		}catch(Exception e) {
 			System.out.println("Something goes wrong! Thread hasn't started!!!");
 		}
 	}
 
 	public void run() {
+		while(true) {
+			if(this.count_pass_measur <= ConfigurationStorage.getSKIP_MEASURE()) { // increasing of count_pass_measur in .add method
+				//System.out.print("fkygwyc");
+				try {
+					Thread.sleep(100);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}else {
+				this.count_pass_measur = 0;
 
-		if(this.count_pass_measur == ConfigurationStorage.getSKIP_MEASURE()) // increasing of count_pass_measur in .add method
-			return;
+				if(aclr_1.bufSize() < ConfigurationStorage.getCOUNT_SEC()) //if amount of measurments is less than it is need tocover one second
+					return;
 
-		this.count_pass_measur = 0;
+				add_measurments(""); // was added to check ""
 
-		if(aclr_1.bufSize() < ConfigurationStorage.getCOUNT_SEC()) //if amount of measurments is less than it is need tocover one second
-			return;
+				this.aclr_1.isAclrFall(this.gyro_1);
+				this.aclr_2.isAclrFall(this.gyro_2);
 
-		add_measurments(""); // was added to check ""
-
-		this.aclr_1.isAclrFall(this.gyro_1);
-		this.aclr_2.isAclrFall(this.gyro_2);
-
-		if(this.isAclrFall && this.isGyroFall) {
-			FallNotificationService.notifyFall();
+				if(this.isAclrFall && this.isGyroFall) {
+					FallNotificationService.notifyFall();
+				}
+			}
 		}
 
 	}
@@ -82,17 +117,26 @@ public class Mathems extends Thread {
 		String measure_str = str; //server.getSensor1Data();
 
 		//aclr
-
-		String str_2 = measure_str.substring(14, 15);
-
-		double Az = Integer.parseInt(measure_str.substring(3, 4), 16); // Az  1234 5678 9112 3456 7892 1234
-		double Ay = Integer.parseInt(measure_str.substring(6, 8), 16); // Ay  2108 00AE 011E 0089 00C6 FEB8
-		double Ax = Integer.parseInt(measure_str.substring(10, 12), 16); // Ax
+		double Ax = correctMeasurments(
+				Integer.parseInt(
+						measure_str.substring(0, 4), 16)); // Az  1234 5678 9112 3456 7892 1234
+		double Ay = correctMeasurments(
+				Integer.parseInt(
+						measure_str.substring(4, 8), 16)); // Ay  2108 00AE 011E 0089 00C6 FEB8
+		double Az = correctMeasurments(
+				Integer.parseInt(
+						measure_str.substring(8, 12), 16)); // Ax
 
 		//gyro
-		double Gz = Integer.parseInt(measure_str.substring(14, 16), 16); // Az
-		double Gy = Integer.parseInt(measure_str.substring(18, 20), 16); // Ay
-		double Gx = Integer.parseInt(measure_str.substring(22, 24), 16); // Ax
+		double Gx = correctMeasurments(
+				Integer.parseInt(
+						measure_str.substring(12, 16), 16)); // Az
+		double Gy = correctMeasurments(
+				Integer.parseInt(
+						measure_str.substring(16, 20), 16)); // Ay
+		double Gz = correctMeasurments(
+				Integer.parseInt(
+						measure_str.substring(20, 24), 16)); // Ax
 
 		System.out.println(convertG(Ax) + " " + convertG(Ay) + " " + convertG(Az));
 		System.out.println(convertAngSp(Gx) + " " + convertAngSp(Gy) + " " + convertAngSp(Gz));
@@ -106,30 +150,46 @@ public class Mathems extends Thread {
 		measure_str = str; //server.getSensor2Data();
 
 		//aclr
-		Az = Integer.parseInt(measure_str.substring(0, 3), 16); // Az
-		Ay = Integer.parseInt(measure_str.substring(4, 7), 16); // Ay
-		Ax = Integer.parseInt(measure_str.substring(8, 11), 16); // Ax
+		Ax = correctMeasurments(
+				Integer.parseInt(
+						measure_str.substring(0, 4), 16)); // Az
+		Ay = correctMeasurments(
+				Integer.parseInt(
+						measure_str.substring(4, 8), 16)); // Ay
+		Az = correctMeasurments(
+				Integer.parseInt(
+						measure_str.substring(8, 12), 16)); // Ax
 
 		//gyro
-		Gz = Integer.parseInt(measure_str.substring(12, 15), 16); // Az
-		Gy = Integer.parseInt(measure_str.substring(16, 19), 16); // Ay
-		Gx = Integer.parseInt(measure_str.substring(20, 24), 16); // Ax
+		Gx = correctMeasurments(
+				Integer.parseInt(
+						measure_str.substring(12, 16), 16)); // Az
+		Gy = correctMeasurments(
+				Integer.parseInt(
+						measure_str.substring(16, 20), 16)); // Ay
+		Gz = correctMeasurments(
+				Integer.parseInt(
+						measure_str.substring(20, 24), 16)); // Ax
 
 		this.aclr_2.add_aclr(convertG(Ax), convertG(Ay), convertG(Az));
 		this.gyro_2.add_gyro(convertAngSp(Gx), convertAngSp(Gy), convertAngSp(Gz));
 
-		System.out.println(Ax + " " + Ay + " " + Az);
-		System.out.println(Gx + " " + Gy + " " + Gz);
-
 		//there we can send data to the Graph!!!!!
 	}
 
+	private double correctMeasurments(double tmp) {
+		if(tmp > 32768) {
+			tmp -= 65536;
+		}
+		return tmp;
+	}
+
 	private double convertG(double number) {
-		return ((number * 1.0) / (32768/4));
+		return (double) Math.round(((number * 100.0) / (32768/ConfigurationStorage.getG_SCALE()))) / 100;
 	}
 
 	private double convertAngSp(double number) {
-		return ((number * 1.0) / (65536 / 500));
+		return (double) Math.round(((number * 100.0) / (65536 / 500))) / 100;
 	}
 
 	public Gyroskope getGyro() {
