@@ -37,11 +37,14 @@ public class DbSave extends Thread {
 		this.count1=0;
 		this.start();
 	}
+	
 	public void run()
 	{
 		//TODO: here include code to store data in database every second
 		while(true)
 		{
+			
+				
 			if(count<Server.acc1.size())
 			{
 				List<String> data= new ArrayList();

@@ -15,10 +15,12 @@ public class Application {
 		
 		Server sr =Server.getInstance();
 		
-		 new ProcessMessage();
+		 //new ProcessMessage();
 		
 			System.out.println("pretending server started");
-			sr.DevInit();			
+			sr.DevInit();	
+			sr.Scan();
+			//sr.connectTo("690153");
 		
 			//FallNotificationService.notifyFall();
 		System.out.println("Give me a command human");
@@ -89,6 +91,17 @@ public class Application {
 	        	}
 	        	else if(command.startsWith("r"))
 	        	{
+	        		String cm = "RH"+command.substring(1);
+	        		for(Commands c: Commands.values())
+	        		{
+	        			if(c.name().equals(cm))
+	        			{
+	        				sr.WriteToPort(c.val());
+	        			}
+	        		}
+	        	}
+	        	else if(command.startsWith("S"))
+	        	{
 	        		String cm = "SH"+command.substring(1);
 	        		for(Commands c: Commands.values())
 	        		{
@@ -98,7 +111,7 @@ public class Application {
 	        			}
 	        		}
 	        	}
-	        	else if(command.equals("s"))
+	        	else if(command.equals("save"))
 	        	{
 	        		new DbSave();
 	        	}
