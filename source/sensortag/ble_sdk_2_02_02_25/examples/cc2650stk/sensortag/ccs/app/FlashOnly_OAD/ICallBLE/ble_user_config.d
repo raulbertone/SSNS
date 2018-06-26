@@ -1,24 +1,24 @@
 # FIXED
 
-ICallBLE/ble_user_config.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/icall/app/ble_user_config.c
-ICallBLE/ble_user_config.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
-ICallBLE/ble_user_config.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/../_common/cc26xx/_hal_types.h
+ICallBLE/ble_user_config.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/icall/app/ble_user_config.c
+ICallBLE/ble_user_config.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
+ICallBLE/ble_user_config.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/../_common/cc26xx/_hal_types.h
 ICallBLE/ble_user_config.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdint.h
-ICallBLE/ble_user_config.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/icall/inc/ble_user_config.h
-ICallBLE/ble_user_config.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/icall/inc/ble_dispatch.h
-ICallBLE/ble_user_config.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_assert.h
-ICallBLE/ble_user_config.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
-ICallBLE/ble_user_config.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_defs.h
-ICallBLE/ble_user_config.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/rf_hal.h
-ICallBLE/ble_user_config.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
-ICallBLE/ble_user_config.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/target/board.h
-ICallBLE/ble_user_config.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/target/./cc2650st/cc2650st_board.h
-ICallBLE/ble_user_config.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/Board.h
+ICallBLE/ble_user_config.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/icall/inc/ble_user_config.h
+ICallBLE/ble_user_config.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/icall/inc/ble_dispatch.h
+ICallBLE/ble_user_config.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_assert.h
+ICallBLE/ble_user_config.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
+ICallBLE/ble_user_config.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_defs.h
+ICallBLE/ble_user_config.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/rf_hal.h
+ICallBLE/ble_user_config.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
+ICallBLE/ble_user_config.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/board.h
+ICallBLE/ble_user_config.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/./cc2650st/cc2650st_board.h
+ICallBLE/ble_user_config.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/Board.h
 ICallBLE/ble_user_config.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/Power.h
 ICallBLE/ble_user_config.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/utils/List.h
 ICallBLE/ble_user_config.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdbool.h
 ICallBLE/ble_user_config.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stddef.h
-ICallBLE/ble_user_config.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/CC2650STK.h
+ICallBLE/ble_user_config.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/CC2650STK.h
 ICallBLE/ble_user_config.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/PIN.h
 ICallBLE/ble_user_config.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/std.h
 ICallBLE/ble_user_config.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdarg.h
@@ -220,27 +220,27 @@ ICallBLE/ble_user_config.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtim
 ICallBLE/ble_user_config.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h
 ICallBLE/ble_user_config.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/family/arm/m3/Hwi__epilogue.h
 ICallBLE/ble_user_config.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Semaphore.h
-ICallBLE/ble_user_config.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/TRNGCC26XX.h
+ICallBLE/ble_user_config.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/TRNGCC26XX.h
 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/icall/app/ble_user_config.c: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/../_common/cc26xx/_hal_types.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/icall/app/ble_user_config.c: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/../_common/cc26xx/_hal_types.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdint.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/icall/inc/ble_user_config.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/icall/inc/ble_dispatch.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_assert.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_defs.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/rf_hal.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/target/board.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/target/./cc2650st/cc2650st_board.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/Board.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/icall/inc/ble_user_config.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/icall/inc/ble_dispatch.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_assert.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_defs.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/rf_hal.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/board.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/./cc2650st/cc2650st_board.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/Board.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/Power.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/utils/List.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdbool.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stddef.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/CC2650STK.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/CC2650STK.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/PIN.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/std.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdarg.h: 
@@ -442,4 +442,4 @@ C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Error.h:
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/family/arm/m3/Hwi__epilogue.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Semaphore.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/TRNGCC26XX.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/TRNGCC26XX.h: 

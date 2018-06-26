@@ -2,6 +2,8 @@ package com.application.math;
 
 import java.util.ArrayList;
 
+import com.application.util.ConfigurationStorage;
+
 
 public class Gyroskope{
 
@@ -12,16 +14,19 @@ public class Gyroskope{
 	private int count_sec;
 	private double FALL_ANGLE;
 
-	public Gyroskope(Mathems math, int count_sec, double FALL_ANGLE)  {
+	public Gyroskope(Mathems math)  {
 		buf_x = new ArrayList<Double>();
 		buf_y = new ArrayList<Double>();
 		buf_z = new ArrayList<Double>();
 		this.math = math;
-		this.count_sec = count_sec;
-		this.FALL_ANGLE = FALL_ANGLE;
+		this.count_sec = 0;
+		this.FALL_ANGLE = 0;
 	}
 
 	public void isGyroFall(int fallStart, int fallStop) {
+
+		this.count_sec = ConfigurationStorage.getCOUNT_SEC();
+		this.FALL_ANGLE = ConfigurationStorage.getFALL_ANGLE();
 
 		if(fallStart == -1) {
 			System.out.println("Error!!! Incorrect FallStart value!!!");
@@ -48,13 +53,11 @@ public class Gyroskope{
 	}
 
 	public void add_gyro(double x, double y, double z) {
-		this.buf_x.remove(0);
-		this.buf_y.remove(0);
-		this.buf_z.remove(0);
-
-		//x = ((x * 1.0) / (65536 / 500)); // convert to angle_speed - scale
-		//y = ((y * 1.0) / (65536 / 500));
-		//z = ((z * 1.0) / (65536 / 500));
+		if(!this.buf_x.isEmpty()) {
+			this.buf_x.remove(0);
+			this.buf_y.remove(0);
+			this.buf_z.remove(0);
+		}
 
 		this.buf_x.add(x);
 		this.buf_y.add(y);

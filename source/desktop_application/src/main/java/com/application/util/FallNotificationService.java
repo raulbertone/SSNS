@@ -1,11 +1,14 @@
 package com.application.util;
 
+import com.application.mainController;
+
 public class FallNotificationService implements Runnable{
 
 	private static FallNotificationService instance;
 	private boolean fallDetected = false;
 	private boolean run = true;
 	private boolean falseAlarm = false;
+	private mainController controller;
 
 	static{
 		instance = new FallNotificationService();
@@ -31,6 +34,10 @@ public class FallNotificationService implements Runnable{
 	// call this method to signal a false alarm (when the user presses a button on the Sensortag)
 	public static void falseAlarm() {
 		instance.falseAlarm = true;
+	}
+	
+	public static void setMain(mainController controller) {
+		instance.controller = controller;
 	}
 
 	/*
@@ -59,7 +66,7 @@ public class FallNotificationService implements Runnable{
 		falseAlarm = false;
 
 		// TODO turn on the buzzer
-		// TODO raise flag in the GUI
+		instance.controller.setLblFallDetColor("#a20000"); // raise flag in the GUI
 
 		// wait to see if the user signals a false alarm
 		try {
@@ -70,12 +77,11 @@ public class FallNotificationService implements Runnable{
 
 		if (falseAlarm) {
 			// TODO turn off the buzzer
-			// TODO lower the flag in the GUI
+			instance.controller.setLblFallDetColor("#000000"); // lower the flag in the GUI
 		} else {
-			// send email
-			requestHelp();
-
-			// TODO raise flag in the GUI
+			
+			requestHelp(); // send email
+			instance.controller.setLblHelpReqColor("#a20000"); // raise flag in the GUI
 
 			fallDetected = false;
 		}

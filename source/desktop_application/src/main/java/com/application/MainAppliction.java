@@ -2,7 +2,7 @@ package com.application;
 
 import java.net.URL;
 
-
+import com.application.util.FallNotificationService;
 
 import javafx.application.*;
 import javafx.fxml.FXMLLoader;
@@ -71,6 +71,6 @@ public class MainAppliction extends Application {
 	
 	
 	public static void main(String[] args) {
-			launch(args);
-		}
+		launch(args);
+	}
 }

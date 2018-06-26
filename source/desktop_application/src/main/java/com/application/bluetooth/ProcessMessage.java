@@ -4,7 +4,7 @@ import java.io.ByteArrayOutputStream;
 
 import org.apache.commons.lang3.ArrayUtils;
 
-import com.application.mainController;
+import com.application.math.Mathems;
 import com.google.common.io.BaseEncoding;
 
 public class ProcessMessage  extends Thread{
@@ -169,6 +169,7 @@ public  String getData (int length)
 	
 public  void addToQueue(String data)
 {
+	Mathems.getInstance(server);
 	String realValues = data.substring(16, 40);
 	if(data.startsWith("1B050000"))
 	{		

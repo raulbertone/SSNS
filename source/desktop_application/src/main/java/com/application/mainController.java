@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 
 import com.application.bluetooth.ProcessMessage;
 import com.application.bluetooth.Server;
+import com.application.util.FallNotificationService;
 
 
 import javafx.application.Platform;
@@ -20,6 +21,7 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class mainController {
@@ -108,8 +110,14 @@ public class mainController {
      * */
     MainAppliction main = new MainAppliction();
     
-    public mainController()
-    {}
+    public void setLblHelpReqColor(String color) {
+    	 lblHelpReq.setTextFill(Color.web(color));
+    }
+   
+    public void setLblFallDetColor(String color) {
+   	 	lblFallDet.setTextFill(Color.web(color));
+    }
+    
     @FXML
     void Connect(ActionEvent event) {
     	
@@ -198,6 +206,10 @@ public class mainController {
     
     @FXML
     void initialize() {
+    	
+    	// set a reference to this controller so that the FallNotificationService can change the colour of labels
+    	FallNotificationService.setMain(this);
+    	
      	
     		
 			sr.DevInit();

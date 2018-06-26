@@ -6,7 +6,7 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/mb_patch.c 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/mb_patch.c 
 
 C_DEPS += \
 ./HAL/Target/CC2650/_common/mb_patch.d 
@@ -21,6 +21,6 @@ C_DEPS__QUOTED += \
 "HAL\Target\CC2650\_common\mb_patch.d" 
 
 C_SRCS__QUOTED += \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/mb_patch.c" 
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/mb_patch.c" 
 
 
