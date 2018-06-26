@@ -4,6 +4,7 @@ import java.io.ByteArrayOutputStream;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+import com.application.math.Mathems;
 import com.google.common.io.BaseEncoding;
 
 public class ProcessMessage  extends Thread{

@@ -2,6 +2,8 @@ package com.application;
 
 import java.net.URL;
 
+import com.application.util.FallNotificationService;
+
 import javafx.application.*;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
@@ -66,6 +68,6 @@ public class MainAppliction extends Application {
 	
 	
 	public static void main(String[] args) {
-			launch(args);
-		}
+		launch(args);
+	}
 }
