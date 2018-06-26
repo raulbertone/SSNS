@@ -32,7 +32,7 @@
             <Button fx:id="btnConnect" mnemonicParsing="false" onAction="#Connect" prefWidth="80.0" text="Connect" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="80.0" />
             <Label fx:id="btnStatus" font="$x1" layoutX="23.0" layoutY="32.0" text="Status:" />
             <Button fx:id="btnDisconnect" mnemonicParsing="false" onAction="#Disconnect" prefWidth="80.0" text="Disconnect" AnchorPane.leftAnchor="142.0" AnchorPane.topAnchor="80.0" />
-            <Label fx:id="lblFallDet" font="$x1" prefHeight="27.0" prefWidth="145.0" text="Fall Detected" textFill="#ff3333" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="39.0" />
+            <Label fx:id="lblFallDet" font="$x1" prefHeight="27.0" prefWidth="145.0" text="Fall Detected" textFill="BLACK" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="39.0" />
             <Label fx:id="lblHelpReq" font="$x1" text="Help Requested" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="74.0" />
           </children>
         </AnchorPane>
