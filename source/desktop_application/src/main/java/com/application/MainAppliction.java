@@ -2,11 +2,8 @@ package com.application;
 
 import java.net.URL;
 
-import com.application.util.FallNotificationService;
-
 import javafx.application.*;
 import javafx.fxml.FXMLLoader;
-
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -25,9 +22,7 @@ public class MainAppliction extends Application {
 		
 		//BorderPane root= (BorderPane)FXMLLoader.load(viewUrl);
 		AnchorPane root = (AnchorPane)FXMLLoader.load(viewUrl);
-		 
-		//FXMLDocumentController controller = (FXMLDocumentController) loader.getController();
-		
+	
 
 		Scene scene = new Scene(root);
 		
@@ -71,6 +66,6 @@ public class MainAppliction extends Application {
 	
 	
 	public static void main(String[] args) {
-		launch(args);
-	}
+			launch(args);
+		}
 }
