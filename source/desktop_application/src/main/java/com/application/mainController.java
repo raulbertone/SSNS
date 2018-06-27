@@ -4,7 +4,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.application.bluetooth.ProcessMessage;
+import com.application.bluetooth.Sensor;
 import com.application.bluetooth.Server;
+import com.application.bluetooth.Utils;
 import com.application.util.FallNotificationService;
 
 
@@ -14,11 +16,15 @@ import javafx.beans.binding.BooleanBinding;
 import javafx.beans.binding.BooleanExpression;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.paint.Color;
@@ -32,8 +38,7 @@ public class mainController {
 	public static StringProperty Scan = new SimpleStringProperty(null);
 	public static StringProperty status = new SimpleStringProperty(Server.STATUS);
 	
-	//BooleanBinding b= Bindings.and(sr.SCAN_COMPLETE, sr.LUNCHPAD_READY);
-			//.and(sr.SCAN_COMPLETE);
+    
 	
     /**
      * @author Elis
@@ -96,6 +101,9 @@ public class mainController {
     @FXML
     private Button btnScan;
     
+    @FXML
+    private ChoiceBox<String> ddlAvSensors;
+    
     /* End of IDs of mainView */
     
     /**
@@ -121,21 +129,17 @@ public class mainController {
     @FXML
     void Connect(ActionEvent event) {
     	
-    
-    	if(this.lblConnecting.isVisible())
-    	{
-    		this.lblConnecting.setText("Connected");
-        	
-    	}
-    	else
-    	{
-    		this.lblConnecting.setVisible(true);
-    	}
+    	String dev = this.ddlAvSensors.getValue();
 
+    	
+    	sr.connectTo(Utils.reverseHexString(dev), this);
+    	
     }
     
     @FXML
     void Disconnect(ActionEvent event) {
+    	
+    	sr.AutoDiscover();
     }
   
     
@@ -171,49 +175,26 @@ public class mainController {
     @FXML
     void ScanForBluetoothDevices(ActionEvent event) {
     	Server.STATUS="Scanning...";
-    	//this.btnConnect.setDisable(true);
-      //this.btnDisconnect.setDisable(true);
-      	Scan.setValue(null);
-      	Platform.runLater(new Runnable() {    		 
-		        @Override
-		        public void run() {
-		        	sr.Scan();
-		        }
-		    });
-  
-//      	Runnable r = new Runnable() {
-//      	  @Override
-//	        public void run() {
-//	        	//sr.Scan();
-//	          System.out.println("Helllo from runnable");  
-//      	  }
-//      	};
-//      	
-//      	r.run();
-//      	new Runnable()
-//      	{
-//      	  @Override
-//	        public void run() {
-//	        	sr.Scan();
-//	        }
-//      	}.run();
-//    	
+          	Scan.setValue(null);
+          	sr.Scan(this);
     
     }
     
     
-    /* End of Actions of main View Buttons */
+    /**End of Actions of main View Buttons */
     
     @FXML
     void initialize() {
     	
     	// set a reference to this controller so that the FallNotificationService can change the colour of labels
     	FallNotificationService.setMain(this);
-    	
-     	
-    		
-			sr.DevInit();
-						
+		sr.DevInit(this);
+			
+	   
+		
+		this.ddlAvSensors.getItems().add("Select a Sensor");
+		this.ddlAvSensors.getSelectionModel().selectFirst();
+//		this.ddlAvSensors.getSelectionModel().select(1);
 		this.lblConnecting.textProperty().bind(status);
         this.btnConnect.disableProperty().bind(BooleanExpression.booleanExpression(Scan.isEmpty()));
         this.btnDisconnect.disableProperty().bind(BooleanExpression.booleanExpression(Scan.isEmpty()));
@@ -250,6 +231,11 @@ public class mainController {
     	return this.btnDisconnect;
     }
 
+    public void showSensorsFound()
+    {
+    	this.ddlAvSensors.getItems().addAll(sr.devicesFound);
+    }
+    
     public static void StatusChanger() {
 
     	Task<Void> task = new Task<Void>() {

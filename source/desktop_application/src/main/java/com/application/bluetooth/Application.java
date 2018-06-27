@@ -18,8 +18,8 @@ public class Application {
 		 //new ProcessMessage();
 		
 			System.out.println("pretending server started");
-			sr.DevInit();	
-			sr.Scan();
+		//	sr.DevInit();	
+			//sr.Scan();
 			//sr.connectTo("690153");
 		
 			//FallNotificationService.notifyFall();

@@ -16,12 +16,8 @@ public class Sensor {
 	   this.addres=add;
    }   
    
-   public Boolean DeviceInitialization()
-   {
-	   
-	   return true;
-   }
-   private void discoverCharacheristics()
+
+   public void discoverCharacheristics()
    {
 	   String command = "0190FD02"+reverseHexString(connHandle);
 	   

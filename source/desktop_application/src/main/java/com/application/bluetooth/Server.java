@@ -35,8 +35,9 @@ public class Server {
 	public static List<String> acc2 = new ArrayList();
 	
 	
-	private  List<String> devicesFound= new ArrayList();
-
+	public static  List<String> devicesFound= new ArrayList();
+    private List<Sensor> connectedSlaves = new ArrayList();
+	
 	private Server()
 	{  
 		// writing to port
@@ -78,6 +79,31 @@ public class Server {
 	public void addToSensor1(String data)
 	{
 		this.sensor1.add(data);
+	}
+	
+	/**
+	 * @author Elis
+	 * 
+	 * This method add a new connection to the Server form here we can control slaves
+	 * 
+	 * @param Sensor sensor
+	 * */
+	public void addConnection(Sensor sensor)
+	{
+		this.connectedSlaves.add(sensor);
+	}
+	/**
+	 * @author Elis
+	 * 
+	 * Method to complete the connected slaves with desired characheristics
+	 * */
+	public void AutoDiscover()
+	{
+		for(Sensor s: connectedSlaves)
+		{
+			s.discoverCharacheristics();
+		}
+		
 	}
 	/**
 	 * @author Elis
@@ -136,23 +162,6 @@ public class Server {
 		}
 		return server;
 	}
-	/**
-	 * @author Elis
-	 * 
-	 * method to convert a hex string to integer
-	 * */
-	 public static int hex2decimal(String s) {
-	        String digits = "0123456789ABCDEF";
-	        s = s.toUpperCase();
-	        int val = 0;
-	        for (int i = 0; i < s.length(); i++) {
-	            char c = s.charAt(i);
-	            int d = digits.indexOf(c);
-	            val = 16*val + d;
-	        }
-	        return val;
-	    }
-	 
 	 /**
 	  * 
 	  * @author Elis
@@ -195,7 +204,7 @@ public class Server {
 	  * 
 	  * Method to reset and prepare lunchpad
 	  * */
-	 public void DevInit()
+	 public void DevInit(mainController controller)
 	    {
 	    	try
 	    	{   
@@ -210,7 +219,7 @@ public class Server {
 	    		System.out.println("Writing: " +Commands.GAP_DEVICE_INIT.val());
 	    		serialPort.writeBytes(BaseEncoding.base16().decode(Commands.GAP_DEVICE_INIT.val()));
 	    		
-	    		new ProcessMessage(true);
+	    		new ProcessMessage(true,controller);
 	    		   	
 	    		
 	    		
@@ -228,31 +237,22 @@ public class Server {
 	  * 
 	  * @param slaveAdd - mac adress of sensor tag
 	  * */
-	 public void connectTo(String slaveAdd)
+	 public void connectTo(String slaveAdd,mainController controller)
 	 {
 		 String connStr= "0109FE09000000";
 		 WriteToPort(connStr+slaveAdd);
-		 new ProcessMessage(true);
-//		 try {
-//				Thread.sleep(100);
-//				 while(!msg.isEmpty())
-//				 {
-//					 new ProcessMessage().getMsg();
-//					// Thread.sleep(10);
-//				 }
-//			} catch (InterruptedException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			} 
+		 Server.STATUS="Connectiong to: " + slaveAdd;
+		 new ProcessMessage(true, controller);
+
 		
 	 }
-	 public void Scan()
+	 public void Scan(mainController controller)
 	 {
 		
 		WriteToPort(Commands.SCAN.val());
 
 
-		new ProcessMessage(true);
+		new ProcessMessage(true,controller);
 		
 	 }
 	 
@@ -272,7 +272,7 @@ public class Server {
 							// new ProcessMessage().getMsg();
 							 Thread.sleep(100);
 						 }
-						 mainController.Scan.setValue("1");									   
+						// mainController.Scan.setValue("1");									   
 					   
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
