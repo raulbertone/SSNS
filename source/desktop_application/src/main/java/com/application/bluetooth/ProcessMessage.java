@@ -4,6 +4,7 @@ import java.io.ByteArrayOutputStream;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+import com.application.mainController;
 import com.application.math.Mathems;
 import com.google.common.io.BaseEncoding;
 
@@ -14,9 +15,11 @@ public class ProcessMessage  extends Thread{
 	private static int dataLength=0;
 	private static int countAcc1=0;
 	private static int countAcc2=0;
+	private mainController controller ;
 	
-	public ProcessMessage(Boolean value)
+	public ProcessMessage(Boolean value,  mainController controller)
 	{
+		this.controller=controller;
 		this.alive=value;
 		this.start();
 	}
@@ -64,6 +67,11 @@ public void run() {
 							ShowScanResults(data);
 							//System.out.println(msg.toString());
 						}
+						else if(data.startsWith("0506")) //0x0605 Gap_Esablishment Link response
+						{
+						   CreateConnection(data);
+							
+						}
 						else if(data.startsWith("1B05")&&data.length()==24)
 						{
 							addToQueue(data);
@@ -105,10 +113,30 @@ public void run() {
 			}
 		}
 
+	 
+	 /**
+	  * @author Elis
+	  * 
+	  * Method to create a new instance of Slave here on this part of system 
+	  * */
+	 public void CreateConnection(String data)
+	 {
+		if(data.substring(4, 6).equals("00"))
+		{
+			String slaveAdd = data.substring(8,20);
+			String connHandle = data.substring(20,24);
+			//here i can define other connection properties but for now this is all I need
+			server.addConnection(new Sensor(Utils.reverseHexString(slaveAdd),connHandle));
+		}
+		else
+		{
+		System.out.println("Connection not succecful");
+		}
+	 }
  public  void ShowScanResults(String data)
 	 {
 	 
-	 String revData= reverseHexString(data);
+	
 	 if(data.substring(4, 6).equals("00"))
 	 {
 		 int slavesFound= Utils.hex2decimal(data.substring(6,8));
@@ -121,28 +149,26 @@ public void run() {
 			 String s= data.substring(beginIndex,endIndex);
 			if(s.startsWith("00"))	
 			{
-				 String devAddres=reverseHexString( s.substring(4));
+				 String devAddres=Utils.reverseHexString( s.substring(4));
 				//if the device macaddres starts with 546C0E is a SensorTag and we add it to the list of disc devices
 				 if(devAddres.startsWith("546C0E"))
 				 {
 					 server.addTolist(devAddres);
 					 System.out.println(devAddres);
-				 }
-				 
-				 
-				
+				 }				
 			}
 			beginIndex+=16;
 			endIndex+=16;
 		 }
 		 server.SCAN_COMPLETE=true;
-		 Server.STATUS="Scan Completed";
+		 Server.STATUS="Scan Completed";	
+		 this.controller.showSensorsFound();
 		 this.alive=false;
 		
 		
 	 }
 	
-	// data.substring(beginIndex, endIndex)
+	
 		 
 	 }
 
@@ -173,29 +199,19 @@ public  void addToQueue(String data)
 	String realValues = data.substring(16, 40);
 	if(data.startsWith("1B050000"))
 	{		
-		Server.acc1.add(reverseHexString(realValues));
-		server.addToSensor1(reverseHexString(realValues));
+		Server.acc1.add(Utils.reverseHexString(realValues));
+		server.addToSensor1(Utils.reverseHexString(realValues));
 		//System.out.println(reverseHexString(realValues));
 		//System.out.println(realValues);
 	}
 	else if(data.startsWith("1B050001"))
 	{
-		Server.acc2.add(reverseHexString(realValues));
-		server.addToSensor2(reverseHexString(realValues));		
+		Server.acc2.add(Utils.reverseHexString(realValues));
+		server.addToSensor2(Utils.reverseHexString(realValues));		
 	}
 			
 	}
-/**
- * @author Elis
- * 
- * method to reverse the hexadecimal string because we get the low parity bit first
- * */
-public  String reverseHexString(String data)
-{
-	byte[] dataB = BaseEncoding.base16().decode(data);
-	ArrayUtils.reverse(dataB);
-	return BaseEncoding.base16().encode(dataB);
-	
-}
+
+
 
 }
