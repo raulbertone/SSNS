@@ -17,6 +17,11 @@ public class ProcessMessage  extends Thread{
 	private static int countAcc2=0;
 	private mainController controller ;
 	
+	public ProcessMessage(Boolean value)
+	{
+		this.alive=value;
+		this.start();
+	}
 	public ProcessMessage(Boolean value,  mainController controller)
 	{
 		this.controller=controller;
@@ -76,7 +81,27 @@ public void run() {
 						{
 							addToQueue(data);
 							
-						}						
+						}
+						else if(data.startsWith("1105") || data.startsWith("0505") || data.startsWith("0905"))
+						{
+							//This is the part that process the message queue for the auotdiscover
+							
+							System.out.println("SRV: "+msg.toString());
+						  if(data.equals("09051A000000"))
+						  {
+							  this.alive=false;
+							  System.out.println("AUTODISCOVERY DONE!!!");
+						     Server.AUTODISCOVERY=true;
+						  }
+						  else  if(data.equals("05051A000000") || data.equals("11051A000000"))
+						  {
+							  this.alive=false;
+							 
+						  }
+							
+						  
+							
+						}
 						else {
 							
 							
@@ -113,6 +138,16 @@ public void run() {
 			}
 		}
 
+	 /**
+	  * @author Elis
+	  * 
+	  * Method  to auto discover services after a sucesful connection of 1 sensor
+	  * */
+	 private void discoverServices(){
+		 
+		 
+	 }
+	 
 	 
 	 /**
 	  * @author Elis
@@ -127,11 +162,13 @@ public void run() {
 			String connHandle = data.substring(20,24);
 			//here i can define other connection properties but for now this is all I need
 			server.addConnection(new Sensor(Utils.reverseHexString(slaveAdd),connHandle));
+			Server.STATUS="Connected";
 		}
 		else
 		{
 		System.out.println("Connection not succecful");
 		}
+		this.alive=false;
 	 }
  public  void ShowScanResults(String data)
 	 {

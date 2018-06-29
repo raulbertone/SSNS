@@ -3,6 +3,7 @@ package com.application;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import com.application.bluetooth.Application;
 import com.application.bluetooth.ProcessMessage;
 import com.application.bluetooth.Sensor;
 import com.application.bluetooth.Server;
@@ -129,17 +130,16 @@ public class mainController {
     @FXML
     void Connect(ActionEvent event) {
     	
-    	String dev = this.ddlAvSensors.getValue();
-
-    	
+    	String dev = this.ddlAvSensors.getValue();   	
     	sr.connectTo(Utils.reverseHexString(dev), this);
     	
     }
     
     @FXML
     void Disconnect(ActionEvent event) {
-    	
     	sr.AutoDiscover();
+    	//new Application();
+    
     }
   
     
@@ -160,6 +160,9 @@ public class mainController {
 
     @FXML
     void StartReceiving(ActionEvent event) {
+    	
+    	 sr.readData();
+    	 new Application();
     }
 
     @FXML
