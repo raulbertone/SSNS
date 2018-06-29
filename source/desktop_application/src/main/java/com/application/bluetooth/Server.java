@@ -104,9 +104,18 @@ public class Server {
 
 	public String getSensor1Data() {
 		// TODO: See what wil you return if ther is no data in the queue
-		String s = sensor1.get(0);
-		sensor1.remove(0);
-		return s;
+		if(sensor1.size()!=0)
+		{
+			String s = sensor1.get(0);
+			sensor1.remove(0);
+			return s;
+			
+		}
+		else
+		{
+			return "";
+		}
+	
 	}
 
 	/**
@@ -117,9 +126,18 @@ public class Server {
 	 */
 
 	public String getSensor2Data() {
-		String s = sensor2.get(0);
-		sensor2.remove(0);
-		return s;
+		
+		if(sensor2.size()!=0)
+		{
+			String s = sensor2.get(0);
+			sensor2.remove(0);
+			return s;
+		}
+		else
+		{
+			return "";
+		}
+	
 	}
 
 	/**

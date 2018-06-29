@@ -1,7 +1,7 @@
 ******************************************************************************
                   TI ARM Linker PC v16.9.1                     
 ******************************************************************************
->> Linked Mon Jun 25 21:54:32 2018
+>> Linked Fri Jun 29 14:58:37 2018
 
 OUTPUT FILE NAME:   <sensortag_cc2650stk_stack.out>
 ENTRY POINT SYMBOL: "startup_entry"  address: 00011001
@@ -385,12 +385,12 @@ MODULE SUMMARY
     +--+-----------------------------+-------+---------+---------+
        Total:                        2       0         0      
                                                               
-    C:\Users\Raul\AppData\Local\Temp\
-       022922                        48      0         4      
+    C:\Users\Elis\AppData\Local\Temp\
+       110402                        48      0         4      
     +--+-----------------------------+-------+---------+---------+
        Total:                        48      0         4      
                                                               
-    D:\SSNS\source\sensortag\ble_sdk_2_02_02_25\src\rom\ble_rom_releases\04242014\
+    C:\Users\Elis\Desktop\HIS\SOSE2018\SSNS\Project\Source_Code\SSNS\SSNS\source\sensortag\ble_sdk_2_02_02_25\src\rom\ble_rom_releases\04242014\
        ble_rom_patch.symbols         912     0         0      
     +--+-----------------------------+-------+---------+---------+
        Total:                        912     0         0      
@@ -401,21 +401,7 @@ MODULE SUMMARY
     +--+-----------------------------+-------+---------+---------+
        Total:                        220     0         0      
                                                               
-    C:\ti\ccsv7\tools\compiler\ti-cgt-arm_16.9.1.LTS\lib\rtsv7M3_T_le_eabi.lib
-       ull_div_t2.obj                500     0         0      
-       memcpy_t2.obj                 156     0         0      
-       memset_t2.obj                 122     0         0      
-       autoinit.obj                  120     0         0      
-       copy_decompress_lzss.obj      104     0         0      
-       cpy_tbl.obj                   76      0         0      
-       ll_mul_t2.obj                 24      0         0      
-       copy_decompress_none.obj      14      0         0      
-       copy_zero_init.obj            12      0         0      
-       startup.obj                   2       0         0      
-    +--+-----------------------------+-------+---------+---------+
-       Total:                        1130    0         0      
-                                                              
-    D:\SSNS\source\sensortag\ble_sdk_2_02_02_25\blelib\ctrl\cc2640\cc2640_ctrl_pxxx.a
+    C:\Users\Elis\Desktop\HIS\SOSE2018\SSNS\Project\Source_Code\SSNS\SSNS\source\sensortag\ble_sdk_2_02_02_25\blelib\ctrl\cc2640\cc2640_ctrl_pxxx.a
        ll_patch.o                    5928    2         296    
        ll_common_patch.o             3080    0         12     
        ll_slave_end_causes_patch.o   1790    0         2      
@@ -434,12 +420,12 @@ MODULE SUMMARY
     +--+-----------------------------+-------+---------+---------+
        Total:                        17484   94        358    
                                                               
-    D:\SSNS\source\sensortag\ble_sdk_2_02_02_25\blelib\hci_tl\cc26xx\cc26xx_hci_tl_none.a
+    C:\Users\Elis\Desktop\HIS\SOSE2018\SSNS\Project\Source_Code\SSNS\SSNS\source\sensortag\ble_sdk_2_02_02_25\blelib\hci_tl\cc26xx\cc26xx_hci_tl_none.a
        hci_tl.o                      176     0         6      
     +--+-----------------------------+-------+---------+---------+
        Total:                        176     0         6      
                                                               
-    D:\SSNS\source\sensortag\ble_sdk_2_02_02_25\blelib\host\host_pxxx.a
+    C:\Users\Elis\Desktop\HIS\SOSE2018\SSNS\Project\Source_Code\SSNS\SSNS\source\sensortag\ble_sdk_2_02_02_25\blelib\host\host_pxxx.a
        gattservapp.o                 4052    8         57     
        gatt_server.o                 2838    0         13     
        gap_linkmgr.o                 2488    0         32     
@@ -464,6 +450,20 @@ MODULE SUMMARY
        gap_devmgr.o                  176     0         9      
     +--+-----------------------------+-------+---------+---------+
        Total:                        26648   16        598    
+                                                              
+    C:\ti\ccsv7\tools\compiler\ti-cgt-arm_16.9.1.LTS\lib\rtsv7M3_T_le_eabi.lib
+       ull_div_t2.obj                500     0         0      
+       memcpy_t2.obj                 156     0         0      
+       memset_t2.obj                 122     0         0      
+       autoinit.obj                  120     0         0      
+       copy_decompress_lzss.obj      104     0         0      
+       cpy_tbl.obj                   76      0         0      
+       ll_mul_t2.obj                 24      0         0      
+       copy_decompress_none.obj      14      0         0      
+       copy_zero_init.obj            12      0         0      
+       startup.obj                   2       0         0      
+    +--+-----------------------------+-------+---------+---------+
+       Total:                        1130    0         0      
                                                               
        Linker Generated:             0       968       0      
     +--+-----------------------------+-------+---------+---------+

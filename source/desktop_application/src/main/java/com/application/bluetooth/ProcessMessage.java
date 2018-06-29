@@ -77,7 +77,7 @@ public void run() {
 						   CreateConnection(data);
 							
 						}
-						else if(data.startsWith("1B05")&&data.length()==24)
+						else if(data.startsWith("1B05")) //&&data.length()==26
 						{
 							addToQueue(data);
 							

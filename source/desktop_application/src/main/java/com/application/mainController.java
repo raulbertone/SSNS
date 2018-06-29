@@ -161,7 +161,7 @@ public class mainController {
     @FXML
     void StartReceiving(ActionEvent event) {
     	
-    	 sr.readData();
+    	// sr.readData();
     	 new Application();
     }
 
