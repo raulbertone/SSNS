@@ -1,11 +1,11 @@
 # FIXED
 
-HAL/Target/CC2650/_common/mb_patch.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/mb_patch.c
-HAL/Target/CC2650/_common/mb_patch.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_mcu.h
+HAL/Target/CC2650/_common/mb_patch.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/mb_patch.c
+HAL/Target/CC2650/_common/mb_patch.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_mcu.h
 HAL/Target/CC2650/_common/mb_patch.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdint.h
-HAL/Target/CC2650/_common/mb_patch.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_defs.h
-HAL/Target/CC2650/_common/mb_patch.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
-HAL/Target/CC2650/_common/mb_patch.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/../_common/cc26xx/_hal_types.h
+HAL/Target/CC2650/_common/mb_patch.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_defs.h
+HAL/Target/CC2650/_common/mb_patch.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
+HAL/Target/CC2650/_common/mb_patch.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/../_common/cc26xx/_hal_types.h
 HAL/Target/CC2650/_common/mb_patch.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_nvic.h
 HAL/Target/CC2650/_common/mb_patch.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_ints.h
 HAL/Target/CC2650/_common/mb_patch.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_types.h
@@ -28,23 +28,23 @@ HAL/Target/CC2650/_common/mb_patch.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/pr
 HAL/Target/CC2650/_common/mb_patch.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_fcfg1.h
 HAL/Target/CC2650/_common/mb_patch.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/driverlib/ioc.h
 HAL/Target/CC2650/_common/mb_patch.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_ioc.h
-HAL/Target/CC2650/_common/mb_patch.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/icall/src/inc/ICall.h
+HAL/Target/CC2650/_common/mb_patch.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/icall/src/inc/ICall.h
 HAL/Target/CC2650/_common/mb_patch.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdlib.h
 HAL/Target/CC2650/_common/mb_patch.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/linkage.h
-HAL/Target/CC2650/_common/mb_patch.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_assert.h
-HAL/Target/CC2650/_common/mb_patch.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
-HAL/Target/CC2650/_common/mb_patch.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/mb.h
-HAL/Target/CC2650/_common/mb_patch.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
+HAL/Target/CC2650/_common/mb_patch.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_assert.h
+HAL/Target/CC2650/_common/mb_patch.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
+HAL/Target/CC2650/_common/mb_patch.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/mb.h
+HAL/Target/CC2650/_common/mb_patch.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
 HAL/Target/CC2650/_common/mb_patch.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_rfc_dbell.h
-HAL/Target/CC2650/_common/mb_patch.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/r2f_common_flash_jt.h
-HAL/Target/CC2650/_common/mb_patch.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/r2r_common_flash_jt.h
+HAL/Target/CC2650/_common/mb_patch.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/r2f_common_flash_jt.h
+HAL/Target/CC2650/_common/mb_patch.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/r2r_common_flash_jt.h
 
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/mb_patch.c: 
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_mcu.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/mb_patch.c: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_mcu.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdint.h: 
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_defs.h: 
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/../_common/cc26xx/_hal_types.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_defs.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/../_common/cc26xx/_hal_types.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_nvic.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_ints.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_types.h: 
@@ -67,13 +67,13 @@ C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_a
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_fcfg1.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/driverlib/ioc.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_ioc.h: 
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/icall/src/inc/ICall.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/icall/src/inc/ICall.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdlib.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/linkage.h: 
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_assert.h: 
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/mb.h: 
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_assert.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/mb.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_rfc_dbell.h: 
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/r2f_common_flash_jt.h: 
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/r2r_common_flash_jt.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/r2f_common_flash_jt.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/cc26xx/r2r_common_flash_jt.h: 

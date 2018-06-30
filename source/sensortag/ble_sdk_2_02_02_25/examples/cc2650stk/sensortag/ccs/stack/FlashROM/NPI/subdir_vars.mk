@@ -6,7 +6,7 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/npi/stack/npi.c 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/npi/stack/npi.c 
 
 C_DEPS += \
 ./NPI/npi.d 
@@ -21,6 +21,6 @@ C_DEPS__QUOTED += \
 "NPI\npi.d" 
 
 C_SRCS__QUOTED += \
-"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/npi/stack/npi.c" 
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/npi/stack/npi.c" 
 
 
