@@ -2,6 +2,14 @@ package com.application.util;
 
 import com.application.mainController;
 
+/**
+ * This class handles the notifications triggered by the detection of a fall.
+ * On start it idles while waiting for a trigger. When the fall detection
+ * algorithm thinks the user has fallen, it alerts the FNS which turns on and off
+ * the buzzer on the Sensortags and the flags in the GUI accordingly.
+ *
+ * @author Raul Bertone
+ */
 public class FallNotificationService implements Runnable{
 
 	private static FallNotificationService instance;
@@ -12,9 +20,9 @@ public class FallNotificationService implements Runnable{
 
 	static{
 		instance = new FallNotificationService();
-		
+
 		(new Thread(instance)).start();
-		
+
     }
 
 	/*
@@ -35,7 +43,7 @@ public class FallNotificationService implements Runnable{
 	public static void falseAlarm() {
 		instance.falseAlarm = true;
 	}
-	
+
 	public static void setMain(mainController controller) {
 		instance.controller = controller;
 	}
@@ -79,7 +87,7 @@ public class FallNotificationService implements Runnable{
 			// TODO turn off the buzzer
 			instance.controller.setLblFallDetColor("#000000"); // lower the flag in the GUI
 		} else {
-			
+
 			requestHelp(); // send email
 			instance.controller.setLblHelpReqColor("#a20000"); // raise flag in the GUI
 
