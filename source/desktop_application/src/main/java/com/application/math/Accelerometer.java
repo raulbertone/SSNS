@@ -32,6 +32,7 @@ public class Accelerometer {
 
 		Accelerometer tmp_aclr = this;
 		Gyroskope tmp_gyro = gyro;
+		//System.out.println("IsAclFall");
 
 		this.IMPACT_PASS = ConfigurationStorage.getIMPACT_PASS();
 		this.IMPACT_POW = ConfigurationStorage.getIMPACT_POW();
@@ -43,7 +44,10 @@ public class Accelerometer {
 									 + sqr(tmp_aclr.buf_y.get(i))
 									 + sqr(tmp_aclr.buf_z.get(i))); // got an impact from fall need to be sure
 
+			//System.out.println("In loop" + i + "impact = " + impact);
+
 			if(impact > IMPACT_POW) {
+				//System.out.println("Impact");
 				isLaying(i, tmp_aclr);
 				tmp_gyro.isGyroFall(getFallStart(i, tmp_aclr), i);// double check for fall from Gyro
 			}
@@ -52,28 +56,47 @@ public class Accelerometer {
 
 	public int getFallStart(int impact, Accelerometer tmp_aclr) {
 
+		//System.out.println("getFallStart impact  = " + impact);
+
+		if(impact != 0) {
+			impact--; // go one measurment back from fall
+
+			}
+
 		this.FORCE_IMPACT_D = ConfigurationStorage.getFORCE_IMPACT_D();
 		this.FORCE_IMPACT_U = ConfigurationStorage.getFORCE_IMPACT_U();
 
 		for(int i = impact; i >= 0; i--) {
+
+			System.out.println("getFallStart loop i = " + i);
+
 			double force_impact = Math.abs(tmp_aclr.buf_z.get(i));
+
+			System.out.println("force_impact = " + force_impact);
+
 			if(force_impact < FORCE_IMPACT_U && force_impact > FORCE_IMPACT_D) {
+				//System.out.println("Return i");
 				return i;
 			}
 		}
-		return -1;
+		System.out.println("getFallStart is not correct");
+		return 1;
 	}
 
 	public void add_aclr(double x, double y, double z) {
+
 		if(!this.buf_x.isEmpty()) {
-			this.buf_x.remove(0);
-			this.buf_y.remove(0);
-			this.buf_z.remove(0);
+			if (this.buf_x.size() > 10) {
+				this.buf_x.remove(0);
+				this.buf_y.remove(0);
+				this.buf_z.remove(0);
+			}
 		}
 
 		this.buf_x.add(x);
 		this.buf_y.add(y);
 		this.buf_z.add(z);
+
 	}
 
 	public int bufSize() {
@@ -82,13 +105,16 @@ public class Accelerometer {
 
 	private void isLaying(int i, Accelerometer tmp_aclr) {
 
+		System.out.println("IsLLaying, i = " + i);
 		boolean fall = false;
 		for(int j = i + IMPACT_PASS; j < tmp_aclr.buf_x.size(); j++) { // to be sure that there is a fall we pass half of fall time
 
+			System.out.println("isLaying loop j = " + j);
 			double laying = Math.sqrt( sqr(tmp_aclr.buf_x.get(j)) + sqr(tmp_aclr.buf_y.get(j)));
 
 			if(laying > LAYING_POW) {
 				math.isAclrFall = true;
+				System.out.println("Aclr Fall!!!");
 			}
 		}
 	}

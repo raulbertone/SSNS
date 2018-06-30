@@ -29,34 +29,45 @@ public class Gyroskope{
 		this.FALL_ANGLE = ConfigurationStorage.getFALL_ANGLE();
 
 		if(fallStart == -1) {
-			System.out.println("Error!!! Incorrect FallStart value!!!");
+
+			System.out.println("Error!!! Incorrect FallStart value!!! " + fallStart);
 			return;
 		}
 
 
 		double angle = isFall(fallStart, fallStop);
 
-		if(angle <= this.FALL_ANGLE || angle >= this.FALL_ANGLE)
+		if( -angle >= this.FALL_ANGLE && angle <= this.FALL_ANGLE) {
 			math.isGyroFall = true;
+			System.out.println("Gyro Fall!!!");
+		}
+
 	}
 
 	private double isFall(int fallStart, int fallStop) {
 		double xAngle = 0;
 		double yAngle = 0;
 
-		for(int i = fallStart; i < fallStart; i++ ) {
+		for(int i = fallStart; i <= fallStop; i++ ) {
+			if(this.buf_x.get(i) > 5)
 			xAngle += Math.abs(this.buf_x.get(i) * (1000 / count_sec));
+
+			if(this.buf_y.get(i) > 5)
 			yAngle += Math.abs(this.buf_y.get(i) * (1000 / count_sec));
 		}
+
+		System.out.println((xAngle + yAngle) % 180 - 90);
 
 		return (xAngle + yAngle) % 180 - 90;
 	}
 
 	public void add_gyro(double x, double y, double z) {
 		if(!this.buf_x.isEmpty()) {
-			this.buf_x.remove(0);
-			this.buf_y.remove(0);
-			this.buf_z.remove(0);
+			if( this.buf_x.size() > 9) {
+				this.buf_x.remove(0);
+				this.buf_y.remove(0);
+				this.buf_z.remove(0);
+			}
 		}
 
 		this.buf_x.add(x);
