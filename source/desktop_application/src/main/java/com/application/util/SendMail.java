@@ -4,13 +4,28 @@ import javax.mail.*;
 import javax.mail.internet.*;
 import java.util.Properties;
 
+/**
+ * This class provides helper methods to send emails.
+ *
+ * @author Raul Bertone
+ */
+
 public abstract class SendMail {
 
+	// account credentials for the mail server
     private static final String SMTP_HOST_NAME = "smtps.aruba.it";
     private static final int SMTP_HOST_PORT = 465;
     private static final String SMTP_AUTH_USER = "fall.detector@emptyingthebuffer.com";
     private static final String SMTP_AUTH_PWD  = "256rtcw45wf54fs";
 
+    /**
+     * Sends an email to a single recipient using the static account credentials.
+     *
+     * @param messageBody The email's body.
+     * @param msgSubject The email's subject.
+     * @param toAddress The recipient's address
+     * @throws Exception
+     */
     public static void send(String messageBody, String msgSubject, String toAddress) throws Exception{
         Properties props = new Properties();
 
