@@ -6,10 +6,10 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/roles/gap.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/roles/gapbondmgr.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/host/gattservapp_util.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/host/sm_ecc.c 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/roles/gap.c \
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/roles/gapbondmgr.c \
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/host/gattservapp_util.c \
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/host/sm_ecc.c 
 
 C_DEPS += \
 ./PROFILES/gap.d \
@@ -36,9 +36,9 @@ C_DEPS__QUOTED += \
 "PROFILES\sm_ecc.d" 
 
 C_SRCS__QUOTED += \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/roles/gap.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/profiles/roles/gapbondmgr.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/host/gattservapp_util.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/host/sm_ecc.c" 
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/roles/gap.c" \
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/roles/gapbondmgr.c" \
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/host/gattservapp_util.c" \
+"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/host/sm_ecc.c" 
 
 

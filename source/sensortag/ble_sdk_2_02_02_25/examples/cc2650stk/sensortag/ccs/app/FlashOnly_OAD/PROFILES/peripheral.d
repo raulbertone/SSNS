@@ -1,6 +1,6 @@
 # FIXED
 
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/profiles/roles/cc26xx/peripheral.c
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/roles/cc26xx/peripheral.c
 PROFILES/peripheral.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/string.h
 PROFILES/peripheral.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/linkage.h
 PROFILES/peripheral.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/std.h
@@ -199,44 +199,44 @@ PROFILES/peripheral.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxwa
 PROFILES/peripheral.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/driverlib/rom.h
 PROFILES/peripheral.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/driverlib/gpio.h
 PROFILES/peripheral.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_gpio.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/gap.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/bcomdef.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/comdef.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/../_common/cc26xx/_hal_types.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_defs.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/gap.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/bcomdef.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/comdef.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/../_common/cc26xx/_hal_types.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_defs.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal.h
 PROFILES/peripheral.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/limits.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Memory.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Timers.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/icall/src/inc/ICall.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Memory.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Timers.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/icall/src/inc/ICall.h
 PROFILES/peripheral.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdlib.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_assert.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/sm.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/hci.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/controller/cc26xx/inc/ll.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/gatt.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/att.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/l2cap.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/hci_tl.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/hci_data.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/hci_event.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/hci_tl.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/linkdb.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/util.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_assert.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/sm.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/hci.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/controller/cc26xx/inc/ll.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/gatt.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/att.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/l2cap.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/hci_tl.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/hci_data.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/hci_event.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/hci_tl.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/linkdb.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/util.h
 PROFILES/peripheral.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Clock.h
 PROFILES/peripheral.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Queue.h
 PROFILES/peripheral.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Semaphore.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/gattservapp.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/profiles/roles/cc26xx/peripheral.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/profiles/roles/gapbondmgr.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal_snv.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/icall/inc/icall_apimsg.h
-PROFILES/peripheral.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/gapgattserver.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/gattservapp.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/roles/cc26xx/peripheral.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/roles/gapbondmgr.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal_snv.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/icall/inc/icall_apimsg.h
+PROFILES/peripheral.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/gapgattserver.h
 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/profiles/roles/cc26xx/peripheral.c: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/roles/cc26xx/peripheral.c: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/string.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/linkage.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/std.h: 
@@ -435,39 +435,39 @@ C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_c
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/driverlib/rom.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/driverlib/gpio.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_gpio.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/gap.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/bcomdef.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/comdef.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/../_common/cc26xx/_hal_types.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_defs.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/gap.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/bcomdef.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/comdef.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/../_common/cc26xx/_hal_types.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_defs.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/limits.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Memory.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Timers.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/icall/src/inc/ICall.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Memory.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Timers.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/icall/src/inc/ICall.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdlib.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_assert.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/sm.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/hci.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/controller/cc26xx/inc/ll.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/gatt.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/att.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/l2cap.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/hci_tl.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/hci_data.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/hci_event.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/hci_tl.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/linkdb.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/util.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_assert.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/sm.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/hci.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/controller/cc26xx/inc/ll.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/gatt.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/att.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/l2cap.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/hci_tl.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/hci_data.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/hci_event.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/hci_tl.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/linkdb.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/util.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Clock.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Queue.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Semaphore.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/gattservapp.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/profiles/roles/cc26xx/peripheral.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/profiles/roles/gapbondmgr.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal_snv.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/icall/inc/icall_apimsg.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/gapgattserver.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/gattservapp.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/roles/cc26xx/peripheral.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/roles/gapbondmgr.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal_snv.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/icall/inc/icall_apimsg.h: 
+D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/gapgattserver.h: 

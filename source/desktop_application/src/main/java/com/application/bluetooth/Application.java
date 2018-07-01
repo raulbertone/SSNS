@@ -4,25 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import com.application.util.FallNotificationService;
 import com.google.common.io.BaseEncoding;
 
-public class Application {
-
+public class Application extends Thread {
 	
-	//public List<Message> messages= new ArrayList<Message>();
-	public static void main(String[] args) {
-		
-		Server sr = new Server();
-		
-		 new ProcessMessage();
-		
-			System.out.println("pretending server started");
-			sr.DevInit();			
-		
-		
+	public Application()
+	{
+		this.start();
+	}
+	
+	
+	public void run()
+	{
+		Server sr =Server.getInstance();
+		new ProcessMessage(true);
 		System.out.println("Give me a command human");
 		  Scanner in = new Scanner(System.in);
-	        
+		  
 	        while(in.hasNext())	        	
 	        {
 	        	String command = in.next();
@@ -88,6 +87,17 @@ public class Application {
 	        	}
 	        	else if(command.startsWith("r"))
 	        	{
+	        		String cm = "RH"+command.substring(1);
+	        		for(Commands c: Commands.values())
+	        		{
+	        			if(c.name().equals(cm))
+	        			{
+	        				sr.WriteToPort(c.val());
+	        			}
+	        		}
+	        	}
+	        	else if(command.startsWith("S"))
+	        	{
 	        		String cm = "SH"+command.substring(1);
 	        		for(Commands c: Commands.values())
 	        		{
@@ -97,12 +107,30 @@ public class Application {
 	        			}
 	        		}
 	        	}
-	        	else if(command.equals("s"))
+	        	else if(command.equals("save"))
 	        	{
 	        		new DbSave();
 	        	}
 	        }
-	        
+
+	}
+	
+	//public List<Message> messages= new ArrayList<Message>();
+	public static void main() {
+		
+		Server sr =Server.getInstance();
+		
+		// new ProcessMessage();
+		
+			System.out.println("pretending server started");
+		//	sr.DevInit();	
+			//sr.Scan();
+			//sr.connectTo("690153");
+		
+			//FallNotificationService.notifyFall();
+		System.out.println("Give me a command human");
+		  Scanner in = new Scanner(System.in);
+	       	        
 	}
 	
 	

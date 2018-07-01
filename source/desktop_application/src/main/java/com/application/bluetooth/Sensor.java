@@ -1,5 +1,95 @@
 package com.application.bluetooth;
 
+import org.apache.commons.lang3.ArrayUtils;
+
+import com.google.common.io.BaseEncoding;
+
 public class Sensor {
 
+	Server server= Server.getInstance();
+   private String addres ; 
+   private String connHandle;
+   
+   public Sensor(String add, String conn)
+   {
+	   this.connHandle=conn;
+	   this.addres=add;
+   }     
+ 
+   public void readMovementService()
+   {
+	   String enableNotif = "0192FD06"+ reverseHexString(connHandle)+"3D000100";
+	   String configM ="0192FD06"+reverseHexString(connHandle)+"3F003F02";
+	 
+	   server.WriteToPort(enableNotif);
+	   new ProcessMessage(true);
+	   server.WriteToPort(configM);
+   }
+   public void discoverCharacheristics()
+   {
+ 
+	  new Runnable() {
+ 
+		   String dscServices = "0190FD02"+reverseHexString(connHandle);
+		   String dscAllChars = "01B2FD06"+ reverseHexString(connHandle) +"01000001";
+			String dscCharDesc = "0184FD06"+ reverseHexString(connHandle) +"01000001";
+		@Override
+		public void run() {
+			
+			server.WriteToPort(dscServices);
+			
+			ProcessMessage pr = new ProcessMessage(true,null);
+			ProcessMessage pr1 =null;
+		    int counter=0;
+		    try {
+		    	while(!Server.AUTODISCOVERY)
+				{
+					if(pr.isAlive())
+					{						
+							Thread.sleep(100);						
+					}
+					else
+					{
+						if(pr1==null)
+						{
+							server.WriteToPort(dscCharDesc);
+							 pr1 = new ProcessMessage(true,null); 
+						}						
+						else if(pr1.isAlive())
+						{
+							Thread.sleep(100);	
+						}
+						else
+						{
+							 server.WriteToPort(dscAllChars);
+							 new ProcessMessage(true,null); 
+							 break; 
+						}
+					}
+				
+				}
+				
+				
+				
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}}.run();	  
+	
+   }
+    
+   public void discServriceByUUID(){
+	   
+	   String command = "command for this";
+   }
+  
+   private  String reverseHexString(String data)
+   {
+   	byte[] dataB = BaseEncoding.base16().decode(data);
+   	ArrayUtils.reverse(dataB);
+   	return BaseEncoding.base16().encode(dataB);
+   	
+   }
 }
