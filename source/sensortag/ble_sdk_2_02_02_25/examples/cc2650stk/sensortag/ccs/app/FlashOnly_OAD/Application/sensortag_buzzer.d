@@ -1,6 +1,6 @@
 # FIXED
 
-Application/sensortag_buzzer.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_buzzer.c
+Application/sensortag_buzzer.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_buzzer.c
 Application/sensortag_buzzer.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/Power.h
 Application/sensortag_buzzer.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdint.h
 Application/sensortag_buzzer.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/utils/List.h
@@ -160,13 +160,13 @@ Application/sensortag_buzzer.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products
 Application/sensortag_buzzer.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stddef.h
 Application/sensortag_buzzer.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/driverLib/timer.h
 Application/sensortag_buzzer.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_gpt.h
-Application/sensortag_buzzer.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_buzzer.h
-Application/sensortag_buzzer.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/Board.h
-Application/sensortag_buzzer.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/./cc2650st/cc2650st_board.h
-Application/sensortag_buzzer.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/Board.h
-Application/sensortag_buzzer.obj: D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/CC2650STK.h
+Application/sensortag_buzzer.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_buzzer.h
+Application/sensortag_buzzer.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/Board.h
+Application/sensortag_buzzer.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/./cc2650st/cc2650st_board.h
+Application/sensortag_buzzer.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/Board.h
+Application/sensortag_buzzer.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/CC2650STK.h
 
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_buzzer.c: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_buzzer.c: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/Power.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdint.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/utils/List.h: 
@@ -326,8 +326,8 @@ C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbi
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stddef.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/driverLib/timer.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_gpt.h: 
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_buzzer.h: 
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/Board.h: 
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/./cc2650st/cc2650st_board.h: 
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/Board.h: 
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/CC2650STK.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_buzzer.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/Board.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/./cc2650st/cc2650st_board.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/Board.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/CC2650STK.h: 

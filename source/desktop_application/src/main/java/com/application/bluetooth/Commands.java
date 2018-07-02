@@ -22,19 +22,21 @@ public enum Commands {
 	CH("018AFD0400001100"),
 	CH1("018AFD0400001E00"),
 	CH4("018AFD0400003100"),
+	CH14("018AFD040000410A"), //movement period
 	
-	CH2("0192FD0600001F000100"),  
-	CH3("0192FD050000330002"),
+	CH2("0192FD0600001F000100"),  //enable notification
+	CH3("0192FD050000330002"),  //barometere data 33 read calibration
 	CH5("0192FD050000310000"), 
-	CH6("0192FD050000330001"),  
-	CH7("0192FD06000025000100"),
-	CH8("0192FD0600002D000100"),
+	CH6("0192FD050000330001"),  // barometer start measurments
+	CH7("0192FD06000025000100"), //enable notif
+	CH8("0192FD0600002D000100"), //enable notif
 	CH9("0192FD06000027003802"), // Datacollection Raul Code
 	
 	CH10("0192FD0600003D000100"),
 	CH11("0192FD0600004D000100"),
 	CH12("0192FD0600003F003802"), //START DATA COLLECTION for Accelerometer 
-	CH13("018AFD0400002700"), //I need to study why this is done after starting data collection .
+	CH13("018AFD0400003F01"),
+	CH15("0192FD0600003F003F02"),//I need to study why this is done after starting data collection .
 		
 	RUN("0192FD06000027008700"), 
 	ACC("018AFD0400002700"),

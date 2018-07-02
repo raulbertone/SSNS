@@ -6,7 +6,7 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/common/hal_assert.c 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/common/hal_assert.c 
 
 C_DEPS += \
 ./HAL/Common/hal_assert.d 
@@ -21,6 +21,6 @@ C_DEPS__QUOTED += \
 "HAL\Common\hal_assert.d" 
 
 C_SRCS__QUOTED += \
-"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/common/hal_assert.c" 
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/common/hal_assert.c" 
 
 

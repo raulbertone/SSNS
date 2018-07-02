@@ -6,7 +6,7 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/ecc/ECCROMCC26XX.c 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/ecc/ECCROMCC26XX.c 
 
 C_DEPS += \
 ./Drivers/ECC/ECCROMCC26XX.d 
@@ -21,6 +21,6 @@ C_DEPS__QUOTED += \
 "Drivers\ECC\ECCROMCC26XX.d" 
 
 C_SRCS__QUOTED += \
-"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/ecc/ECCROMCC26XX.c" 
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/ecc/ECCROMCC26XX.c" 
 
 
