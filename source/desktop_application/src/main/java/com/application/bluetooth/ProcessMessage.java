@@ -238,7 +238,7 @@ public  String getData (int length)
 	
 public  void addToQueue(String data)
 {
-	Mathems.getInstance(server);
+	Mathems.getInstance(server);	
 	String realValues = data.substring(16, 40);
 	if(data.startsWith("1B050000"))
 	{		
@@ -253,7 +253,8 @@ public  void addToQueue(String data)
 		server.addToSensor2(Utils.reverseHexString(realValues));	
 		//System.out.println("S2: "+realValues);
 	}
-			
+	
+
 	}
 
 
