@@ -37,7 +37,7 @@ public void run() {
 			getMsg();
 			
 			try {
-				Thread.sleep(100);
+				Thread.sleep(50);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -79,7 +79,15 @@ public void run() {
 						}
 						else if(data.startsWith("1B05")) //&&data.length()==26
 						{
-							addToQueue(data);
+							if(data.length()<20)
+							{
+								System.out.println("False Alarm");
+							}
+							else
+							{
+								addToQueue(data);
+							}
+							
 							
 						}
 						else if(data.startsWith("1105") || data.startsWith("0505") || data.startsWith("0905"))
@@ -87,13 +95,13 @@ public void run() {
 							//This is the part that process the message queue for the auotdiscover
 							
 							System.out.println("SRV: "+msg.toString());
-						  if(data.equals("09051A000000"))
+						  if(data.equals("09051A000000")||data.equals("09051A010000"))
 						  {
 							  this.alive=false;
 							  System.out.println("AUTODISCOVERY DONE!!!");
 						     Server.AUTODISCOVERY=true;
 						  }
-						  else  if(data.equals("05051A000000") || data.equals("11051A000000"))
+						  else  if(data.equals("05051A000000") || data.equals("11051A000000")|| data.equals("05051A010000")|| data.equals("11051A010000"))
 						  {
 							  this.alive=false;
 							 
@@ -161,7 +169,7 @@ public void run() {
 			String slaveAdd = data.substring(8,20);
 			String connHandle = data.substring(20,24);
 			//here i can define other connection properties but for now this is all I need
-			server.addConnection(new Sensor(Utils.reverseHexString(slaveAdd),connHandle));
+			server.addConnection(new Sensor(Utils.reverseHexString(slaveAdd),Utils.reverseHexString(connHandle)));
 			Server.STATUS="Connected";
 		}
 		else
@@ -171,9 +179,7 @@ public void run() {
 		this.alive=false;
 	 }
  public  void ShowScanResults(String data)
-	 {
-	 
-	
+	 {	
 	 if(data.substring(4, 6).equals("00"))
 	 {
 		 int slavesFound= Utils.hex2decimal(data.substring(6,8));
@@ -236,15 +242,16 @@ public  void addToQueue(String data)
 	String realValues = data.substring(16, 40);
 	if(data.startsWith("1B050000"))
 	{		
-		Server.acc1.add(Utils.reverseHexString(realValues));
+		//Server.acc1.add(Utils.reverseHexString(realValues));
 		server.addToSensor1(Utils.reverseHexString(realValues));
-		//System.out.println(reverseHexString(realValues));
 		//System.out.println(realValues);
+		//System.out.println("S1: "+realValues);
 	}
 	else if(data.startsWith("1B050001"))
 	{
-		Server.acc2.add(Utils.reverseHexString(realValues));
-		server.addToSensor2(Utils.reverseHexString(realValues));		
+		//Server.acc2.add(Utils.reverseHexString(realValues));
+		server.addToSensor2(Utils.reverseHexString(realValues));	
+		//System.out.println("S2: "+realValues);
 	}
 			
 	}

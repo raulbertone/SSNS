@@ -1,5 +1,7 @@
 package com.application.bluetooth;
 
+import java.util.HashMap;
+
 import org.apache.commons.lang3.ArrayUtils;
 
 import com.google.common.io.BaseEncoding;
@@ -9,9 +11,12 @@ public class Sensor {
 	Server server= Server.getInstance();
    private String addres ; 
    private String connHandle;
+   private String WriteCharOpCode ="0192FD06";
+   HashMap<String,String> services = new HashMap<String,String>();
    
    public Sensor(String add, String conn)
    {
+	   
 	   this.connHandle=conn;
 	   this.addres=add;
    }     
@@ -20,19 +25,35 @@ public class Sensor {
    {
 	   String enableNotif = "0192FD06"+ reverseHexString(connHandle)+"3D000100";
 	   String configM ="0192FD06"+reverseHexString(connHandle)+"3F003F02";
-	 
-	   server.WriteToPort(enableNotif);
-	   new ProcessMessage(true);
-	   server.WriteToPort(configM);
+	  
+	   new Thread(new Runnable(){
+		     
+		   @Override
+		   public void run()
+		   {
+			   new ProcessMessage(true);
+			   try {
+				   server.WriteToPort(WriteCharOpCode+reverseHexString(connHandle)+"25000100"); 
+				Thread.sleep(500);
+				 server.WriteToPort(WriteCharOpCode+reverseHexString(connHandle)+"27003802"); 
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			 
+		   }
+	   }).start();
+	   //server.WriteToPort(enableNotif);
+	   
+	   //server.WriteToPort(configM);
    }
    public void discoverCharacheristics()
    {
- 
-	  new Runnable() {
- 
+     new Thread(  new Runnable() {
+    	 
 		   String dscServices = "0190FD02"+reverseHexString(connHandle);
 		   String dscAllChars = "01B2FD06"+ reverseHexString(connHandle) +"01000001";
-			String dscCharDesc = "0184FD06"+ reverseHexString(connHandle) +"01000001";
+		   String dscCharDesc = "0184FD06"+ reverseHexString(connHandle) +"01000001";
 		@Override
 		public void run() {
 			
@@ -41,6 +62,7 @@ public class Sensor {
 			ProcessMessage pr = new ProcessMessage(true,null);
 			ProcessMessage pr1 =null;
 		    int counter=0;
+		    Server.AUTODISCOVERY=false;
 		    try {
 		    	while(!Server.AUTODISCOVERY)
 				{
@@ -76,8 +98,9 @@ public class Sensor {
 				e.printStackTrace();
 			}
 			
-		}}.run();	  
-	
+		}}	  
+  ).start();
+	  	
    }
     
    public void discServriceByUUID(){

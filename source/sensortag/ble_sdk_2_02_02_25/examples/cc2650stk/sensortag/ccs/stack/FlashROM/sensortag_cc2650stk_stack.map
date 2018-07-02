@@ -1,7 +1,7 @@
 ******************************************************************************
                   TI ARM Linker PC v16.9.1                     
 ******************************************************************************
->> Linked Fri Jun 29 14:58:37 2018
+>> Linked Sun Jul 01 14:28:04 2018
 
 OUTPUT FILE NAME:   <sensortag_cc2650stk_stack.out>
 ENTRY POINT SYMBOL: "startup_entry"  address: 00011001
@@ -386,7 +386,7 @@ MODULE SUMMARY
        Total:                        2       0         0      
                                                               
     C:\Users\Elis\AppData\Local\Temp\
-       110402                        48      0         4      
+       081122                        48      0         4      
     +--+-----------------------------+-------+---------+---------+
        Total:                        48      0         4      
                                                               

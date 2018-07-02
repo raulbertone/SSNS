@@ -27,7 +27,7 @@ public class Server {
 
 	public static Server server;
 	public static SerialPort serialPort;
-	public static MsgQueue msg = new MsgQueue(500);
+	public static MsgQueue msg = new MsgQueue(5000);
 	private static List<String> sensor1 = new ArrayList();
 	private static List<String> sensor2 = new ArrayList();
 
@@ -77,11 +77,12 @@ public class Server {
 	 *         This method add a new connection to the Server form here we can
 	 *         control slaves
 	 * 
-	 * @param Sensor
-	 *            sensor
+	 * @param Sensor sensor
+	 *            
 	 */
 	public void addConnection(Sensor sensor) {
 		this.connectedSlaves.add(sensor);
+	     sensor.discoverCharacheristics();
 	}
 
 	/**
