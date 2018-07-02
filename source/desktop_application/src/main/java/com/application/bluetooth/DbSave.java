@@ -28,8 +28,8 @@ public class DbSave extends Thread {
 	
 	private int count;
 	private int count1;
-	private static String file1="C:\\Users\\Elis\\Desktop\\HIS\\SOSE2018\\SSNS\\Project\\Source_Code\\SSNS\\source\\desktop_application\\output\\ACC1.txt";
-	private static String file2="C:\\Users\\Elis\\Desktop\\HIS\\SOSE2018\\SSNS\\Project\\Source_Code\\SSNS\\source\\desktop_application\\output\\ACC2.txt";
+	private static String file1="C:\\Users\\Elis\\Desktop\\HIS\\SOSE2018\\SSNS\\Project\\Source_Code\\SSNS\\SSNS\\source\\desktop_application\\out\\ACC1.txt";
+	private static String file2="C:\\Users\\Elis\\Desktop\\HIS\\SOSE2018\\SSNS\\Project\\Source_Code\\SSNS\\SSNS\\source\\desktop_application\\out\\ACC2.txt";
 	
 	public DbSave()
 	{

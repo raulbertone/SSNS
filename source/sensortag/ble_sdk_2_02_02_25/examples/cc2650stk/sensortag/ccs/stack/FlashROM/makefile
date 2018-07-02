@@ -10,7 +10,7 @@ GEN_OPTS__FLAG :=
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
-"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/config/ccs_linker_defines.cmd" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/config/ccs_linker_defines.cmd" \
 "./HAL/Common/hal_assert.obj" \
 "./HAL/Target/CC2650/Drivers/hal_flash_wrapper.obj" \
 "./HAL/Target/CC2650/Drivers/hal_rtc_wrapper.obj" \
@@ -35,12 +35,12 @@ ORDERED_OBJS += \
 "./Startup/osal_icall_ble.obj" \
 "./Startup/rom_jt.obj" \
 "./TOOLS/onboard.obj" \
-"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/config/lib_linker.cmd" \
-"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/ccs/cc26xx_stack.cmd" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/config/lib_linker.cmd" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/ccs/cc26xx_stack.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
--l"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/config/lib_linker.cmd" \
--l"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/rom/ble_rom_releases/04242014/ble_rom_patch.symbols" \
+-l"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/config/lib_linker.cmd" \
+-l"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/rom/ble_rom_releases/04242014/ble_rom_patch.symbols" \
 -l"C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/driverlib/bin/ccs/driverlib.lib" \
 
 -include ../makefile.init
@@ -193,7 +193,7 @@ main-build: $(OBJS) $(GEN_CMDS)
 sensortag_cc2650stk_stack.out: $(OBJS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM Linker'
-	"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" --cmd_file="D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/../../../../../src/config/build_components.opt" --cmd_file="D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/build_config.opt"  -mv7M3 --code_state=16 --abi=eabi -me -O4 --opt_for_speed=0 --c99 --define=CC26XX --define=CC26XXWARE --define=DATA= --define=EXT_HAL_ASSERT --define=FLASH_ROM_BUILD --define=GATT_NO_CLIENT --define=INCLUDE_AES_DECRYPT --define=NEAR_FUNC= --define=OSAL_CBTIMER_NUM_TASKS=1 --define=OSAL_MAX_NUM_PROXY_TASKS=8 --define=OSAL_SNV=0 --define=POWER_SAVING --define=USE_ICALL --define=xDEBUG --define=xDEBUG_ENC --define=xDEBUG_GPIO --define=xDEBUG_SW_TRACE --define=xNO_BLE_SECURITY --define=xPM_DISABLE_PWRDOWN --define=xTESTMODES --define=xTEST_BLEBOARD --diag_wrap=off --diag_suppress=48 --diag_suppress=16004 --diag_warning=225 --display_error_number -z -m"sensortag_cc2650stk_stack.map" --heap_size=0 --stack_size=256 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --reread_libs --display_error_number --diag_suppress=16002-D --diag_suppress=10325-D --diag_suppress=10247-D --diag_suppress=10229-D --diag_wrap=off --warn_sections --xml_link_info="sensortag_cc2650stk_stack_linkInfo.xml" --entry_point=startup_entry --rom_model --unused_section_elimination=on --compress_dwarf=on -o "sensortag_cc2650stk_stack.out" $(ORDERED_OBJS)
+	"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" --cmd_file="C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/../../../../../src/config/build_components.opt" --cmd_file="C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/build_config.opt"  -mv7M3 --code_state=16 --abi=eabi -me -O4 --opt_for_speed=0 --c99 --define=CC26XX --define=CC26XXWARE --define=DATA= --define=EXT_HAL_ASSERT --define=FLASH_ROM_BUILD --define=GATT_NO_CLIENT --define=INCLUDE_AES_DECRYPT --define=NEAR_FUNC= --define=OSAL_CBTIMER_NUM_TASKS=1 --define=OSAL_MAX_NUM_PROXY_TASKS=8 --define=OSAL_SNV=0 --define=POWER_SAVING --define=USE_ICALL --define=xDEBUG --define=xDEBUG_ENC --define=xDEBUG_GPIO --define=xDEBUG_SW_TRACE --define=xNO_BLE_SECURITY --define=xPM_DISABLE_PWRDOWN --define=xTESTMODES --define=xTEST_BLEBOARD --diag_warning=225 --display_error_number --diag_suppress=48 --diag_suppress=16004 --diag_wrap=off -z -m"sensortag_cc2650stk_stack.map" --heap_size=0 --stack_size=256 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --reread_libs --warn_sections --diag_wrap=off --diag_suppress=16002-D --diag_suppress=10325-D --diag_suppress=10247-D --diag_suppress=10229-D --display_error_number --xml_link_info="sensortag_cc2650stk_stack_linkInfo.xml" --entry_point=startup_entry --rom_model --unused_section_elimination=on --compress_dwarf=on -o "sensortag_cc2650stk_stack.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	@$(MAKE) --no-print-directory post-build
@@ -214,12 +214,12 @@ clean:
 	-@echo ' '
 
 pre-build:
-	-"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/../../../../../tools/lib_search/lib_search.exe" D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/build_config.opt "D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/../../../../../tools/lib_search/params_split_cc2640.xml" D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/../../../../../src/../blelib D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/../config/lib_linker.cmd
+	-"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/../../../../../tools/lib_search/lib_search.exe" C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/build_config.opt "C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/../../../../../tools/lib_search/params_split_cc2640.xml" C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/../../../../../src/../blelib C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/../config/lib_linker.cmd
 	-@echo ' '
 
 post-build:
 	-C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armhex -order MS --memwidth=8 --romwidth=8 --intel -o sensortag_cc2650stk_stack.hex sensortag_cc2650stk_stack.out
-	-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/../../../../../tools/frontier/frontier.exe ccs D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/FlashROM/sensortag_cc2650stk_stack_linkInfo.xml D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/../config/ccs_compiler_defines.bcfg D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/../config/ccs_linker_defines.cmd
+	-C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/../../../../../tools/frontier/frontier.exe ccs C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/FlashROM/sensortag_cc2650stk_stack_linkInfo.xml C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/../config/ccs_compiler_defines.bcfg C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/examples/cc2650stk/sensortag/ccs/stack/../config/ccs_linker_defines.cmd
 	-@echo ' '
 
 .PHONY: all clean dependents

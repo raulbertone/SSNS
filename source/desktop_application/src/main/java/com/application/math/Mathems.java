@@ -62,12 +62,12 @@ public class Mathems extends Thread {
 	}
 
 	public static void main() {
-		Server server = Server.getInstance();
-		Mathems math = new Mathems(server);
+		//Server server = Server.getInstance();
+	//	Mathems math = new Mathems(server);
 
-		math.add_measurments("F06800A2003FFEC000AD008E");
+		//math.add_measurments("F06800A2003FFEC000AD008E");
 
-		System.out.println("Hi!! I'm here using WhatsApp!!");
+		//System.out.println("Hi!! I'm here using WhatsApp!!");
 
 	}
 
@@ -86,6 +86,7 @@ public class Mathems extends Thread {
 			if(this.count_pass_measur <= ConfigurationStorage.getSKIP_MEASURE()) { // increasing of count_pass_measur in .add method
 				//System.out.print("fkygwyc");
 				try {
+					add_measurments(); // was added to check ""
 					Thread.sleep(100);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
@@ -97,8 +98,7 @@ public class Mathems extends Thread {
 				if(aclr_1.bufSize() < ConfigurationStorage.getCOUNT_SEC()) //if amount of measurments is less than it is need tocover one second
 					return;
 
-				add_measurments(""); // was added to check ""
-
+				
 				this.aclr_1.isAclrFall(this.gyro_1);
 				this.aclr_2.isAclrFall(this.gyro_2);
 
@@ -111,68 +111,85 @@ public class Mathems extends Thread {
 	}
 
 
-	public void add_measurments(String str) { //was added to check String str
+	public void add_measurments() { //was added to check String str
 
 		//for the first sensor
-		String measure_str = str; //server.getSensor1Data();
+		String measure_str = server.getSensor1Data();
+		
+		double Ax;
+		double Ay; 
+		double Az;
+		
+		double Gx;
+		double Gy;
+		double Gz;
+		
+		if(!measure_str.isEmpty()) {
 
-		//aclr
-		double Ax = correctMeasurments(
-				Integer.parseInt(
-						measure_str.substring(0, 4), 16)); // Az  1234 5678 9112 3456 7892 1234
-		double Ay = correctMeasurments(
-				Integer.parseInt(
-						measure_str.substring(4, 8), 16)); // Ay  2108 00AE 011E 0089 00C6 FEB8
-		double Az = correctMeasurments(
-				Integer.parseInt(
-						measure_str.substring(8, 12), 16)); // Ax
-
-		//gyro
-		double Gx = correctMeasurments(
-				Integer.parseInt(
-						measure_str.substring(12, 16), 16)); // Az
-		double Gy = correctMeasurments(
-				Integer.parseInt(
-						measure_str.substring(16, 20), 16)); // Ay
-		double Gz = correctMeasurments(
-				Integer.parseInt(
-						measure_str.substring(20, 24), 16)); // Ax
-
-		System.out.println(convertG(Ax) + " " + convertG(Ay) + " " + convertG(Az));
-		System.out.println(convertAngSp(Gx) + " " + convertAngSp(Gy) + " " + convertAngSp(Gz));
-
-		this.aclr_1.add_aclr(convertG(Ax), convertG(Ay), convertG(Az));
-		this.gyro_1.add_gyro(convertAngSp(Gx), convertAngSp(Gy), convertAngSp(Gz));
+		//aclr 
+			this.count_pass_measur++;
+			
+			 Ax = correctMeasurments(
+					Integer.parseInt(
+							measure_str.substring(0, 4), 16)); // Az  1234 5678 9112 3456 7892 1234
+			 Ay = correctMeasurments(
+					Integer.parseInt(
+							measure_str.substring(4, 8), 16)); // Ay  2108 00AE 011E 0089 00C6 FEB8
+			 Az = correctMeasurments(
+					Integer.parseInt(
+							measure_str.substring(8, 12), 16)); // Ax
+	
+			//gyro
+			 Gx = correctMeasurments(
+					Integer.parseInt(
+							measure_str.substring(12, 16), 16)); // Az
+			 Gy = correctMeasurments(
+					Integer.parseInt(
+							measure_str.substring(16, 20), 16)); // Ay
+			 Gz = correctMeasurments(
+					Integer.parseInt(
+							measure_str.substring(20, 24), 16)); // Ax
+	
+			System.out.println("Accelerometer: "+convertG(Ax) + " " + convertG(Ay) + " " + convertG(Az));
+			System.out.println("Gyroscope: "+convertAngSp(Gx) + " " + convertAngSp(Gy) + " " + convertAngSp(Gz));
+	
+			this.aclr_1.add_aclr(convertG(Ax), convertG(Ay), convertG(Az));
+			this.gyro_1.add_gyro(convertAngSp(Gx), convertAngSp(Gy), convertAngSp(Gz));
+		}
 
 		//there we can send data to the Graph!!!!!
 
 		//for the second sensor
-		measure_str = str; //server.getSensor2Data();
-
-		//aclr
-		Ax = correctMeasurments(
-				Integer.parseInt(
-						measure_str.substring(0, 4), 16)); // Az
-		Ay = correctMeasurments(
-				Integer.parseInt(
-						measure_str.substring(4, 8), 16)); // Ay
-		Az = correctMeasurments(
-				Integer.parseInt(
-						measure_str.substring(8, 12), 16)); // Ax
-
-		//gyro
-		Gx = correctMeasurments(
-				Integer.parseInt(
-						measure_str.substring(12, 16), 16)); // Az
-		Gy = correctMeasurments(
-				Integer.parseInt(
-						measure_str.substring(16, 20), 16)); // Ay
-		Gz = correctMeasurments(
-				Integer.parseInt(
-						measure_str.substring(20, 24), 16)); // Ax
-
-		this.aclr_2.add_aclr(convertG(Ax), convertG(Ay), convertG(Az));
-		this.gyro_2.add_gyro(convertAngSp(Gx), convertAngSp(Gy), convertAngSp(Gz));
+		measure_str ="";
+		measure_str = server.getSensor2Data();
+		
+		if(!measure_str.isEmpty()) {
+	
+			//aclr
+			Ax = correctMeasurments(
+					Integer.parseInt(
+							measure_str.substring(0, 4), 16)); // Az
+			Ay = correctMeasurments(
+					Integer.parseInt(
+							measure_str.substring(4, 8), 16)); // Ay
+			Az = correctMeasurments(
+					Integer.parseInt(
+							measure_str.substring(8, 12), 16)); // Ax
+	
+			//gyro
+			Gx = correctMeasurments(
+					Integer.parseInt(
+							measure_str.substring(12, 16), 16)); // Az
+			Gy = correctMeasurments(
+					Integer.parseInt(
+							measure_str.substring(16, 20), 16)); // Ay
+			Gz = correctMeasurments(
+					Integer.parseInt(
+							measure_str.substring(20, 24), 16)); // Ax
+	
+			this.aclr_2.add_aclr(convertG(Ax), convertG(Ay), convertG(Az));
+			this.gyro_2.add_gyro(convertAngSp(Gx), convertAngSp(Gy), convertAngSp(Gz));
+		}
 
 		//there we can send data to the Graph!!!!!
 	}

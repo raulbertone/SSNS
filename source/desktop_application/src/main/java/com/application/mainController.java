@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.application.bluetooth.Application;
+import com.application.bluetooth.DbSave;
 import com.application.bluetooth.ProcessMessage;
 import com.application.bluetooth.Sensor;
 import com.application.bluetooth.Server;
@@ -137,7 +138,8 @@ public class mainController {
     
     @FXML
     void Disconnect(ActionEvent event) {
-    	sr.AutoDiscover();
+    	sr.WriteToPort("01030C00");
+    	//sr.AutoDiscover();
     	//new Application();
     
     }
@@ -145,10 +147,13 @@ public class mainController {
     
     @FXML
     void Clean(ActionEvent event) {
+    	 //sr.WriteToPort("01030C00");
+     //   new DbSave();
     }
     
     @FXML
     void CloseApp(ActionEvent event) {
+   
     }    
     
     @FXML
@@ -159,10 +164,9 @@ public class mainController {
     }
 
     @FXML
-    void StartReceiving(ActionEvent event) {
-    	
-    	 sr.readData();
-    	 new Application();
+    void StartReceiving(ActionEvent event) {  	
+    	sr.readData();
+    	// new Application();
     }
 
     @FXML

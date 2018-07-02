@@ -6,8 +6,8 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/icall/app/ble_user_config.c \
-D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/icall/app/icall_api.c 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/icall/app/ble_user_config.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/icall/app/icall_api.c 
 
 C_DEPS += \
 ./ICallBLE/ble_user_config.d \
@@ -26,7 +26,7 @@ C_DEPS__QUOTED += \
 "ICallBLE\icall_api.d" 
 
 C_SRCS__QUOTED += \
-"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/icall/app/ble_user_config.c" \
-"D:/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/icall/app/icall_api.c" 
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/icall/app/ble_user_config.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/icall/app/icall_api.c" 
 
 
