@@ -232,10 +232,14 @@ public class mainController {
     }
 
     @FXML
+<<<<<<< HEAD
+    void StartReceiving(ActionEvent event) {
+    	prepareTimeline();
+=======
     void StartReceiving(ActionEvent event) {  	
     	sr.readData();
-    	prepareTimeline();
     	// new Application();
+>>>>>>> development
     }
 
     @FXML
