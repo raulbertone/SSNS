@@ -19,15 +19,15 @@ public abstract class ConfigurationStorage {
 	private static String CONTACT_PERSON_EMAIL = "bert1.raul@gmail.com";
 
 	// fall detection algorithm's settings
-	private static double IMPACT_POW = 4.0; // Value of Impact(g)
-	private static int IMPACT_PASS = 0; // Measurements after Impact(count)
-	private static double LAYING_POW = 1.0; // double, Laying Acceleration(g)
+	private static double IMPACT_POW = 1.5; // Value of Impact(g)
+	private static int IMPACT_PASS = 2; // Measurements after Impact(count)
+	private static double LAYING_POW = 0.8; // double, Laying Acceleration(g)
 	private static int SKIP_MEASURE = 10; // Skipped Measurements(count)
 	private static double FALL_ANGLE = 30.0; // Fall angle(degrees)
 	private static int COUNT_SEC = 10; // amount of measurements per second
 	private static double FORCE_IMPACT_D = 0.8; // lower and upper limit for force of laying
-	private static double FORCE_IMPACT_U = 1.1 ; //
-	private static int G_SCALE = 4; // scale of the Accelerometer
+	private static double FORCE_IMPACT_U = 1.3 ; //
+	private static int G_SCALE = 8; // scale of the Accelerometr
 
 	// help request settings
 	private static int HELP_REQUEST_DELAY = 5;
