@@ -6,21 +6,21 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_bar.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_batt.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_buzzer.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_conn_ctrl.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_factoryreset.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_hum.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_io.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_keys.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_mov.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_oad.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_opt.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_register.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_tmp.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/common/cc26xx/util.c 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_bar.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_batt.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_buzzer.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_conn_ctrl.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_factoryreset.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_hum.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_io.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_keys.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_mov.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_oad.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_opt.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_register.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_tmp.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/util.c 
 
 C_DEPS += \
 ./Application/sensortag.d \
@@ -91,20 +91,20 @@ C_DEPS__QUOTED += \
 "Application\util.d" 
 
 C_SRCS__QUOTED += \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_bar.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_batt.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_buzzer.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_conn_ctrl.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_factoryreset.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_hum.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_io.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_keys.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_mov.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_oad.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_opt.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_register.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_tmp.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/common/cc26xx/util.c" 
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_bar.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_batt.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_buzzer.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_conn_ctrl.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_factoryreset.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_hum.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_io.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_keys.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_mov.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_oad.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_opt.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_register.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_tmp.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/util.c" 
 
 

@@ -9,7 +9,7 @@
  */
 
 
--l"C:\Users\Raul\Dropbox\UAS\SSNS\workspace\ble_sdk_2_02_02_25\examples\cc2650stk\sensortag\ccs\app\FlashOnly_OAD\configPkg\package\cfg\app_ble_pem3.oem3"
+-l"C:\Users\Elis\Desktop\HIS\SOSE2018\SSNS\Project\Source_Code\SSNS\SSNS\source\sensortag\ble_sdk_2_02_02_25\examples\cc2650stk\sensortag\ccs\app\FlashOnly_OAD\configPkg\package\cfg\app_ble_pem3.oem3"
 -l"C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/mw/display/lib/display.aem3"
 -l"C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/mw/lcd/lib/lcd.aem3"
 -l"C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/mw/grlib/lib/grlib.aem3"
@@ -19,7 +19,7 @@
 -l"C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/pdm/lib/pdm_cc26xxware.aem3"
 -l"C:\ti\tirtos_cc13xx_cc26xx_2_21_01_08\products\tidrivers_cc13xx_cc26xx_2_21_01_01\packages\ti\mw\fatfs\lib\release\ti.mw.fatfs.aem3"
 -l"C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/ports/lib/tirtosport.aem3"
--l"C:\Users\Raul\Dropbox\UAS\SSNS\workspace\ble_sdk_2_02_02_25\examples\cc2650stk\sensortag\ccs\config\src\sysbios\sysbios.aem3"
+-l"C:\Users\Elis\Desktop\HIS\SOSE2018\SSNS\Project\Source_Code\SSNS\SSNS\source\sensortag\ble_sdk_2_02_02_25\examples\cc2650stk\sensortag\ccs\config\src\sysbios\sysbios.aem3"
 -l"C:\ti\tirtos_cc13xx_cc26xx_2_21_01_08\products\bios_6_46_01_38\packages\ti\targets\arm\rtsarm\lib\boot.aem3"
 -l"C:\ti\tirtos_cc13xx_cc26xx_2_21_01_08\products\bios_6_46_01_38\packages\ti\targets\arm\rtsarm\lib\auto_init.aem3"
 

@@ -6,14 +6,14 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/osal/src/common/osal.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_bufmgr.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_cbtimer.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_clock.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_memory_icall.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_pwrmgr.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/osal/src/mcu/cc26xx/osal_snv_wrapper.c \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_timers.c 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/common/osal.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_bufmgr.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_cbtimer.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_clock.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_memory_icall.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_pwrmgr.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/mcu/cc26xx/osal_snv_wrapper.c \
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_timers.c 
 
 C_DEPS += \
 ./OSAL/osal.d \
@@ -56,13 +56,13 @@ C_DEPS__QUOTED += \
 "OSAL\osal_timers.d" 
 
 C_SRCS__QUOTED += \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/osal/src/common/osal.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_bufmgr.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_cbtimer.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_clock.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_memory_icall.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_pwrmgr.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/osal/src/mcu/cc26xx/osal_snv_wrapper.c" \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_timers.c" 
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/common/osal.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_bufmgr.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_cbtimer.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_clock.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_memory_icall.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_pwrmgr.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/mcu/cc26xx/osal_snv_wrapper.c" \
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/common/osal_timers.c" 
 
 

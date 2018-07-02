@@ -6,7 +6,7 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/TRNGCC26XX.c 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/TRNGCC26XX.c 
 
 C_DEPS += \
 ./Drivers/TRNG/TRNGCC26XX.d 
@@ -21,6 +21,6 @@ C_DEPS__QUOTED += \
 "Drivers\TRNG\TRNGCC26XX.d" 
 
 C_SRCS__QUOTED += \
-"C:/Users/Raul/Dropbox/UAS/SSNS/GitHub/Sensortag_sourcecode/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/TRNGCC26XX.c" 
+"C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/TRNGCC26XX.c" 
 
 
