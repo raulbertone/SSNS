@@ -240,6 +240,11 @@ public class mainController {
 
     @FXML
     void StopReceiving(ActionEvent event) {
+    	
+    	for(int i=1;i<100;i++)
+    	{
+    		Q1.add(Math.random());
+    		}
     }
        
     @FXML

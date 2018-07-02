@@ -82,16 +82,19 @@ public class Mathems extends Thread {
 	}
 
 	public void run() {
+		
+		try {
+			Thread.sleep(10);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		while(true) {
 			if(this.count_pass_measur <= ConfigurationStorage.getSKIP_MEASURE()) { // increasing of count_pass_measur in .add method
 				//System.out.print("fkygwyc");
-				try {
+				
 					add_measurments(); // was added to check ""
-					Thread.sleep(100);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				
 			}else {
 				this.count_pass_measur = 0;
 
@@ -104,8 +107,12 @@ public class Mathems extends Thread {
 				this.aclr_2.isAclrFall(this.gyro_2);
 
 				if(this.isAclrFall && this.isGyroFall) {
+					System.out.println("Notify!!");
 					FallNotificationService.notifyFall();
 				}
+				
+				this.isAclrFall = false;
+				this.isGyroFall = false;
 			}
 		}
 
@@ -125,7 +132,10 @@ public class Mathems extends Thread {
 		double Gy;
 		double Gz;
 
-		if(!measure_str.isEmpty()) {
+		if(measure_str==null) { 
+			System.out.println("string null");
+			}
+		if( !measure_str.equals("-1")) {
 
 		//aclr
 			this.count_pass_measur++;
@@ -152,7 +162,7 @@ public class Mathems extends Thread {
 							measure_str.substring(20, 24), 16)); // Ax
 
 			System.out.println("Accelerometer: "+convertG(Ax) + " " + convertG(Ay) + " " + convertG(Az));
-			//System.out.println("Gyroscope: "+convertAngSp(Gx) + " " + convertAngSp(Gy) + " " + convertAngSp(Gz));
+			System.out.println("Gyroscope: "+convertAngSp(Gx) + " " + convertAngSp(Gy) + " " + convertAngSp(Gz));
 
 			this.aclr_1.add_aclr(convertG(Ax), convertG(Ay), convertG(Az));
 			this.gyro_1.add_gyro(convertAngSp(Gx), convertAngSp(Gy), convertAngSp(Gz));
@@ -164,7 +174,7 @@ public class Mathems extends Thread {
 		measure_str ="";
 		measure_str = server.getSensor2Data();
 
-		if(!measure_str.isEmpty()) {
+		if(!measure_str.equals("-1")) {
 
 			//aclr
 			Ax = correctMeasurments(

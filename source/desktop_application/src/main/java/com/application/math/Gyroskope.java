@@ -2,6 +2,7 @@ package com.application.math;
 
 import java.util.ArrayList;
 
+import com.application.bluetooth.Server;
 import com.application.util.ConfigurationStorage;
 
 
@@ -22,6 +23,15 @@ public class Gyroskope{
 		this.count_sec = 0;
 		this.FALL_ANGLE = 0;
 	}
+	
+	public Gyroskope (Gyroskope copy)
+	{
+		this.buf_x=new ArrayList<Double>(copy.buf_x);
+		this.buf_y=new ArrayList<Double>(copy.buf_y);
+		this.buf_z=new ArrayList<Double>(copy.buf_z);
+		this.math=copy.math;
+		
+	}
 
 	public void isGyroFall(int fallStart, int fallStop) {
 
@@ -37,9 +47,10 @@ public class Gyroskope{
 
 		double angle = isFall(fallStart, fallStop);
 
-		if( -angle >= this.FALL_ANGLE && angle <= this.FALL_ANGLE) {
+		if( angle >= -this.FALL_ANGLE && angle <= this.FALL_ANGLE) {
 			math.isGyroFall = true;
 			System.out.println("Gyro Fall!!!");
+			return;
 		}
 
 	}
@@ -47,23 +58,31 @@ public class Gyroskope{
 	private double isFall(int fallStart, int fallStop) {
 		double xAngle = 0;
 		double yAngle = 0;
+		
+		System.out.println("Im in Gyro, start:" + fallStart + " stop: " + fallStop);
+		
+		
 
-		for(int i = fallStart; i <= fallStop; i++ ) {
-			if(this.buf_x.get(i) > 5)
-			xAngle += Math.abs(this.buf_x.get(i) * (1000 / count_sec));
+		for(int i = fallStart; i < fallStop; i++ ) {
+			if(Math.abs(this.buf_x.get(i)) > 5) {
+				xAngle += Math.abs(this.buf_x.get(i) * (double)(1.0 / count_sec));
+				System.out.println("New angle x: " + xAngle + " i:" + i);	
+			}
 
-			if(this.buf_y.get(i) > 5)
-			yAngle += Math.abs(this.buf_y.get(i) * (1000 / count_sec));
+			if(Math.abs(this.buf_y.get(i)) > 5) {
+				yAngle += Math.abs(this.buf_y.get(i) * (double)(1.0 / count_sec));
+				System.out.println("New angle y: " + yAngle + " i:" + i);	
+			}
 		}
 
-		System.out.println((xAngle + yAngle) % 180 - 90);
+		System.out.println((xAngle + " " + yAngle));
 
 		return (xAngle + yAngle) % 180 - 90;
 	}
 
 	public void add_gyro(double x, double y, double z) {
 		if(!this.buf_x.isEmpty()) {
-			if( this.buf_x.size() > 9) {
+			if( this.buf_x.size() > ConfigurationStorage.getSKIP_MEASURE() + 10) {
 				this.buf_x.remove(0);
 				this.buf_y.remove(0);
 				this.buf_z.remove(0);

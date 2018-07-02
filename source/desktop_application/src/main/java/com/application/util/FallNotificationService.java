@@ -23,6 +23,7 @@ public class FallNotificationService implements Runnable{
 	private boolean falseAlarm = false; // true if the user signaled a false alarm by pressing a button on the Sensortag
 	private mainController controller; // reference to the GUI controller of the main screen
 	private boolean fallHappened = false;
+	private boolean waitingForFeedback = false;
 
 	/*
 	 * At class load time, an instance of this class is created and started.
@@ -104,6 +105,7 @@ public class FallNotificationService implements Runnable{
 		instance.controller.setLblFallDetColor("#a20000"); // raise flag in the GUI
 
 		// wait to see if the user signals a false alarm
+		waitingForFeedback = true;
 		try {
 			Thread.sleep(ConfigurationStorage.getHELP_REQUEST_DELAY());
 		} catch (InterruptedException e) {
@@ -114,6 +116,7 @@ public class FallNotificationService implements Runnable{
 			// TODO turn off the buzzer
 			instance.controller.setLblFallDetColor("#000000"); // lower the flag in the GUI
 			falseAlarm = false;
+			waitingForFeedback = false;
 		} else {
 			fallHappened = true;
 
@@ -124,10 +127,15 @@ public class FallNotificationService implements Runnable{
 			instance.controller.setLblHelpReqColor("#a20000"); // raise flag in the GUI
 
 			fallDetected = false;
+			waitingForFeedback = false;
 		}
 	}
 
 	private synchronized void setFallFlag() {
+		if (waitingForFeedback) {
+			return;
+		}
+		
 		fallDetected = true;
 		notify();
 	}

@@ -28,7 +28,7 @@ public class Server {
 	public static Server server;
 	public static SerialPort serialPort;
 	public static MsgQueue msg = new MsgQueue(5000);
-	private static List<String> sensor1 = new ArrayList();
+	public static List<String> sensor1 = new ArrayList();
 	private static List<String> sensor2 = new ArrayList();
 
 	public static List<String> acc1 = new ArrayList();
@@ -105,16 +105,14 @@ public class Server {
 
 	public String getSensor1Data() {
 		// TODO: See what wil you return if ther is no data in the queue
-		if(sensor1.size()!=0)
-		{
-			String s = sensor1.get(0);
-			sensor1.remove(0);
-			return s;
-			
+		if(sensor1.size()!=0 && sensor1.get(0)!=null)
+		{	
+				return sensor1.remove(0);
+				
 		}
 		else
 		{
-			return "";
+			return "-1";
 		}
 	
 	}
@@ -127,17 +125,16 @@ public class Server {
 	 */
 
 	public String getSensor2Data() {
-		
-		if(sensor2.size()!=0)
-		{
-			String s = sensor2.get(0);
-			sensor2.remove(0);
-			return s;
+		if(sensor2.size()!=0 && sensor2.get(0)!=null)
+		{	
+				return sensor2.remove(0);
+				
 		}
 		else
 		{
-			return "";
+			return "-1";
 		}
+	
 	
 	}
 
