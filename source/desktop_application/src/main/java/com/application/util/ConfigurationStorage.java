@@ -9,6 +9,7 @@ public abstract class ConfigurationStorage {
 	// user's data
 	private static String FIRST_NAME = "John";
 	private static String LAST_NAME = "Doh";
+	private static String BIRTH_DATE = "03/03/1978";
 	private static String GENDER = "M";
 	private static String ADDRESS = "Some Street 5, Onecity";
 	private static String PHONE_NUMBER = "555-123456789";
@@ -27,12 +28,20 @@ public abstract class ConfigurationStorage {
 	private static int COUNT_SEC = 20; // amount of measurements per second
 	private static double FORCE_IMPACT_D = 0.8; // lower and upper limit for force of laying
 	private static double FORCE_IMPACT_U = 1.3; //
-	private static int G_SCALE = 4; // scale of the Accelerometr
+	private static double G_SCALE = 4; // scale of the Accelerometer
 
 	// help request settings
 	private static int HELP_REQUEST_DELAY = 10 * 1000;
 
+	
+	public static String getBIRTH_DATE() {
+		return BIRTH_DATE;
+	}
 
+	public static void setBIRTH_DATE(String bIRTH_DATE) {
+		BIRTH_DATE = bIRTH_DATE;
+	}
+	
 	public static String getFIRST_NAME() {
 		return FIRST_NAME;
 	}
@@ -167,7 +176,7 @@ public abstract class ConfigurationStorage {
 		return G_SCALE;
 	}
 
-	public static void setG_SCALE(int g_SCALE) {
+	public static void setG_SCALE(double g_SCALE) {
 		G_SCALE = g_SCALE;
 	}
 
