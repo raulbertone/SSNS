@@ -40,7 +40,7 @@ public class Gyroskope{
 
 		if(fallStart == -1) {
 
-			System.out.println("Error!!! Incorrect FallStart value!!! " + fallStart);
+			//System.out.println("Error!!! Incorrect FallStart value!!! " + fallStart);
 			return;
 		}
 
@@ -59,23 +59,23 @@ public class Gyroskope{
 		double xAngle = 0;
 		double yAngle = 0;
 		
-		System.out.println("Im in Gyro, start:" + fallStart + " stop: " + fallStop);
+		//System.out.println("Im in Gyro, start:" + fallStart + " stop: " + fallStop);
 		
 		
 
 		for(int i = fallStart; i < fallStop; i++ ) {
 			if(Math.abs(this.buf_x.get(i)) > 5) {
 				xAngle += Math.abs(this.buf_x.get(i) * (double)(1.0 / count_sec));
-				System.out.println("New angle x: " + xAngle + " i:" + i);	
+				//System.out.println("New angle x: " + xAngle + " i:" + i);	
 			}
 
 			if(Math.abs(this.buf_y.get(i)) > 5) {
 				yAngle += Math.abs(this.buf_y.get(i) * (double)(1.0 / count_sec));
-				System.out.println("New angle y: " + yAngle + " i:" + i);	
+				//System.out.println("New angle y: " + yAngle + " i:" + i);	
 			}
 		}
 
-		System.out.println((xAngle + " " + yAngle));
+		//System.out.println((xAngle + " " + yAngle));
 
 		return (xAngle + yAngle) % 180 - 90;
 	}

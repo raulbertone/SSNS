@@ -1,6 +1,7 @@
 package com.application.bluetooth;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -31,9 +32,9 @@ public class Server {
 	public static List<String> sensor1 = new ArrayList();
 	private static List<String> sensor2 = new ArrayList();
 
-	public static List<String> acc1 = new ArrayList();
-	public static List<String> acc2 = new ArrayList();
-
+	public static ConcurrentLinkedQueue<Number> absAcc1Queue = new ConcurrentLinkedQueue<>();
+	public static ConcurrentLinkedQueue<Number> absAcc2Queue = new ConcurrentLinkedQueue<>();
+	
 	public static List<String> devicesFound = new ArrayList();
 	private List<Sensor> connectedSlaves = new ArrayList();
 
@@ -60,6 +61,17 @@ public class Server {
 		devicesFound.add(dev);
 	}
 
+	/**
+	 * @author Elis 
+	 * 
+	 * Method to add values to the Accelerometer queue
+	 * */
+	public void addToabsAcc1Queue(double val)
+	{
+		this.absAcc1Queue.add((Number)val);
+	}
+	
+	
 	/**
 	 * @author Elis
 	 * 
