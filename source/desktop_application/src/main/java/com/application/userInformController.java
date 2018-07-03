@@ -32,9 +32,6 @@ public class userInformController {
     private TextField emailPerson1;
 
     @FXML
-    private TextField emailPerson2;
-
-    @FXML
     private TextField firstName;
 
     @FXML
@@ -49,9 +46,7 @@ public class userInformController {
     @FXML
     private TextField namePerson1;
 
-    @FXML
-    private TextField namePerson2;
-    
+
     @FXML
     void SaveUserInfo(ActionEvent event) {
     }

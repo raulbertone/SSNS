@@ -26,10 +26,22 @@ public class SettingsController {
     private Button btnSave;
 
     @FXML
-    private TextField OFFSET_TIME;
-    
+    private TextField COUNT_SEC;
+
     @FXML
     private TextField FALL_ANGLE;
+
+    @FXML
+    private TextField FORCE_IMPACT_D;
+
+    @FXML
+    private TextField FORCE_IMPACT_U;
+
+    @FXML
+    private TextField G_SCALE;
+
+    @FXML
+    private TextField HELP_REQUEST_DELAY;
 
     @FXML
     private TextField IMPACT_PASS;
@@ -41,7 +53,7 @@ public class SettingsController {
     private TextField LAYING_POW;
 
     @FXML
-    private TextField SKIP_MEASUR;
+    private TextField SKIP_MEASURE;
 
 
     @FXML

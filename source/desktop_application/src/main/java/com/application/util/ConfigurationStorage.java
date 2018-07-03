@@ -9,6 +9,7 @@ public abstract class ConfigurationStorage {
 	// user's data
 	private static String FIRST_NAME = "John";
 	private static String LAST_NAME = "Doh";
+	private static String BIRTH_DATE = "03/03/1978";
 	private static String GENDER = "M";
 	private static String ADDRESS = "Some Street 5, Onecity";
 	private static String PHONE_NUMBER = "555-123456789";
@@ -33,6 +34,15 @@ public abstract class ConfigurationStorage {
 	private static int HELP_REQUEST_DELAY = 10 * 1000;
 
 
+	
+	public static String getBIRTH_DATE() {
+		return BIRTH_DATE;
+	}
+
+	public static void setBIRTH_DATE(String bIRTH_DATE) {
+		BIRTH_DATE = bIRTH_DATE;
+	}
+	
 	public static String getFIRST_NAME() {
 		return FIRST_NAME;
 	}
