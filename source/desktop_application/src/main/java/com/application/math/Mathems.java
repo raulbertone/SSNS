@@ -82,29 +82,37 @@ public class Mathems extends Thread {
 	}
 
 	public void run() {
+		
+		try {
+			Thread.sleep(10);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		while(true) {
 			if(this.count_pass_measur <= ConfigurationStorage.getSKIP_MEASURE()) { // increasing of count_pass_measur in .add method
 				//System.out.print("fkygwyc");
-				try {
+				
 					add_measurments(); // was added to check ""
-					Thread.sleep(100);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				
 			}else {
 				this.count_pass_measur = 0;
 
-				if(aclr_1.bufSize() < ConfigurationStorage.getCOUNT_SEC()) //if amount of measurments is less than it is need tocover one second
-					return;
+				//if(aclr_1.bufSize() < ConfigurationStorage.getCOUNT_SEC()) //if amount of measurments is less than it is need tocover one second
+					//return;
 
-				
+				System.out.println("IsAclFall");
+
 				this.aclr_1.isAclrFall(this.gyro_1);
 				this.aclr_2.isAclrFall(this.gyro_2);
 
 				if(this.isAclrFall && this.isGyroFall) {
+					System.out.println("Notify!!");
 					FallNotificationService.notifyFall();
 				}
+				
+				this.isAclrFall = false;
+				this.isGyroFall = false;
 			}
 		}
 
@@ -115,20 +123,23 @@ public class Mathems extends Thread {
 
 		//for the first sensor
 		String measure_str = server.getSensor1Data();
-		
+
 		double Ax;
-		double Ay; 
+		double Ay;
 		double Az;
-		
+
 		double Gx;
 		double Gy;
 		double Gz;
-		
-		if(!measure_str.isEmpty()) {
 
-		//aclr 
+		if(measure_str==null) { 
+			System.out.println("string null");
+			}
+		if( !measure_str.equals("-1")) {
+
+		//aclr
 			this.count_pass_measur++;
-			
+
 			 Ax = correctMeasurments(
 					Integer.parseInt(
 							measure_str.substring(0, 4), 16)); // Az  1234 5678 9112 3456 7892 1234
@@ -138,7 +149,7 @@ public class Mathems extends Thread {
 			 Az = correctMeasurments(
 					Integer.parseInt(
 							measure_str.substring(8, 12), 16)); // Ax
-	
+
 			//gyro
 			 Gx = correctMeasurments(
 					Integer.parseInt(
@@ -149,10 +160,10 @@ public class Mathems extends Thread {
 			 Gz = correctMeasurments(
 					Integer.parseInt(
 							measure_str.substring(20, 24), 16)); // Ax
-	
+
 			System.out.println("Accelerometer: "+convertG(Ax) + " " + convertG(Ay) + " " + convertG(Az));
 			System.out.println("Gyroscope: "+convertAngSp(Gx) + " " + convertAngSp(Gy) + " " + convertAngSp(Gz));
-	
+
 			this.aclr_1.add_aclr(convertG(Ax), convertG(Ay), convertG(Az));
 			this.gyro_1.add_gyro(convertAngSp(Gx), convertAngSp(Gy), convertAngSp(Gz));
 		}
@@ -162,9 +173,9 @@ public class Mathems extends Thread {
 		//for the second sensor
 		measure_str ="";
 		measure_str = server.getSensor2Data();
-		
-		if(!measure_str.isEmpty()) {
-	
+
+		if(!measure_str.equals("-1")) {
+
 			//aclr
 			Ax = correctMeasurments(
 					Integer.parseInt(
@@ -175,7 +186,7 @@ public class Mathems extends Thread {
 			Az = correctMeasurments(
 					Integer.parseInt(
 							measure_str.substring(8, 12), 16)); // Ax
-	
+
 			//gyro
 			Gx = correctMeasurments(
 					Integer.parseInt(
@@ -186,9 +197,9 @@ public class Mathems extends Thread {
 			Gz = correctMeasurments(
 					Integer.parseInt(
 							measure_str.substring(20, 24), 16)); // Ax
-	
+
 			this.aclr_2.add_aclr(convertG(Ax), convertG(Ay), convertG(Az));
-			this.gyro_2.add_gyro(convertAngSp(Gx), convertAngSp(Gy), convertAngSp(Gz));
+			//this.gyro_2.add_gyro(convertAngSp(Gx), convertAngSp(Gy), convertAngSp(Gz));
 		}
 
 		//there we can send data to the Graph!!!!!

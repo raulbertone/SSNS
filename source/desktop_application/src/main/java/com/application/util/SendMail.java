@@ -39,7 +39,7 @@ public abstract class SendMail {
         MimeMessage message = new MimeMessage(mailSession);
         message.setFrom(new InternetAddress(SMTP_AUTH_USER));
         message.setSubject(msgSubject);
-        message.setContent(messageBody, "text/plain");
+        message.setContent(messageBody + System.currentTimeMillis(), "text/plain");
 
         message.addRecipient(Message.RecipientType.TO,
              new InternetAddress(toAddress));
@@ -48,7 +48,7 @@ public abstract class SendMail {
           (SMTP_HOST_NAME, SMTP_HOST_PORT, SMTP_AUTH_USER, SMTP_AUTH_PWD);
 
         transport.sendMessage(message,
-            message.getRecipients(Message.RecipientType.TO));
+           message.getRecipients(Message.RecipientType.TO));
         transport.close();
     }
 }
