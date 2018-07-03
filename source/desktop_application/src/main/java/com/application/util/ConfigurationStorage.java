@@ -1,5 +1,10 @@
 package com.application.util;
 
+/**
+ * The class provides static access to configuration and user data.
+ *
+ * @author Raul Bertone
+ */
 public abstract class ConfigurationStorage {
 	// user's data
 	private static String FIRST_NAME = "John";
@@ -9,19 +14,24 @@ public abstract class ConfigurationStorage {
 	private static String PHONE_NUMBER = "555-123456789";
 	private static String BLOOD_TYPE = "AB-";
 
-	// contact person's data
+	// helper's data
 	private static String CONTACT_PERSON_NAME = "Good Samaritan";
 	private static String CONTACT_PERSON_EMAIL = "bert1.raul@gmail.com";
 
 	// fall detection algorithm's settings
-	private static double IMPACT_POW = 4.0; // Value of Impact(g)
-	private static int IMPACT_PASS = 0; // Measurements after Impact(count)
-	private static double LAYING_POW = 1.0; // double, Laying Acceleration(g)
-	private static int SKIP_MEASURE = 0; // Skipped Measurements(count)
+	private static double IMPACT_POW = 2; // Value of Impact(g)
+	private static int IMPACT_PASS = 2; // Measurements after Impact(count)
+	private static double LAYING_POW = 0.8; // double, Laying Acceleration(g)
+	private static int SKIP_MEASURE = 20; // Skipped Measurements(count)
 	private static double FALL_ANGLE = 30.0; // Fall angle(degrees)
+	private static int COUNT_SEC = 20; // amount of measurements per second
+	private static double FORCE_IMPACT_D = 0.8; // lower and upper limit for force of laying
+	private static double FORCE_IMPACT_U = 1.3; //
+	private static int G_SCALE = 4; // scale of the Accelerometr
 
 	// help request settings
-	private static int HELP_REQUEST_DELAY = 5;
+	private static int HELP_REQUEST_DELAY = 10 * 1000;
+
 
 	public static String getFIRST_NAME() {
 		return FIRST_NAME;
@@ -126,6 +136,41 @@ public abstract class ConfigurationStorage {
 	public static void setFALL_ANGLE(double fALL_ANGLE) {
 		FALL_ANGLE = fALL_ANGLE;
 	}
+
+	public static int getCOUNT_SEC() {
+		return COUNT_SEC;
+	}
+
+	public static void setCOUNT_SEC(int cOUNT_SEC) {
+		COUNT_SEC = cOUNT_SEC;
+	}
+
+	public static double getFORCE_IMPACT_D() {
+		return FORCE_IMPACT_D;
+	}
+
+	public static void setFORCE_IMPACT_D(double fORCE_IMPACT_D) {
+		FORCE_IMPACT_D = fORCE_IMPACT_D;
+	}
+
+	public static double getFORCE_IMPACT_U() {
+		return FORCE_IMPACT_U;
+	}
+
+	public static void setFORCE_IMPACT_U(double fORCE_IMPACT_U) {
+		FORCE_IMPACT_U = fORCE_IMPACT_U;
+	}
+
+	//G_SCALE
+
+	public static double getG_SCALE() {
+		return G_SCALE;
+	}
+
+	public static void setG_SCALE(int g_SCALE) {
+		G_SCALE = g_SCALE;
+	}
+
 
 	public static int getHELP_REQUEST_DELAY() {
 		return HELP_REQUEST_DELAY;

@@ -22,18 +22,19 @@ public class portListning {
 	IOException,SerialPortException 
 	{
 		
+		new ProcessMessage(true);
 		
-		System.out.println("Serial Ports:");
-		String[] portNames = SerialPortList.getPortNames();
-		for(int i = 0; i < portNames.length; i++){
-			System.out.println(portNames[i]);
-		}
-		
-	     serialPort = new SerialPort("COM7");		
-		serialPort.openPort();
-		serialPort.setParams(115200, 8, 1, 0);
-		//byte[] bytes = serialPort.readBytes();
-		 serialPort.addEventListener(new PortReader(), SerialPort.MASK_RXCHAR);
+//		System.out.println("Serial Ports:");
+//		String[] portNames = SerialPortList.getPortNames();
+//		for(int i = 0; i < portNames.length; i++){
+//			System.out.println(portNames[i]);
+//		}
+//		
+//	     serialPort = new SerialPort("COM7");		
+//		serialPort.openPort();
+//		serialPort.setParams(115200, 8, 1, 0);
+//		//byte[] bytes = serialPort.readBytes();
+//		 serialPort.addEventListener(new PortReader(), SerialPort.MASK_RXCHAR);
 				
 		
 		

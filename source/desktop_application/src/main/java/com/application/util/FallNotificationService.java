@@ -1,15 +1,37 @@
 package com.application.util;
 
+import com.application.mainController;
+
+/**
+ * This class handles the notifications triggered by the detection of a fall.
+ * On start it idles while waiting for a trigger. When the fall detection
+ * algorithm thinks the user has fallen, it alerts this class which turns on and off
+ * the buzzer on the Sensortags, the flags in the GUI and sends email accordingly.
+ *
+ * The class is runnable and one instance is expected to always be available at runtime.
+ * To insure that, at class load time an instance of the class is created and started.
+ * This instance can then be reached by means of static methods. This allows callers
+ * to reach instance methods without actually needing a reference to the instance itself.
+ *
+ * @author Raul Bertone
+ */
 public class FallNotificationService implements Runnable{
 
 	private static FallNotificationService instance;
-	private boolean fallDetected = false;
-	private boolean run = true;
-	private boolean falseAlarm = false;
+	private boolean fallDetected = false; // true if a fall has been detected but help not yet requested.
+	private boolean run = true; // set to false to stop the thread
+	private boolean falseAlarm = false; // true if the user signaled a false alarm by pressing a button on the Sensortag
+	private mainController controller; // reference to the GUI controller of the main screen
+	private boolean fallHappened = false;
+	private boolean waitingForFeedback = false;
 
+	/*
+	 * At class load time, an instance of this class is created and started.
+	 */
 	static{
 		instance = new FallNotificationService();
 		(new Thread(instance)).start();
+
     }
 
 	/*
@@ -27,8 +49,13 @@ public class FallNotificationService implements Runnable{
 	}
 
 	// call this method to signal a false alarm (when the user presses a button on the Sensortag)
-	public static void falseAlarm() {
-		instance.falseAlarm = true;
+	public static void notifyFalseAlarm() {
+		instance.setFalseAlarm();
+	}
+
+	// call this method at startup to provide a reference to the GUI controller
+	public static void setMain(mainController controller) {
+		instance.controller = controller;
 	}
 
 	/*
@@ -37,14 +64,20 @@ public class FallNotificationService implements Runnable{
 	@Override
 	public void run() {
 
+		// main thread loop
 		while(run) {
 			waitForFall();
 		}
 	}
 
+	private synchronized void setFalseAlarm() {
+		instance.falseAlarm = true;
+		notify();
+	}
+
 	private synchronized void waitForFall() {
 
-		// wait on this
+		// wait on this until either notifyFall() or notifyFalseAlarm() methods are called
 		while (!fallDetected) {
 			try {
 				wait();
@@ -53,45 +86,67 @@ public class FallNotificationService implements Runnable{
 			}
 		}
 
+		if(falseAlarm & fallHappened) {
+			// TODO turn off the buzzer
+			instance.controller.setLblFallDetColor("#000000"); // lower Fall flag in the GUI
+			instance.controller.setLblHelpReqColor("#000000"); // lower Help flag in the GUI
+
+			String message = " says it was a false alarm, everything's fine";
+			String subject = "False Alarm";
+			sendMail(message, subject);
+			fallHappened = false;
+			return;
+		}
+
 		// to prevent random button presses to incorrectly "pre-declare" a fall as a false alarm
 		falseAlarm = false;
 
 		// TODO turn on the buzzer
-		// TODO raise flag in the GUI
+		instance.controller.setLblFallDetColor("#a20000"); // raise flag in the GUI
 
 		// wait to see if the user signals a false alarm
+		waitingForFeedback = true;
 		try {
-			wait(ConfigurationStorage.getHELP_REQUEST_DELAY());
+			Thread.sleep(ConfigurationStorage.getHELP_REQUEST_DELAY());
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 
 		if (falseAlarm) {
 			// TODO turn off the buzzer
-			// TODO lower the flag in the GUI
+			instance.controller.setLblFallDetColor("#000000"); // lower the flag in the GUI
+			falseAlarm = false;
+			waitingForFeedback = false;
 		} else {
-			// send email
-			requestHelp();
+			fallHappened = true;
 
-			// TODO raise flag in the GUI
+			String message = " has fallen and requires assistance";
+			String subject = "Help! I have fallen!";
+
+			sendMail(message, subject); // send email
+			instance.controller.setLblHelpReqColor("#a20000"); // raise flag in the GUI
 
 			fallDetected = false;
+			waitingForFeedback = false;
 		}
 	}
 
 	private synchronized void setFallFlag() {
+		if (waitingForFeedback) {
+			return;
+		}
+		
 		fallDetected = true;
 		notify();
 	}
 
 	// helper method that prepares the email and sends it
-	private void requestHelp() {
-		String messageBody = ConfigurationStorage.getFIRST_NAME() + " " + ConfigurationStorage.getLAST_NAME() + " living at " + ConfigurationStorage.getADDRESS() +
-							 " has fallen and requires assistance";
+	private void sendMail(String message, String subject) {
+		String messageBody = ConfigurationStorage.getFIRST_NAME() + " " + ConfigurationStorage.getLAST_NAME() + " living at " + ConfigurationStorage.getADDRESS() + message;
 		String toAddress = ConfigurationStorage.getCONTACT_PERSON_EMAIL();
 
 		try {
-			SendMail.send(messageBody, "Help! I have fallen!", toAddress);
+			SendMail.send(messageBody, subject, toAddress);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

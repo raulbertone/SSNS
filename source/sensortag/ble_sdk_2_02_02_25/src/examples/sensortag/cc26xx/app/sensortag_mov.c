@@ -132,7 +132,7 @@ static uint8_t sensorData[SENSOR_DATA_LEN];
 // bit 6:     magnetometer enable
 // bit 7:     WOM enable
 // bit 8-9:   accelerometer range (2,4,8,16)
-static uint16_t mpuConfig = 0x1BF;
+static uint16_t mpuConfig = 0x13F;
 
 static uint8_t appState;
 static volatile bool mpuDataRdy;

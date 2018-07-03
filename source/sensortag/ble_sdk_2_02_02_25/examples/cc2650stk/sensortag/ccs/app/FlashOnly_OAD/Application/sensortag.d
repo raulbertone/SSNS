@@ -1,6 +1,6 @@
 # FIXED
 
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag.c
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag.c
 Application/sensortag.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/string.h
 Application/sensortag.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/linkage.h
 Application/sensortag.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/std.h
@@ -183,49 +183,49 @@ Application/sensortag.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6
 Application/sensortag.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Queue.h
 Application/sensortag.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Task.h
 Application/sensortag.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/package/Task_SupportProxy.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/icall/src/inc/ICall.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/icall/src/inc/ICall.h
 Application/sensortag.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdbool.h
 Application/sensortag.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdlib.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_assert.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/../_common/cc26xx/_hal_types.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_defs.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/gatt.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/bcomdef.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/comdef.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_assert.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/../_common/cc26xx/_hal_types.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_defs.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/gatt.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/bcomdef.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/comdef.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal.h
 Application/sensortag.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/limits.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Memory.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Timers.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/att.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/l2cap.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/gatt_profile_uuid.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/hci.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/controller/cc26xx/inc/ll.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/gapgattserver.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/gattservapp.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/profiles/roles/gapbondmgr.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/gap.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/sm.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal_snv.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/util.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Memory.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Timers.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/att.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/l2cap.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/gatt_profile_uuid.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/hci.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/controller/cc26xx/inc/ll.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/gapgattserver.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/gattservapp.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/roles/gapbondmgr.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/gap.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/sm.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal_snv.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/util.h
 Application/sensortag.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Clock.h
 Application/sensortag.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Queue.h
 Application/sensortag.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Semaphore.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/icall/inc/icall_apimsg.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/linkdb.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/icall/inc/icall_apimsg.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/linkdb.h
 Application/sensortag.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/mw/sensors/SensorI2C.h
 Application/sensortag.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/mw/sensortag/SensorTagTest.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_revision.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/target/Board.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/target/./cc2650st/cc2650st_board.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/Board.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_revision.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/Board.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/./cc2650st/cc2650st_board.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/Board.h
 Application/sensortag.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/Power.h
 Application/sensortag.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/utils/List.h
 Application/sensortag.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stddef.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/CC2650STK.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/CC2650STK.h
 Application/sensortag.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/PIN.h
 Application/sensortag.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stddef.h
 Application/sensortag.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/driverlib/ioc.h
@@ -245,32 +245,32 @@ Application/sensortag.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xx
 Application/sensortag.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/mw/sensors/SensorUtil.h
 Application/sensortag.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Clock.h
 Application/sensortag.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Task.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/profiles/dev_info/devinfoservice.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/movementservice.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/st_util.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/displayservice.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_register.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensorTag.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/profiles/roles/cc26xx/peripheral.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/dev_info/devinfoservice.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/movementservice.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/st_util.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/displayservice.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_register.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensorTag.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/roles/cc26xx/peripheral.h
 Application/sensortag.obj: C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Clock.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_factoryreset.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_factoryreset.h
 Application/sensortag.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/string.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_tmp.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_hum.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_bar.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_mov.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_opt.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_keys.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_io.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/target/board.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_batt.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_audio.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_oad.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_conn_ctrl.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_display.h
-Application/sensortag.obj: C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_light.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_tmp.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_hum.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_bar.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_mov.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_opt.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_keys.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_io.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/board.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_batt.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_audio.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_oad.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_conn_ctrl.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_display.h
+Application/sensortag.obj: C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_light.h
 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag.c: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag.c: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/string.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/linkage.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/std.h: 
@@ -453,49 +453,49 @@ C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbi
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Queue.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Task.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/package/Task_SupportProxy.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/icall/src/inc/ICall.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/icall/src/inc/ICall.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdbool.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdlib.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_assert.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/../_common/cc26xx/_hal_types.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_defs.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/gatt.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/bcomdef.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/comdef.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_assert.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/../_common/cc26xx/_hal_types.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/inc/hal_defs.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/gatt.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/bcomdef.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/comdef.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/limits.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Memory.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Timers.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/att.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/l2cap.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/gatt_profile_uuid.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/hci.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/controller/cc26xx/inc/ll.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/gapgattserver.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/gattservapp.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/profiles/roles/gapbondmgr.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/gap.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/sm.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal_snv.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/util.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Memory.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/OSAL_Timers.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/att.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/l2cap.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/gatt_profile_uuid.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/hci.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/controller/cc26xx/inc/ll.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/gapgattserver.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/gattservapp.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/roles/gapbondmgr.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/gap.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/sm.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/osal/src/inc/osal_snv.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/components/hal/src/target/_common/hal_types.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/util.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Clock.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Queue.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Semaphore.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/icall/inc/icall_apimsg.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/inc/linkdb.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/icall/inc/icall_apimsg.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/inc/linkdb.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/mw/sensors/SensorI2C.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/mw/sensortag/SensorTagTest.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_revision.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/target/Board.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/target/./cc2650st/cc2650st_board.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/Board.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_revision.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/Board.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/./cc2650st/cc2650st_board.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/Board.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/Power.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/utils/List.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stddef.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/CC2650STK.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/common/cc26xx/../../boards/CC2650STK/CC2650STK.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/drivers/PIN.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stddef.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/driverlib/ioc.h: 
@@ -515,27 +515,27 @@ C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/cc26xxware_2_24_03_17272/inc/hw_g
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/tidrivers_cc13xx_cc26xx_2_21_01_01/packages/ti/mw/sensors/SensorUtil.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Clock.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Task.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/profiles/dev_info/devinfoservice.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/movementservice.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/st_util.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/displayservice.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_register.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensorTag.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/profiles/roles/cc26xx/peripheral.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/dev_info/devinfoservice.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/movementservice.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/st_util.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/sensor_profile/cc26xx/displayservice.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_register.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensorTag.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/profiles/roles/cc26xx/peripheral.h: 
 C:/ti/tirtos_cc13xx_cc26xx_2_21_01_08/products/bios_6_46_01_38/packages/ti/sysbios/knl/Clock.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_factoryreset.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_factoryreset.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/string.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_tmp.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_hum.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_bar.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_mov.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_opt.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_keys.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_io.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/target/board.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_batt.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_audio.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_oad.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_conn_ctrl.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_display.h: 
-C:/Users/Raul/Dropbox/UAS/SSNS/workspace/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_light.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_tmp.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_hum.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_bar.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_mov.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_opt.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_keys.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_io.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/target/board.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_batt.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_audio.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_oad.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_conn_ctrl.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_display.h: 
+C:/Users/Elis/Desktop/HIS/SOSE2018/SSNS/Project/Source_Code/SSNS/SSNS/source/sensortag/ble_sdk_2_02_02_25/src/examples/sensortag/cc26xx/app/sensortag_light.h: 
