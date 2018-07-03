@@ -2,6 +2,7 @@ package com.application.math;
 
 import java.rmi.server.ServerCloneException;
 import java.text.DecimalFormat;
+import java.util.Date;
 
 import com.application.bluetooth.Server;
 import com.application.util.ConfigurationStorage;
@@ -14,6 +15,7 @@ public class Mathems extends Thread {
 
 	boolean isAclrFall;
 	boolean isGyroFall;
+	boolean isNotified;
 
 	private Gyroskope gyro_1;
 	private Accelerometer aclr_1;
@@ -28,6 +30,7 @@ public class Mathems extends Thread {
 	private Mathems(Server server) {
 		this.isAclrFall = false;
 		this.isGyroFall = false;
+		this.isNotified = false;
 
 		this.count_pass_measur = 0;
 
@@ -92,10 +95,13 @@ public class Mathems extends Thread {
 		while(true) {
 			if(this.count_pass_measur <= ConfigurationStorage.getSKIP_MEASURE()) { // increasing of count_pass_measur in .add method
 				//System.out.print("fkygwyc");
-				
+				long tmp =System.currentTimeMillis();
 					add_measurments(); // was added to check ""
-				
+				System.out.println("Time addMsr: " +(System.currentTimeMillis()-tmp));
 			}else {
+				
+				
+				
 				this.count_pass_measur = 0;
 
 				//if(aclr_1.bufSize() < ConfigurationStorage.getCOUNT_SEC()) //if amount of measurments is less than it is need tocover one second
@@ -108,7 +114,15 @@ public class Mathems extends Thread {
 
 				if(this.isAclrFall && this.isGyroFall) {
 					System.out.println("Notify!!");
-					FallNotificationService.notifyFall();
+					new Thread(new Runnable() {
+
+						@Override
+						public void run() {
+							
+							FallNotificationService.notifyFall();
+						}}).start();
+					
+				
 				}
 				
 				this.isAclrFall = false;
@@ -131,6 +145,8 @@ public class Mathems extends Thread {
 		double Gx;
 		double Gy;
 		double Gz;
+		
+		double tmp;
 
 		if(measure_str==null) { 
 			System.out.println("string null");
@@ -161,11 +177,25 @@ public class Mathems extends Thread {
 					Integer.parseInt(
 							measure_str.substring(20, 24), 16)); // Ax
 
-			System.out.println("Accelerometer: "+convertG(Ax) + " " + convertG(Ay) + " " + convertG(Az));
-			System.out.println("Gyroscope: "+convertAngSp(Gx) + " " + convertAngSp(Gy) + " " + convertAngSp(Gz));
-
-			this.aclr_1.add_aclr(convertG(Ax), convertG(Ay), convertG(Az));
-			this.gyro_1.add_gyro(convertAngSp(Gx), convertAngSp(Gy), convertAngSp(Gz));
+			Ax = convertG(Ax);
+			Ay = convertG(Ay);
+			Az = convertG(Az);
+			
+			Gx = convertAngSp(Gx);
+			Gy = convertAngSp(Gy);
+			Gz = convertAngSp(Gz);
+			 
+			//System.out.println("Accelerometer: "+convertG(Ax) + " " + convertG(Ay) + " " + convertG(Az));
+			//System.out.println("Gyroscope: "+convertAngSp(Gx) + " " + convertAngSp(Gy) + " " + convertAngSp(Gz));
+			//TODO: calculate Absolute value and add it to the Queue
+			 
+			
+			 
+			tmp = Math.sqrt(sqr(Ax) + sqr(Ay) + sqr(Az));
+			Server.absAcc1Queue.add((Number)tmp);
+			  //System.out.println("ACC1"+tmp);
+			this.aclr_1.add_aclr(Ax, Ay, Az);
+			this.gyro_1.add_gyro(Gx, Gy, Gz);
 		}
 
 		//there we can send data to the Graph!!!!!
@@ -197,12 +227,28 @@ public class Mathems extends Thread {
 			Gz = correctMeasurments(
 					Integer.parseInt(
 							measure_str.substring(20, 24), 16)); // Ax
+			
+			Ax = convertG(Ax);
+			Ay = convertG(Ay);
+			Az = convertG(Az);
+			
+			Gx = convertAngSp(Gx);
+			Gy = convertAngSp(Gy);
+			Gz = convertAngSp(Gz);
 
-			this.aclr_2.add_aclr(convertG(Ax), convertG(Ay), convertG(Az));
-			//this.gyro_2.add_gyro(convertAngSp(Gx), convertAngSp(Gy), convertAngSp(Gz));
+			//TODO: calculate Abbsolute value and add it to the Queue
+			tmp = Math.sqrt(sqr(Ax) + sqr(Ay) + sqr(Az));
+			//System.out.println("ACC2: "+ tmp);
+		    Server.absAcc2Queue.add((Number)tmp);
+			this.aclr_2.add_aclr(Ax, Ay, Az);
+			this.gyro_2.add_gyro(Gx, Gy, Gz);
 		}
 
 		//there we can send data to the Graph!!!!!
+	}
+	
+	private double sqr(double i) {
+		return i*i;
 	}
 
 	private double correctMeasurments(double tmp) {

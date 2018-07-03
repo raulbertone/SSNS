@@ -29,20 +29,36 @@ import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
+import javafx.scene.chart.XYChart.Data;
+import javafx.scene.chart.XYChart.Series;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class mainController {
 
-
+	//region
+/**
+ * @author Elis
+ * 
+ * Some counters for the series update and graph update
+ * 
+ * */
+	int Accel1SerieCnt=0;
+	//endregion
 	Server sr = Server.getInstance();
 	
 	public static StringProperty Scan = new SimpleStringProperty(null);
 	public static StringProperty status = new SimpleStringProperty(Server.STATUS);
+	
+	private XYChart.Series<Number, Number> Accel1Serie = new XYChart.Series<>(); 
+	private XYChart.Series<Number, Number> Accel2Serie = new XYChart.Series<>(); 
+	NumberAxis xAxis = new NumberAxis(0, 50, 1);
+	NumberAxis yAxis = new NumberAxis(0,5,0.1);
 	
     
 	
@@ -68,9 +84,6 @@ public class mainController {
     
     @FXML
     static CategoryAxis accel_time;
-    
-    @FXML
-    static LineChart<Number, String> Accelerometer;
 
     @FXML
     static CategoryAxis gyro_time;
@@ -124,6 +137,8 @@ public class mainController {
     @FXML
     private ChoiceBox<String> ddlAvSensors;
     
+    @FXML
+    private AnchorPane idGraphAccl;
     /* End of IDs of mainView */
     
     /**
@@ -137,57 +152,7 @@ public class mainController {
      *       Apply Rule 1
      * */
     MainAppliction main = new MainAppliction();
-    
-    //LineChart variable initialization
-    static int xSeriesData = 0;
-    
-    static XYChart.Series<Number, String> accel1_series = new XYChart.Series<>();
-    
-    static XYChart.Series<Number, String> accel2_series = new XYChart.Series<>();
-    
-    
-    static XYChart.Series<Number, String> gyro1_series = new XYChart.Series<>();
-    
-    
-    static XYChart.Series<Number, String> gyro2_series = new XYChart.Series<>();
-    
-    static ConcurrentLinkedQueue<Number> Q1 = new ConcurrentLinkedQueue<>();    
-    static ConcurrentLinkedQueue<Number> Q2 = new ConcurrentLinkedQueue<>();    
-    static ConcurrentLinkedQueue<Number> Q3 = new ConcurrentLinkedQueue<>();    
-    static ConcurrentLinkedQueue<Number> Q4 = new ConcurrentLinkedQueue<>();
-    
-    static void setVars() {
-    	
-    	accel_accel = new NumberAxis(0, 100, 10);
-        accel_time = new CategoryAxis();
-        
-        gyro_accel = new NumberAxis(0, 100, 10);
-        gyro_time = new CategoryAxis();
-        
-        accel1_series.setName("Accel1");
-        accel2_series.setName("Accel2");
-        gyro1_series.setName("Accel1");
-        gyro2_series.setName("Accel1");
-        
-        Accelerometer = new LineChart<Number, String>(accel_accel, accel_time) {
-            // Override to remove symbols on each data point
-            @Override
-            protected void dataItemAdded(Series<Number, String> series, int itemIndex, Data<Number, String> item) {
-            }
-        };
-
-        Gyroscope = new LineChart<Number, String>(gyro_accel, gyro_time) {
-            // Override to remove symbols on each data point
-            @Override
-            protected void dataItemAdded(Series<Number, String> series, int itemIndex, Data<Number, String> item) {
-            }
-        };
-        
-        Accelerometer.getData().addAll(accel1_series,accel2_series);
-        Gyroscope.getData().addAll(gyro1_series,gyro2_series);
-        }
-
-    
+       
     public void setLblHelpReqColor(String color) {
     	 lblHelpReq.setTextFill(Color.web(color));
     }
@@ -234,17 +199,14 @@ public class mainController {
     @FXML
     void StartReceiving(ActionEvent event) {  	
     	sr.readData();
-    	prepareTimeline();
+    	
     	// new Application();
     }
 
     @FXML
     void StopReceiving(ActionEvent event) {
     	
-    	for(int i=1;i<100;i++)
-    	{
-    		Q1.add(Math.random());
-    		}
+    	
     }
        
     @FXML
@@ -267,6 +229,8 @@ public class mainController {
     @FXML
     void initialize() {
     	
+    	 initializeGraph(idGraphAccl,Accel1Serie,Accel2Serie);
+    	 prepareTimeline();
     	// set a reference to this controller so that the FallNotificationService can change the colour of labels
     	FallNotificationService.setMain(this);
 		sr.DevInit(this);
@@ -279,7 +243,6 @@ public class mainController {
         this.btnDisconnect.disableProperty().bind(BooleanExpression.booleanExpression(Scan.isEmpty()));
 		//this.btnConnect.disableProperty().bind(observable);
         assert btnConnect != null : "fx:id=\"btnConnect\" was not injected: check your FXML file 'main.fxml'.";       
-        assert Accelerometer != null : "fx:id=\"Accelerometer\" was not injected: check your FXML file 'main.fxml'.";
         assert Gyroscope != null : "fx:id=\"Gyroscope\" was not injected: check your FXML file 'main.fxml'.";
         assert btnClean != null : "fx:id=\"btnClean\" was not injected: check your FXML file 'main.fxml'.";
         assert btnDisconnect != null : "fx:id=\"btnDisconnect\" was not injected: check your FXML file 'main.fxml'.";
@@ -289,62 +252,122 @@ public class mainController {
         assert lblConnecting != null : "fx:id=\"lblConnecting\" was not injected: check your FXML file 'main.fxml'.";
         assert lblFallDet != null : "fx:id=\"lblFallDet\" was not injected: check your FXML file 'main.fxml'.";
         assert lblHelpReq != null : "fx:id=\"lblHelpReq\" was not injected: check your FXML file 'main.fxml'.";
-        
-        setVars();
-        prepareTimeline();
+       
         
     }
+
+	/**
+	 * @author Elis
+	 * 
+	 *         TODO: Please Use this section t add other functions that you will
+	 *         need for help
+	 * 
+	 *         Apply Rule1
+	 * 
+	 */
+
+	public void addAccqDataToSerie() {
+		for (int i = 0; i < 20; i++) { // -- add 20 numbers to the plot+
+			if (!Server.absAcc1Queue.isEmpty() || !Server.absAcc2Queue.isEmpty()) {
+				int tmp = Accel1SerieCnt++;
+				if (!Server.absAcc1Queue.isEmpty()) {
+					Accel1Serie.getData().add(new XYChart.Data<>(tmp, Server.absAcc1Queue.remove()));
+				} else {
+					Accel1Serie.getData().add(new XYChart.Data<>(tmp, 0));
+				}
+				if (!Server.absAcc2Queue.isEmpty()) {
+					Accel2Serie.getData().add(new XYChart.Data<>(tmp, Server.absAcc2Queue.remove()));
+				} else {
+					Accel2Serie.getData().add(new XYChart.Data<>(tmp, 0));
+				}
+			} else {
+				break;
+			}
+
+		}
+
+		if (Accel1Serie.getData().size() > 50) {
+			Accel1Serie.getData().remove(0, Accel1Serie.getData().size() - 50);
+		}
+		if (Accel2Serie.getData().size() > 50) {
+			Accel2Serie.getData().remove(0, Accel2Serie.getData().size() - 50);
+		}
+		if (Accel1SerieCnt > 50) {
+			xAxis.setLowerBound(Accel1SerieCnt - 50);
+		} else {
+			xAxis.setLowerBound(0);
+		}
+		if (Accel1SerieCnt != 0) {
+			xAxis.setUpperBound(Accel1SerieCnt - 1);
+		} else {
+			xAxis.setUpperBound(0);
+		}
+	}
     
-  //Timeline gets called in the JavaFX Main thread
-    void prepareTimeline() {
+    
+//    private void addDataToSeries() {
+//        for (int i = 0; i < 3; i++) { //-- add 20 numbers to the plot+
+//            if (blood.getBloodQue().isEmpty()) 
+//            break;
+//            
+//            series1.getData().add(new XYChart.Data<>(xSeriesData++, blood.removeHead()));    
+//        }
+//       
+//        if (series1.getData().size() > 300) {
+//            series1.getData().remove(0, series1.getData().size() - 300);
+//        }
+//        
+//        // update
+//        if(xSeriesData>100)
+//        {
+//        	xAxis.setLowerBound(xSeriesData-100);
+//        }
+//        else
+//        {
+//        	xAxis.setLowerBound(0);
+//        }
+//       
+//        xAxis.setUpperBound(xSeriesData - 1);
+//    }
+//    
+    
+    
+    private void prepareTimeline() {
         // Every frame to take any data from queue and add to chart
         new AnimationTimer() {
             @Override
             public void handle(long now) {
-                addData();
+            	addAccqDataToSerie();
             }
         }.start();
     }
     
-  //use given data to populate the charts
-    private void addData() {
-    	for (int i = 0; i < 20; i++) { //-- add 20 numbers to the plot+
-            if (Q1.isEmpty()) break;
-    		accel1_series.getData().add(new XYChart.Data<>(Q1.remove(), ""+ xSeriesData++));
-            accel2_series.getData().add(new XYChart.Data<>(Q2.remove(), ""+ xSeriesData++));
-            gyro1_series.getData().add(new XYChart.Data<>(Q3.remove(), ""+ xSeriesData++));
-            gyro2_series.getData().add(new XYChart.Data<>(Q4.remove(), ""+ xSeriesData++));
-        }
+    private void initializeGraph(AnchorPane graphAnchorPane, XYChart.Series<Number, Number> Accel1Series,  XYChart.Series<Number, Number> Accel2Series) {
     	
-    	if (accel1_series.getData().size() > 100) {
-            accel1_series.getData().remove(0, accel1_series.getData().size() - 100);
-        }
-        if (accel2_series.getData().size() > 100) {
-            accel2_series.getData().remove(0, accel2_series.getData().size() - 100);
-        }
-        if (gyro1_series.getData().size() > 100) {
-            gyro1_series.getData().remove(0, gyro1_series.getData().size() - 100);
-        }
+    	xAxis.setLabel("time in minutes");
+        yAxis.setLabel("Acceleration");
+         
+         final LineChart<Number, Number> lineChart = new LineChart<Number, Number>(xAxis, yAxis) {
+             // Override to remove symbols on each data point
+             @Override
+             protected void dataItemAdded(Series<Number, Number> series, int itemIndex, Data<Number, Number> item) {
+             }
+         };
         
-        if (gyro2_series.getData().size() > 100) {
-            gyro2_series.getData().remove(0, gyro2_series.getData().size() - 100);
-        }
-        
-        // update
-        accel_accel.setLowerBound(xSeriesData - 100);
-        accel_accel.setUpperBound(xSeriesData - 1);
-        gyro_accel.setLowerBound(xSeriesData - 100);
-        gyro_accel.setUpperBound(xSeriesData - 1);
+         lineChart.setAnimated(true);
+         lineChart.setTitle("Acceleromtere");
+         lineChart.setHorizontalGridLinesVisible(true);
+         lineChart.setVerticalGridLinesVisible(false);
+    	
+         Accel1Series.setName("Accelerometer1");
+         lineChart.getData().addAll(Accel1Series);
+         Accel2Series.setName("Accelerometer2");
+         lineChart.getData().addAll(Accel2Serie);
+         
+         graphAnchorPane.getChildren().add(lineChart);
     }
     
-    /**
-     * @author Elis
-     * 
-     * TODO: Please Use this section t add other functions that you will need for help 
-     * 
-     *   Apply Rule1
-     
-     * */
+    
     public Button getbtnConnect()
     {
     	return this.btnConnect;

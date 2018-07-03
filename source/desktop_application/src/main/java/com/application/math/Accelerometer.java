@@ -79,7 +79,7 @@ public class Accelerometer {
 
 			double force_impact = Math.abs(tmp_aclr.buf_z.get(i));
 
-			System.out.println("force_impact = " + force_impact + " original: " + tmp_aclr.buf_z.get(i));
+			//System.out.println("force_impact = " + force_impact + " original: " + tmp_aclr.buf_z.get(i));
 			
 			while(force_impact > 0.8 && force_impact < 1.3)
 			{
@@ -91,7 +91,7 @@ public class Accelerometer {
 //				return i;
 //			}
 		}
-		System.out.println("getFallStart is not correct");
+	 //System.out.println("getFallStart is not correct");
 		return 0;
 	}
 
