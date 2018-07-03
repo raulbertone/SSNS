@@ -32,8 +32,10 @@
             <Button fx:id="btnConnect" mnemonicParsing="false" onAction="#Connect" prefWidth="80.0" text="Connect" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="80.0" />
             <Label fx:id="btnStatus" font="$x1" layoutX="23.0" layoutY="32.0" text="Status:" />
             <Button fx:id="btnDisconnect" mnemonicParsing="false" onAction="#Disconnect" prefWidth="80.0" text="Disconnect" AnchorPane.leftAnchor="142.0" AnchorPane.topAnchor="80.0" />
-            <Label fx:id="lblFallDet" font="$x1" prefHeight="27.0" prefWidth="145.0" text="Fall Detected" textFill="#ff3333" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="39.0" />
+            <Label fx:id="lblFallDet" font="$x1" prefHeight="27.0" prefWidth="145.0" text="Fall Detected" textFill="BLACK" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="39.0" />
             <Label fx:id="lblHelpReq" font="$x1" text="Help Requested" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="74.0" />
+            <Button fx:id="btnScan" layoutX="254.0" layoutY="80.0" mnemonicParsing="false" onAction="#ScanForBluetoothDevices" prefWidth="80.0" text="Scan" />
+            <ChoiceBox fx:id="ddlAvSensors" layoutX="415.0" layoutY="77.0" prefWidth="150.0" />
           </children>
         </AnchorPane>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
@@ -44,26 +46,15 @@
                   <children>
                     <SplitPane dividerPositions="0.5" focusTraversable="true" prefHeight="375.0" prefWidth="796.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                       <items>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                          <children>
-                            <LineChart fx:id="Accelerometer" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-1.0" minWidth="-1.0" prefHeight="373.0" prefWidth="394.0" title="Accelerometer" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                              <xAxis>
-                                <CategoryAxis label="time" side="BOTTOM" />
-                              </xAxis>
-                              <yAxis>
-                                <NumberAxis label="Acceleration" side="LEFT" />
-                              </yAxis>
-                            </LineChart>
-                          </children>
-                        </AnchorPane>
+                        <AnchorPane fx:id="idGraphAccl" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                           <children>
                             <LineChart fx:id="Gyroscope" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefHeight="373.0" prefWidth="394.0" title="Gyroscope" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                               <xAxis>
-                                <CategoryAxis label="time" side="BOTTOM" />
+                                <CategoryAxis fx:id="gyro_time" label="time" side="BOTTOM" />
                               </xAxis>
                               <yAxis>
-                                <NumberAxis label="Acceleration" side="LEFT" />
+                                <NumberAxis fx:id="gyro_accel" label="Acceleration" side="LEFT" />
                               </yAxis>
                             </LineChart>
                           </children>
@@ -76,7 +67,7 @@
                   <children>
                     <Button fx:id="btnStart" mnemonicParsing="false" onAction="#StartReceiving" prefWidth="80.0" text="Start" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="258.0" />
                     <Button id="Stop" fx:id="btnStop" mnemonicParsing="false" onAction="#StopReceiving" prefWidth="80.0" text="Stop" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="155.0" />
-                    <Button fx:id="btnClean" minHeight="-1.0" mnemonicParsing="false" onAction="#Clean" prefHeight="-1.0" prefWidth="80.0" text="Clean" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="47.0" />
+                    <Button fx:id="btnClean" minHeight="-1.0" mnemonicParsing="false" onAction="#Clean" prefHeight="-1.0" prefWidth="80.0" text="Reset" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="47.0" />
                   </children>
                 </AnchorPane>
               </items>
