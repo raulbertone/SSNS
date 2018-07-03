@@ -13,19 +13,21 @@ public class ProcessMessage  extends Thread{
 	Boolean alive;
 	Server server = Server.getInstance();
 	private static int dataLength=0;
-	private static int countAcc1=0;
-	private static int countAcc2=0;
+	private  int countAcc1=0;
+	private  int countAcc2=0;
 	private mainController controller ;
-	
+	private long timestamp=0;
 	public ProcessMessage(Boolean value)
 	{
 		this.alive=value;
+		this.setName("Msg_Thread");
 		this.start();
 	}
 	public ProcessMessage(Boolean value,  mainController controller)
 	{
 		this.controller=controller;
 		this.alive=value;
+		this.setName("Msg_Thread");
 		this.start();
 	}
 public void run() {
@@ -239,21 +241,37 @@ public  String getData (int length)
 public  void addToQueue(String data)
 {
 	Mathems.getInstance(server);	
+	
 	String realValues = data.substring(16, 40);
 	if(data.startsWith("1B050000"))
 	{		
+		
+		this.countAcc1++;
 		//Server.acc1.add(Utils.reverseHexString(realValues));
 		server.addToSensor1(Utils.reverseHexString(realValues));
-		//System.out.println(realValues);
-		//System.out.println("S1: "+realValues);
+		
+		//
 	}
 	else if(data.startsWith("1B050001"))
 	{
+		this.countAcc2++;
+		
 		//Server.acc2.add(Utils.reverseHexString(realValues));
 		server.addToSensor2(Utils.reverseHexString(realValues));	
 		//System.out.println("S2: "+realValues);
 	}
 	
+//	if(timestamp==0)
+//		{
+//		timestamp=System.currentTimeMillis();
+//		}
+//	else if(System.currentTimeMillis()-timestamp>10)
+//	{
+//		timestamp=System.currentTimeMillis();
+//		System.out.println("Valuesfrom ACC1: "+ this.countAcc1);
+//		System.out.println("Valuesfrom ACC2: "+ this.countAcc2);
+//	}
+//	
 
 	}
 

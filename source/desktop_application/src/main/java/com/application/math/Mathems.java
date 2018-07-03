@@ -95,9 +95,9 @@ public class Mathems extends Thread {
 		while(true) {
 			if(this.count_pass_measur <= ConfigurationStorage.getSKIP_MEASURE()) { // increasing of count_pass_measur in .add method
 				//System.out.print("fkygwyc");
-				long tmp =System.currentTimeMillis();
+				
 					add_measurments(); // was added to check ""
-				System.out.println("Time addMsr: " +(System.currentTimeMillis()-tmp));
+				
 			}else {
 				
 				
@@ -135,6 +135,7 @@ public class Mathems extends Thread {
 
 	public void add_measurments() { //was added to check String str
 
+		long tmptime =System.currentTimeMillis();
 		//for the first sensor
 		String measure_str = server.getSensor1Data();
 
@@ -192,10 +193,13 @@ public class Mathems extends Thread {
 			
 			 
 			tmp = Math.sqrt(sqr(Ax) + sqr(Ay) + sqr(Az));
+			
 			Server.absAcc1Queue.add((Number)tmp);
-			  //System.out.println("ACC1"+tmp);
+			//TODO: here I add values to accelerometer graph for gyroscope but now I add the same value that we calculate for Accelerometer this must change
+			Server.gyro1DataToDisplay.add((Number)tmp);
 			this.aclr_1.add_aclr(Ax, Ay, Az);
 			this.gyro_1.add_gyro(Gx, Gy, Gz);
+			//System.out.println("Time addMsr: " +(System.currentTimeMillis()-tmptime));
 		}
 
 		//there we can send data to the Graph!!!!!
@@ -240,6 +244,9 @@ public class Mathems extends Thread {
 			tmp = Math.sqrt(sqr(Ax) + sqr(Ay) + sqr(Az));
 			//System.out.println("ACC2: "+ tmp);
 		    Server.absAcc2Queue.add((Number)tmp);
+		    
+		  //TODO: here I add values to accelerometer graph for gyroscope but now I add the same value that we calculate for Accelerometer this must change
+			Server.gyro2DataToDisplay.add((Number)tmp);
 			this.aclr_2.add_aclr(Ax, Ay, Az);
 			this.gyro_2.add_gyro(Gx, Gy, Gz);
 		}
