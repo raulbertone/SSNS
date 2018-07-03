@@ -31,7 +31,7 @@ public class Sensor {
 		   @Override
 		   public void run()
 		   {
-			   new ProcessMessage(true);
+			   //new ProcessMessage(true);
 			   try {
 				   server.WriteToPort(WriteCharOpCode+reverseHexString(connHandle)+"25000100"); 
 				Thread.sleep(500);

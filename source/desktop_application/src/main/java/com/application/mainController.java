@@ -60,7 +60,15 @@ public class mainController {
 	NumberAxis xAxis = new NumberAxis(0, 50, 1);
 	NumberAxis yAxis = new NumberAxis(0,5,0.1);
 	
-    
+	//TODO: fix range of each gyroaxis
+	int gyroSerieCount=0;
+	NumberAxis xGxis = new NumberAxis(0, 50, 1);
+	NumberAxis yGxis = new NumberAxis(0,5,0.1);
+	private XYChart.Series<Number, Number> Gyro1Serie = new XYChart.Series<>(); 
+	private XYChart.Series<Number, Number> Gyro2Serie = new XYChart.Series<>(); 
+	//private XYChart.Series<Number, Number> Accel2Serie = new XYChart.Series<>(); 
+	//private XYChart.Series<Number, Number> Accel2Serie = new XYChart.Series<>(); 
+	
 	
     /**
      * @author Elis
@@ -91,10 +99,6 @@ public class mainController {
     @FXML
     static NumberAxis gyro_accel;
     
-    @FXML
-    static LineChart<Number, String> Gyroscope;
-
-
     @FXML
     private Button btnClean;   
     
@@ -139,6 +143,10 @@ public class mainController {
     
     @FXML
     private AnchorPane idGraphAccl;
+    
+
+    @FXML
+    private AnchorPane idGraphGyro;
     /* End of IDs of mainView */
     
     /**
@@ -231,6 +239,8 @@ public class mainController {
     	
     	 initializeGraph(idGraphAccl,Accel1Serie,Accel2Serie);
     	 prepareTimeline();
+    	 
+    	 initializeGyroGraph(idGraphGyro, Gyro1Serie, Gyro2Serie);
     	// set a reference to this controller so that the FallNotificationService can change the colour of labels
     	FallNotificationService.setMain(this);
 		sr.DevInit(this);
@@ -243,7 +253,6 @@ public class mainController {
         this.btnDisconnect.disableProperty().bind(BooleanExpression.booleanExpression(Scan.isEmpty()));
 		//this.btnConnect.disableProperty().bind(observable);
         assert btnConnect != null : "fx:id=\"btnConnect\" was not injected: check your FXML file 'main.fxml'.";       
-        assert Gyroscope != null : "fx:id=\"Gyroscope\" was not injected: check your FXML file 'main.fxml'.";
         assert btnClean != null : "fx:id=\"btnClean\" was not injected: check your FXML file 'main.fxml'.";
         assert btnDisconnect != null : "fx:id=\"btnDisconnect\" was not injected: check your FXML file 'main.fxml'.";
         assert btnStart != null : "fx:id=\"btnStart\" was not injected: check your FXML file 'main.fxml'.";
@@ -265,21 +274,59 @@ public class mainController {
 	 *         Apply Rule1
 	 * 
 	 */
+    
+    public void addGyroDataToSerie()
+    {
+    	for(int i=0; i<3; i++)
+    	{
+    		if(!Server.gyro1DataToDisplay.isEmpty() || !Server.gyro2DataToDisplay.isEmpty())
+    		{
+    			int tmp=gyroSerieCount++;
+    			if(!Server.gyro1DataToDisplay.isEmpty())
+    			{
+    				Gyro1Serie.getData().add(new XYChart.Data<>(tmp, Server.gyro1DataToDisplay.remove()));
+    			}
+    			if(!Server.gyro2DataToDisplay.isEmpty())
+    			{
+    				Gyro2Serie.getData().add(new XYChart.Data<>(tmp, Server.gyro2DataToDisplay.remove()));
+    			}
+    		}
+    		else
+    		{
+    			break;
+    		}
+    	}
+    	
+    	//Update timeline
+    	if (Gyro1Serie.getData().size() > 50) {
+    		Gyro1Serie.getData().remove(0, Gyro1Serie.getData().size() - 50);
+		}
+		if (Gyro2Serie.getData().size() > 50) {
+			Gyro2Serie.getData().remove(0, Gyro2Serie.getData().size() - 50);
+		}
+		if (gyroSerieCount > 50) {
+			xGxis.setLowerBound(Accel1SerieCnt - 50);
+		} else {
+			xGxis.setLowerBound(0);
+		}
+		if (gyroSerieCount != 0) {
+			xGxis.setUpperBound(Accel1SerieCnt - 1);
+		} else {
+			xGxis.setUpperBound(0);
+		}
+    }
 
 	public void addAccqDataToSerie() {
-		for (int i = 0; i < 20; i++) { // -- add 20 numbers to the plot+
+		for (int i = 0; i < 3; i++) { 
 			if (!Server.absAcc1Queue.isEmpty() || !Server.absAcc2Queue.isEmpty()) {
 				int tmp = Accel1SerieCnt++;
 				if (!Server.absAcc1Queue.isEmpty()) {
 					Accel1Serie.getData().add(new XYChart.Data<>(tmp, Server.absAcc1Queue.remove()));
-				} else {
-					Accel1Serie.getData().add(new XYChart.Data<>(tmp, 0));
-				}
+				}  				
 				if (!Server.absAcc2Queue.isEmpty()) {
 					Accel2Serie.getData().add(new XYChart.Data<>(tmp, Server.absAcc2Queue.remove()));
-				} else {
-					Accel2Serie.getData().add(new XYChart.Data<>(tmp, 0));
-				}
+				} 
+				
 			} else {
 				break;
 			}
@@ -304,40 +351,14 @@ public class mainController {
 		}
 	}
     
-    
-//    private void addDataToSeries() {
-//        for (int i = 0; i < 3; i++) { //-- add 20 numbers to the plot+
-//            if (blood.getBloodQue().isEmpty()) 
-//            break;
-//            
-//            series1.getData().add(new XYChart.Data<>(xSeriesData++, blood.removeHead()));    
-//        }
-//       
-//        if (series1.getData().size() > 300) {
-//            series1.getData().remove(0, series1.getData().size() - 300);
-//        }
-//        
-//        // update
-//        if(xSeriesData>100)
-//        {
-//        	xAxis.setLowerBound(xSeriesData-100);
-//        }
-//        else
-//        {
-//        	xAxis.setLowerBound(0);
-//        }
-//       
-//        xAxis.setUpperBound(xSeriesData - 1);
-//    }
-//    
-    
-    
+       
     private void prepareTimeline() {
         // Every frame to take any data from queue and add to chart
         new AnimationTimer() {
             @Override
             public void handle(long now) {
             	addAccqDataToSerie();
+            	addGyroDataToSerie();
             }
         }.start();
     }
@@ -367,7 +388,31 @@ public class mainController {
          graphAnchorPane.getChildren().add(lineChart);
     }
     
-    
+    private void initializeGyroGraph(AnchorPane graphAnchorPane,XYChart.Series<Number, Number> gyro1Serie,XYChart.Series<Number, Number> gyro2Serie)
+    { 
+    	xGxis.setLabel("Time");
+    	yGxis.setLabel("Angle in Degre");
+    	
+    	final LineChart<Number, Number> lineChartGyro = new LineChart<Number, Number>(xGxis, yGxis) {
+            // Override to remove symbols on each data point
+            @Override
+            protected void dataItemAdded(Series<Number, Number> series, int itemIndex, Data<Number, Number> item) {
+            }
+        };
+        lineChartGyro.setAnimated(true);
+        lineChartGyro.setTitle("Gyroscope");
+        lineChartGyro.setHorizontalGridLinesVisible(true);
+        lineChartGyro.setVerticalGridLinesVisible(false);
+        
+        gyro1Serie.setName("Gyro 1");
+        lineChartGyro.getData().addAll(gyro1Serie);
+        
+        gyro2Serie.setName("Gyro 2");
+        lineChartGyro.getData().addAll(gyro2Serie);
+        
+        graphAnchorPane.getChildren().add(lineChartGyro);
+        
+    }
     public Button getbtnConnect()
     {
     	return this.btnConnect;

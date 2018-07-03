@@ -35,6 +35,9 @@ public class Server {
 	public static ConcurrentLinkedQueue<Number> absAcc1Queue = new ConcurrentLinkedQueue<>();
 	public static ConcurrentLinkedQueue<Number> absAcc2Queue = new ConcurrentLinkedQueue<>();
 	
+	public static ConcurrentLinkedQueue<Number> gyro1DataToDisplay = new ConcurrentLinkedQueue<>();
+	public static ConcurrentLinkedQueue<Number> gyro2DataToDisplay = new ConcurrentLinkedQueue<>();
+	
 	public static List<String> devicesFound = new ArrayList();
 	private List<Sensor> connectedSlaves = new ArrayList();
 
@@ -247,6 +250,7 @@ public class Server {
 	 *   Method to start reading ata from senosr
 	 */
 	public void readData() {
+		new ProcessMessage(true);
 		for (Sensor s : connectedSlaves) {
 			s.readMovementService();
 		}
