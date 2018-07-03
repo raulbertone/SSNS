@@ -43,36 +43,36 @@ public class DbSave extends Thread {
 		//TODO: here include code to store data in database every second
 		while(true)
 		{
-			
-				
-			if(count<Server.acc1.size())
-			{
-				List<String> data= new ArrayList();
-				for (int i=count; i<Server.acc1.size();i++)
-				{				
-					data.add(Server.acc1.get(count));
-					count++;
-				}
-				saveToFile(data,file1);
-			}
-			
-			if(count1<Server.acc2.size())
-			{
-				List<String> data= new ArrayList();
-				for (int i=count1; i<Server.acc2.size();i++)
-				{
-					data.add(Server.acc2.get(count1));
-					count1++;
-				}
-				saveToFile(data,file2);
-			}
-			
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				
-				e.printStackTrace();
-			}
+//			
+//				
+//			if(count<Server.acc1.size())
+//			{
+//				List<String> data= new ArrayList();
+//				for (int i=count; i<Server.acc1.size();i++)
+//				{				
+//					data.add(Server.acc1.get(count));
+//					count++;
+//				}
+//				saveToFile(data,file1);
+//			}
+//			
+//			if(count1<Server.acc2.size())
+//			{
+//				List<String> data= new ArrayList();
+//				for (int i=count1; i<Server.acc2.size();i++)
+//				{
+//					data.add(Server.acc2.get(count1));
+//					count1++;
+//				}
+//				saveToFile(data,file2);
+//			}
+//			
+//			try {
+//				Thread.sleep(1000);
+//			} catch (InterruptedException e) {
+//				
+//				e.printStackTrace();
+//			}
 		}
 		
 		
