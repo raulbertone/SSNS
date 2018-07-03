@@ -28,11 +28,10 @@ public abstract class ConfigurationStorage {
 	private static int COUNT_SEC = 20; // amount of measurements per second
 	private static double FORCE_IMPACT_D = 0.8; // lower and upper limit for force of laying
 	private static double FORCE_IMPACT_U = 1.3; //
-	private static int G_SCALE = 4; // scale of the Accelerometr
+	private static double G_SCALE = 4; // scale of the Accelerometer
 
 	// help request settings
 	private static int HELP_REQUEST_DELAY = 10 * 1000;
-
 
 	
 	public static String getBIRTH_DATE() {
@@ -177,7 +176,7 @@ public abstract class ConfigurationStorage {
 		return G_SCALE;
 	}
 
-	public static void setG_SCALE(int g_SCALE) {
+	public static void setG_SCALE(double g_SCALE) {
 		G_SCALE = g_SCALE;
 	}
 

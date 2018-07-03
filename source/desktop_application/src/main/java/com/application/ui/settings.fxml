@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="553.0" prefWidth="332.9998779296875" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.application.SettingsController">
+<AnchorPane prefHeight="553.0" prefWidth="355.9998779296875" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.application.SettingsController">
   <!-- TODO Add Nodes -->
   <children>
-    <Button fx:id="btnSave" layoutX="246.0" layoutY="503.0" minHeight="-1.0" mnemonicParsing="false" onAction="#SaveSettings" prefHeight="21.0" prefWidth="73.0" text="Save" />
+    <Button fx:id="btnSave" layoutX="236.0" layoutY="503.0" minHeight="-1.0" mnemonicParsing="false" onAction="#SaveSettings" prefHeight="21.0" prefWidth="83.0" text="Save" />
     <TextField id="txtFieldOffset" fx:id="IMPACT_POW" layoutX="234.0" layoutY="77.0" prefWidth="75.0" />
-    <Button fx:id="btnCancel" layoutX="158.0" layoutY="503.0" mnemonicParsing="false" onAction="#CancelSettings" prefHeight="21.0" prefWidth="73.0" text="Cancel" />
-    <Button fx:id="btnDef" layoutX="246.0" layoutY="473.0" mnemonicParsing="false" onAction="#SetDefault" prefWidth="73.0" text="Default" />
-    <Label id="IMPACT_POW" layoutX="18.0" layoutY="79.0" text="Value of Impact(g)">
+    <Button id="btnCancel" fx:id="btnClose" layoutX="89.0" layoutY="503.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="21.0" prefWidth="73.0" text="Close" />
+    <Button fx:id="btnDef" layoutX="236.0" layoutY="473.0" mnemonicParsing="false" onAction="#SetDefault" prefWidth="83.0" text="Defaults" />
+    <Label id="IMPACT_POW" layoutX="18.0" layoutY="79.0" text="Value of Impact">
       <font>
         <Font size="15.0" fx:id="x2" />
       </font>
@@ -33,13 +33,19 @@
     <TextField id="txtFieldOffset" fx:id="FALL_ANGLE" layoutX="234.0" layoutY="228.0" prefWidth="75.0" />
     <TextField id="FALL_ANGLE" fx:id="COUNT_SEC" layoutX="234.0" layoutY="269.0" prefHeight="22.0" prefWidth="74.9998779296875" />
     <Label id="COUNT_SEC" font="$x2" layoutX="17.0" layoutY="271.0" text="Measurements per Second" />
-    <Label id="FORCE_IMPACT_D" font="$x2" layoutX="17.0" layoutY="310.0" text="Lower limit" />
-    <Label id="FORCE_IMPACT_U" font="$x2" layoutX="18.0" layoutY="350.0" text="Upper limit" />
+    <Label id="FORCE_IMPACT_D" font="$x2" layoutX="17.0" layoutY="310.0" text="Lower laying limit" />
+    <Label id="FORCE_IMPACT_U" font="$x2" layoutX="18.0" layoutY="350.0" text="Upper laying limit" />
     <Label id="G_SCALE" font="$x2" layoutX="17.0" layoutY="386.0" prefHeight="18.0001220703125" text="Accelerometer scale" />
     <Label id="HELP_REQUEST_DELAY" font="$x2" layoutX="17.0" layoutY="428.0" text="Help request delay" />
     <TextField id="txtFieldOffset" fx:id="FORCE_IMPACT_D" layoutX="234.0" layoutY="311.0" prefWidth="75.0" />
     <TextField id="LAYING_POW" fx:id="FORCE_IMPACT_U" layoutX="234.0" layoutY="349.0" prefHeight="22.0" prefWidth="74.9998779296875" />
     <TextField id="txtFieldOffset" fx:id="G_SCALE" layoutX="234.0" layoutY="387.0" prefWidth="75.0" />
     <TextField id="FALL_ANGLE" fx:id="HELP_REQUEST_DELAY" layoutX="234.0" layoutY="428.0" prefHeight="22.0" prefWidth="74.9998779296875" />
+    <Label font="$x2" layoutX="314.0" layoutY="79.0" text="g" />
+    <Label font="$x2" layoutX="313.0" layoutY="154.0" prefWidth="22.0" text="g" />
+    <Label font="$x2" layoutX="313.0" layoutY="230.0" prefWidth="21.9998779296875" text="°" />
+    <Label font="$x2" layoutX="313.0" layoutY="310.0" prefWidth="22.0" text="g" />
+    <Label font="$x2" layoutX="313.0" layoutY="350.0" prefWidth="22.0" text="g" />
+    <Label font="$x2" layoutX="313.0" layoutY="430.0" prefWidth="28.9998779296875" text="mS" />
   </children>
 </AnchorPane>
