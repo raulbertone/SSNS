@@ -24,9 +24,6 @@ public class SettingsController {
     private Button btnClose;
 
     @FXML
-    private Button btnDef;
-
-    @FXML
     private Button btnSave;
 
     @FXML
@@ -98,7 +95,6 @@ public class SettingsController {
     @FXML
     void initialize() {
         assert btnClose != null : "fx:id=\"btnCancel\" was not injected: check your FXML file 'settings.fxml'.";
-        assert btnDef != null : "fx:id=\"btnDef\" was not injected: check your FXML file 'settings.fxml'.";
         assert btnSave != null : "fx:id=\"btnSave\" was not injected: check your FXML file 'settings.fxml'.";
 
         this.IMPACT_POW.textProperty().setValue(String.valueOf(ConfigurationStorage.getIMPACT_POW()));
