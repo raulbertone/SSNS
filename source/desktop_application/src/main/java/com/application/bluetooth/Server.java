@@ -247,15 +247,22 @@ public class Server {
 	/**
 	 * @author Elis
 	 * 
-	 *   Method to start reading ata from senosr
+	 *   Method to start reading data from senosr
 	 */
 	public void readData() {
 		new ProcessMessage(true);
 		for (Sensor s : connectedSlaves) {
 			s.readMovementService();
+			
 		}
 
 		
+	}
+	public void activateButtons()
+	{
+		for (Sensor s : connectedSlaves) {
+			s.activateButtonService();			
+		}
 	}
 
 }
