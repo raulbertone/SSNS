@@ -6,6 +6,7 @@ import org.apache.commons.lang3.ArrayUtils;
 
 import com.application.mainController;
 import com.application.math.Mathems;
+import com.application.util.FallNotificationService;
 import com.google.common.io.BaseEncoding;
 
 public class ProcessMessage  extends Thread{
@@ -84,6 +85,8 @@ public void run() {
 							if(data.length()<20)
 							{
 								System.out.println("False Alarm");
+								FallNotificationService.notifyFalseAlarm();
+								
 							}
 							else
 							{
@@ -100,7 +103,8 @@ public void run() {
 						  if(data.equals("09051A000000")||data.equals("09051A010000"))
 						  {
 							  this.alive=false;
-							  System.out.println("AUTODISCOVERY DONE!!!");
+							 System.out.println("AUTODISCOVERY DONE!!!");
+							 Server.STATUS="Conected/Ready";
 						     Server.AUTODISCOVERY=true;
 						  }
 						  else  if(data.equals("05051A000000") || data.equals("11051A000000")|| data.equals("05051A010000")|| data.equals("11051A010000"))
@@ -260,19 +264,7 @@ public  void addToQueue(String data)
 		server.addToSensor2(Utils.reverseHexString(realValues));	
 		//System.out.println("S2: "+realValues);
 	}
-	
-//	if(timestamp==0)
-//		{
-//		timestamp=System.currentTimeMillis();
-//		}
-//	else if(System.currentTimeMillis()-timestamp>10)
-//	{
-//		timestamp=System.currentTimeMillis();
-//		System.out.println("Valuesfrom ACC1: "+ this.countAcc1);
-//		System.out.println("Valuesfrom ACC2: "+ this.countAcc2);
-//	}
-//	
-
+		
 	}
 
 

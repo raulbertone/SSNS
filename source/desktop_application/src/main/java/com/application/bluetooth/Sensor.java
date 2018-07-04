@@ -70,6 +70,7 @@ public class Sensor {
 			ProcessMessage pr1 =null;
 		    int counter=0;
 		    Server.AUTODISCOVERY=false;
+		    Server.STATUS="Autodiscoverig Characheristics...";
 		    try {
 		    	while(!Server.AUTODISCOVERY)
 				{

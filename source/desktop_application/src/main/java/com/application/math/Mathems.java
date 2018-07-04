@@ -135,7 +135,7 @@ public class Mathems extends Thread {
 
 	public void add_measurments() { //was added to check String str
 
-		long tmptime =System.currentTimeMillis();
+		long tmptime = System.currentTimeMillis();
 		//for the first sensor
 		String measure_str = server.getSensor1Data();
 
@@ -147,7 +147,10 @@ public class Mathems extends Thread {
 		double Gy;
 		double Gz;
 		
-		double tmp;
+		double tmp_aclr;
+		double tmp_gyro;
+		
+		int count_sec = ConfigurationStorage.getCOUNT_SEC();
 
 		if(measure_str==null) { 
 			System.out.println("string null");
@@ -192,11 +195,16 @@ public class Mathems extends Thread {
 			 
 			
 			 
-			tmp = Math.sqrt(sqr(Ax) + sqr(Ay) + sqr(Az));
+			tmp_aclr = Math.sqrt(sqr(Ax) + sqr(Ay) + sqr(Az));
 			
-			Server.absAcc1Queue.add((Number)tmp);
+			Server.absAcc1Queue.add((Number)tmp_aclr);
 			//TODO: here I add values to accelerometer graph for gyroscope but now I add the same value that we calculate for Accelerometer this must change
-			Server.gyro1DataToDisplay.add((Number)tmp);
+			tmp_gyro = 0;
+		    if(Math.abs(Gx) > 5 && Math.abs(Gy) > 5)
+			tmp_gyro = Math.abs(Gx * (double)(1.0 / count_sec)) +
+    						Math.abs(Gy * (double)(1.0 / count_sec));
+		    //System.out.println("Gyro1: "+ tmp_gyro);
+			Server.gyro1DataToDisplay.add((Number)tmp_gyro);
 			this.aclr_1.add_aclr(Ax, Ay, Az);
 			this.gyro_1.add_gyro(Gx, Gy, Gz);
 			//System.out.println("Time addMsr: " +(System.currentTimeMillis()-tmptime));
@@ -240,13 +248,18 @@ public class Mathems extends Thread {
 			Gy = convertAngSp(Gy);
 			Gz = convertAngSp(Gz);
 
-			//TODO: calculate Abbsolute value and add it to the Queue
-			tmp = Math.sqrt(sqr(Ax) + sqr(Ay) + sqr(Az));
-			//System.out.println("ACC2: "+ tmp);
-		    Server.absAcc2Queue.add((Number)tmp);
+			//TODO: calculate Absolute value and add it to the Queue
+			tmp_aclr = Math.sqrt(sqr(Ax) + sqr(Ay) + sqr(Az));
+			//System.out.println("ACC2: "+ tmp_aclr);
+		    Server.absAcc2Queue.add((Number)tmp_aclr);
 		    
 		  //TODO: here I add values to accelerometer graph for gyroscope but now I add the same value that we calculate for Accelerometer this must change
-			Server.gyro2DataToDisplay.add((Number)tmp);
+			tmp_gyro = 0;
+		    if(Math.abs(Gx) > 5 && Math.abs(Gy) > 5)
+		    tmp_gyro = Math.abs(Gx * (double)(1.0 / count_sec)) +
+		    				Math.abs(Gy * (double)(1.0 / count_sec));
+		    //System.out.println("Gyro2: "+ tmp_gyro);
+		    Server.gyro2DataToDisplay.add((Number)tmp_gyro);
 			this.aclr_2.add_aclr(Ax, Ay, Az);
 			this.gyro_2.add_gyro(Gx, Gy, Gz);
 		}

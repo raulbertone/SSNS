@@ -63,7 +63,7 @@ public class mainController {
 	//TODO: fix range of each gyroaxis
 	int gyroSerieCount=0;
 	NumberAxis xGxis = new NumberAxis(0, 50, 1);
-	NumberAxis yGxis = new NumberAxis(0,5,0.1);
+	NumberAxis yGxis = new NumberAxis(0,180,10);
 	private XYChart.Series<Number, Number> Gyro1Serie = new XYChart.Series<>(); 
 	private XYChart.Series<Number, Number> Gyro2Serie = new XYChart.Series<>(); 
 	//private XYChart.Series<Number, Number> Accel2Serie = new XYChart.Series<>(); 
@@ -188,7 +188,9 @@ public class mainController {
     
     @FXML
     void Clean(ActionEvent event) {
-    	 //sr.WriteToPort("01030C00");
+    
+    	FallNotificationService.notifyFalseAlarm();
+    	//sr.WriteToPort("01030C00");
      //   new DbSave();
     }
     
@@ -213,7 +215,7 @@ public class mainController {
 
     @FXML
     void StopReceiving(ActionEvent event) {
-    //	sr.activateButtons();
+    	sr.activateButtons();
     	
     }
        
