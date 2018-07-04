@@ -9,6 +9,7 @@ public abstract class ConfigurationStorage {
 	// user's data
 	private static String FIRST_NAME = "John";
 	private static String LAST_NAME = "Doh";
+	private static String BIRTH_DATE = "03/03/1978";
 	private static String GENDER = "M";
 	private static String ADDRESS = "Some Street 5, Onecity";
 	private static String PHONE_NUMBER = "555-123456789";
@@ -19,25 +20,28 @@ public abstract class ConfigurationStorage {
 	private static String CONTACT_PERSON_EMAIL = "bert1.raul@gmail.com";
 
 	// fall detection algorithm's settings
-	private static double IMPACT_POW = 1.5; // Value of Impact(g)
+	private static double IMPACT_POW = 2; // Value of Impact(g)
 	private static int IMPACT_PASS = 2; // Measurements after Impact(count)
 	private static double LAYING_POW = 0.8; // double, Laying Acceleration(g)
-	private static int SKIP_MEASURE = 10; // Skipped Measurements(count)
+	private static int SKIP_MEASURE = 20; // Skipped Measurements(count)
 	private static double FALL_ANGLE = 30.0; // Fall angle(degrees)
-	private static int COUNT_SEC = 10; // amount of measurements per second
+	private static int COUNT_SEC = 20; // amount of measurements per second
 	private static double FORCE_IMPACT_D = 0.8; // lower and upper limit for force of laying
-<<<<<<< HEAD
-	private static double FORCE_IMPACT_U = 1.3 ; //
-	private static int G_SCALE = 8; // scale of the Accelerometr
-=======
-	private static double FORCE_IMPACT_U = 1.1 ; //
-	private static int G_SCALE = 4; // scale of the Accelerometer
->>>>>>> development
+	private static double FORCE_IMPACT_U = 1.3; //
+	private static double G_SCALE = 4; // scale of the Accelerometer
 
 	// help request settings
-	private static int HELP_REQUEST_DELAY = 5;
+	private static int HELP_REQUEST_DELAY = 10 * 1000;
 
+	
+	public static String getBIRTH_DATE() {
+		return BIRTH_DATE;
+	}
 
+	public static void setBIRTH_DATE(String bIRTH_DATE) {
+		BIRTH_DATE = bIRTH_DATE;
+	}
+	
 	public static String getFIRST_NAME() {
 		return FIRST_NAME;
 	}
@@ -172,7 +176,7 @@ public abstract class ConfigurationStorage {
 		return G_SCALE;
 	}
 
-	public static void setG_SCALE(int g_SCALE) {
+	public static void setG_SCALE(double g_SCALE) {
 		G_SCALE = g_SCALE;
 	}
 
