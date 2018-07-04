@@ -213,7 +213,7 @@ public class mainController {
 
     @FXML
     void StopReceiving(ActionEvent event) {
-    	
+    //	sr.activateButtons();
     	
     }
        
