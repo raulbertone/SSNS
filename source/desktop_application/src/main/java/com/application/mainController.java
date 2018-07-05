@@ -4,13 +4,14 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-import com.application.bluetooth.Application;
+
 import com.application.bluetooth.DbSave;
 import com.application.bluetooth.ProcessMessage;
 import com.application.bluetooth.Sensor;
 import com.application.bluetooth.Server;
 import com.application.bluetooth.Utils;
 import com.application.util.FallNotificationService;
+
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Platform;
@@ -377,7 +378,7 @@ public class mainController {
     
     private void initializeGraph(AnchorPane graphAnchorPane, XYChart.Series<Number, Number> Accel1Series,  XYChart.Series<Number, Number> Accel2Series) {
     	
-    	xAxis.setLabel("time in minutes");
+    	xAxis.setLabel("Time             ");
         yAxis.setLabel("Acceleration");
          
          final LineChart<Number, Number> lineChart = new LineChart<Number, Number>(xAxis, yAxis) {
@@ -388,13 +389,13 @@ public class mainController {
          };
         
          lineChart.setAnimated(true);
-         lineChart.setTitle("Acceleromtere");
+         lineChart.setTitle("Accelerometer");
          lineChart.setHorizontalGridLinesVisible(true);
          lineChart.setVerticalGridLinesVisible(false);
     	
-         Accel1Series.setName("Accelerometer1");
+         Accel1Series.setName("Aclr 1");
          lineChart.getData().addAll(Accel1Series);
-         Accel2Series.setName("Accelerometer2");
+         Accel2Series.setName("Aclr 2");
          lineChart.getData().addAll(Accel2Serie);
          
          graphAnchorPane.getChildren().add(lineChart);
@@ -402,8 +403,8 @@ public class mainController {
     
     private void initializeGyroGraph(AnchorPane graphAnchorPane,XYChart.Series<Number, Number> gyro1Serie,XYChart.Series<Number, Number> gyro2Serie)
     { 
-    	xGxis.setLabel("Time");
-    	yGxis.setLabel("Angle in Degre");
+    	xGxis.setLabel("Time             ");
+    	yGxis.setLabel("Degrees");
     	
     	final LineChart<Number, Number> lineChartGyro = new LineChart<Number, Number>(xGxis, yGxis) {
             // Override to remove symbols on each data point

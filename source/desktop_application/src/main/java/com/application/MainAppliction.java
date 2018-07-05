@@ -3,6 +3,7 @@ package com.application;
 import java.net.URL;
 
 import com.application.util.FallNotificationService;
+import com.application.ui.*;
 
 import javafx.application.*;
 import javafx.fxml.FXMLLoader;

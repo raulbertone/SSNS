@@ -105,7 +105,7 @@ public void run() {
 						  {
 							  this.alive=false;
 							 System.out.println("AUTODISCOVERY DONE!!!");
-							 Server.STATUS="Conected/Ready";
+							 Server.STATUS="Connected/Ready";
 						     Server.AUTODISCOVERY=true;
 						  }
 						  else  if(data.equals("05051A000000") || data.equals("11051A000000")|| data.equals("05051A010000")|| data.equals("11051A010000"))

@@ -49,7 +49,7 @@ public class Gyroskope{
 
 		if( angle >= -this.FALL_ANGLE && angle <= this.FALL_ANGLE) {
 			math.isGyroFall = true;
-			System.out.println("Gyro Fall!!!");
+			System.out.println("Gyro detected a Fall!");
 			return;
 		}
 

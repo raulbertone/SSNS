@@ -60,6 +60,10 @@ public class Server {
 
 	}
 
+	public void addSlave(Sensor slave) {
+		connectedSlaves.add(slave);
+		
+	}
 	public void addTolist(String dev) {
 		devicesFound.add(dev);
 	}
@@ -220,7 +224,7 @@ public class Server {
 	public void connectTo(String slaveAdd, mainController controller) {
 		String connStr = "0109FE09000000";
 		WriteToPort(connStr + slaveAdd);
-		Server.STATUS = "Connectiong to: " + slaveAdd;
+		Server.STATUS = "Connecting to: " + slaveAdd;
 		new ProcessMessage(true, controller);
 
 	}
