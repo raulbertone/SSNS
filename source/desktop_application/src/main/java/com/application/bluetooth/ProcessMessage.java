@@ -85,6 +85,7 @@ public void run() {
 							if(data.length()<20)
 							{
 								System.out.println("False Alarm");
+								
 								FallNotificationService.notifyFalseAlarm();
 								
 							}
