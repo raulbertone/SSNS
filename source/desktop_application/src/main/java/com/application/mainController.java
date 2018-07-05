@@ -187,17 +187,27 @@ public class mainController {
   
     
     @FXML
-    void Clean(ActionEvent event) {
-    
+    void FalseAlrm(ActionEvent event) {
     	FallNotificationService.notifyFalseAlarm();
+    	sr.activateButtons();
+    }
+    
+    @FXML
+    void activateIOService(ActionEvent event) {
+    	sr.activateButtons();
     	//sr.WriteToPort("01030C00");
      //   new DbSave();
     }
     
     @FXML
-    void CloseApp(ActionEvent event) {
-   
+    void doFall(ActionEvent event) {
+    	FallNotificationService.notifyFall();
     }    
+    
+    @FXML
+    void CloseApp(ActionEvent event) {
+    	
+    }   
     
     @FXML
     void Settings(ActionEvent event) throws Exception {
