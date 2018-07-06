@@ -24,6 +24,7 @@ public class Mathems extends Thread {
 	private Accelerometer aclr_2;
 
 	private Server server;
+	
 
 	public static Mathems mathems;
 
@@ -107,18 +108,17 @@ public class Mathems extends Thread {
 				//if(aclr_1.bufSize() < ConfigurationStorage.getCOUNT_SEC()) //if amount of measurments is less than it is need tocover one second
 					//return;
 
-				System.out.println("IsAclFall");
+				//System.out.println("IsAclFall");
 
 				this.aclr_1.isAclrFall(this.gyro_1);
 				this.aclr_2.isAclrFall(this.gyro_2);
 
 				if(this.isAclrFall && this.isGyroFall) {
-					System.out.println("Notify!!");
+					System.out.println("Notify about a Fall!!");
 					new Thread(new Runnable() {
 
 						@Override
 						public void run() {
-							
 							FallNotificationService.notifyFall();
 						}}).start();
 					

@@ -117,7 +117,7 @@ public class Accelerometer {
 
 	private boolean isLaying(int i, Accelerometer tmp_aclr) {
 
-		System.out.println("IsLLaying, i = " + i);
+		//System.out.println("IsLLaying, i = " + i);
 		boolean fall = false;
 		for(int j = i + IMPACT_PASS; j < tmp_aclr.buf_x.size(); j++) { // to be sure that there is a fall we pass half of fall time
 
@@ -126,7 +126,7 @@ public class Accelerometer {
 
 			if(laying > LAYING_POW) {
 				math.isAclrFall = true;
-				System.out.println("Aclr Fall!!!");
+				System.out.println("Aclr detected a Fall!!!");
 				return true;
 			}
 		}
