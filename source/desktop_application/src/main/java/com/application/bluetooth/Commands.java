@@ -43,7 +43,7 @@ public enum Commands {
 	STOP("0192FD0600003F000000"),	
 	CM34("0130FE03150600"),
 	
-	// this commands are temporary for test purposes I need to automatize the creation of command
+	//TODO: this commands are temporary for test purposes I need to automatize the creation of command
 	
 	SH("018AFD0401001100"), //modified ??
 	SH1("018AFD0401001E00"),
