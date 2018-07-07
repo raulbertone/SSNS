@@ -6,6 +6,7 @@ import org.apache.commons.lang3.ArrayUtils;
 
 import com.application.mainController;
 import com.application.math.Mathems;
+import com.application.util.FallNotificationService;
 import com.google.common.io.BaseEncoding;
 
 public class ProcessMessage  extends Thread{
@@ -13,19 +14,21 @@ public class ProcessMessage  extends Thread{
 	Boolean alive;
 	Server server = Server.getInstance();
 	private static int dataLength=0;
-	private static int countAcc1=0;
-	private static int countAcc2=0;
+	private  int countAcc1=0;
+	private  int countAcc2=0;
 	private mainController controller ;
-	
+	private long timestamp=0;
 	public ProcessMessage(Boolean value)
 	{
 		this.alive=value;
+		this.setName("Msg_Thread");
 		this.start();
 	}
 	public ProcessMessage(Boolean value,  mainController controller)
 	{
 		this.controller=controller;
 		this.alive=value;
+		this.setName("Msg_Thread");
 		this.start();
 	}
 public void run() {
@@ -82,6 +85,9 @@ public void run() {
 							if(data.length()<20)
 							{
 								System.out.println("False Alarm");
+								
+								FallNotificationService.notifyFalseAlarm();
+								
 							}
 							else
 							{
@@ -98,7 +104,8 @@ public void run() {
 						  if(data.equals("09051A000000")||data.equals("09051A010000"))
 						  {
 							  this.alive=false;
-							  System.out.println("AUTODISCOVERY DONE!!!");
+							 System.out.println("AUTODISCOVERY DONE!!!");
+							 Server.STATUS="Connected/Ready";
 						     Server.AUTODISCOVERY=true;
 						  }
 						  else  if(data.equals("05051A000000") || data.equals("11051A000000")|| data.equals("05051A010000")|| data.equals("11051A010000"))
@@ -239,22 +246,26 @@ public  String getData (int length)
 public  void addToQueue(String data)
 {
 	Mathems.getInstance(server);	
+	
 	String realValues = data.substring(16, 40);
 	if(data.startsWith("1B050000"))
 	{		
+		
+		this.countAcc1++;
 		//Server.acc1.add(Utils.reverseHexString(realValues));
 		server.addToSensor1(Utils.reverseHexString(realValues));
-		//System.out.println(realValues);
-		//System.out.println("S1: "+realValues);
+		
+		//
 	}
 	else if(data.startsWith("1B050001"))
 	{
+		this.countAcc2++;
+		
 		//Server.acc2.add(Utils.reverseHexString(realValues));
 		server.addToSensor2(Utils.reverseHexString(realValues));	
 		//System.out.println("S2: "+realValues);
 	}
-	
-
+		
 	}
 
 

@@ -26,14 +26,17 @@ public class Server {
 	public static Boolean AUTODISCOVERY = false;
 	public static String STATUS = "Starting...";
 
-	public static Server server;
+	public static Server instance;
 	public static SerialPort serialPort;
 	public static MsgQueue msg = new MsgQueue(5000);
-	public static List<String> sensor1 = new ArrayList();
+	private static List<String> sensor1 = new ArrayList();
 	private static List<String> sensor2 = new ArrayList();
 
 	public static ConcurrentLinkedQueue<Number> absAcc1Queue = new ConcurrentLinkedQueue<>();
 	public static ConcurrentLinkedQueue<Number> absAcc2Queue = new ConcurrentLinkedQueue<>();
+	
+	public static ConcurrentLinkedQueue<Number> gyro1DataToDisplay = new ConcurrentLinkedQueue<>();
+	public static ConcurrentLinkedQueue<Number> gyro2DataToDisplay = new ConcurrentLinkedQueue<>();
 	
 	public static List<String> devicesFound = new ArrayList();
 	private List<Sensor> connectedSlaves = new ArrayList();
@@ -56,7 +59,42 @@ public class Server {
 		}
 
 	}
+	
+	/**
+	 * @author Elis 
+	 * 
+	 * Method to open a COM serial Port
+	 * */
+	public void openCOMPort(String portName)
+	{
+		serialPort = new SerialPort("COM7");
+		try {
+			instance.serialPort.openPort();
 
+			serialPort.setParams(SerialPort.BAUDRATE_115200, SerialPort.DATABITS_8, SerialPort.STOPBITS_1,
+					SerialPort.PARITY_NONE);
+
+			serialPort.setFlowControlMode(SerialPort.FLOWCONTROL_RTSCTS_IN | SerialPort.FLOWCONTROL_RTSCTS_OUT);
+
+			serialPort.addEventListener(new PortReader(serialPort), SerialPort.MASK_RXCHAR);
+
+		} catch (Exception x) {
+			System.out.println("can not open the port");
+		}
+	}
+
+	/**
+	 * @author Elis 
+	 * 
+	 * This method will add the refernece ot the new slave connected to the master device
+	 * 
+	 * @param Sensor slave
+	 * */
+	public void addSlave(Sensor slave) {
+		instance.connectedSlaves.add(slave);
+		slave.discoverCharacheristics();
+		
+	}
 	public void addTolist(String dev) {
 		devicesFound.add(dev);
 	}
@@ -68,7 +106,7 @@ public class Server {
 	 * */
 	public void addToabsAcc1Queue(double val)
 	{
-		this.absAcc1Queue.add((Number)val);
+		instance.absAcc1Queue.add((Number)val);
 	}
 	
 	
@@ -80,7 +118,7 @@ public class Server {
 	 */
 
 	public void addToSensor1(String data) {
-		this.sensor1.add(data);
+		instance.sensor1.add(data);
 	}
 
 	/**
@@ -93,7 +131,7 @@ public class Server {
 	 *            
 	 */
 	public void addConnection(Sensor sensor) {
-		this.connectedSlaves.add(sensor);
+		instance.connectedSlaves.add(sensor);
 	     sensor.discoverCharacheristics();
 	}
 
@@ -105,7 +143,7 @@ public class Server {
 	 */
 
 	public void addToSensor2(String data) {
-		this.sensor2.add(data);
+		instance.sensor2.add(data);
 	}
 
 	/**
@@ -156,14 +194,14 @@ public class Server {
 	 *         get Singleton Instance
 	 */
 	public static Server getInstance() {
-		if (server == null) {
+		if (instance == null) {
 			synchronized (Server.class) {
-				if (server == null) {
-					server = new Server();
+				if (instance == null) {
+					instance = new Server();
 				}
 			}
 		}
-		return server;
+		return instance;
 	}
 
 	/**
@@ -217,7 +255,7 @@ public class Server {
 	public void connectTo(String slaveAdd, mainController controller) {
 		String connStr = "0109FE09000000";
 		WriteToPort(connStr + slaveAdd);
-		Server.STATUS = "Connectiong to: " + slaveAdd;
+		Server.STATUS = "Connecting to: " + slaveAdd;
 		new ProcessMessage(true, controller);
 
 	}
@@ -244,14 +282,22 @@ public class Server {
 	/**
 	 * @author Elis
 	 * 
-	 *   Method to start reading ata from senosr
+	 *   Method to start reading data from senosr
 	 */
 	public void readData() {
+		new ProcessMessage(true);
 		for (Sensor s : connectedSlaves) {
 			s.readMovementService();
+			
 		}
 
 		
+	}
+	public void activateButtons()
+	{
+		for (Sensor s : connectedSlaves) {
+			s.activateButtonService();			
+		}
 	}
 
 }

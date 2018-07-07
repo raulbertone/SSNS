@@ -21,21 +21,28 @@ public class Sensor {
 	   this.addres=add;
    }     
  
+   public void activateButtonService()
+   {
+	   String cmd = WriteCharOpCode+reverseHexString(connHandle) +"2D000100"; //0192FD06 0000 2D000100
+	   //System.out.println(cmd);
+	   server.WriteToPort(cmd);
+   }
    public void readMovementService()
    {
-	   String enableNotif = "0192FD06"+ reverseHexString(connHandle)+"3D000100";
-	   String configM ="0192FD06"+reverseHexString(connHandle)+"3F003F02";
+	   String enableNotif = WriteCharOpCode+ reverseHexString(connHandle)+"3D000100";
+	   String configM =WriteCharOpCode+reverseHexString(connHandle)+"3F003F02";
 	  
 	   new Thread(new Runnable(){
 		     
 		   @Override
 		   public void run()
 		   {
-			   new ProcessMessage(true);
+			   //new ProcessMessage(true);
 			   try {
 				   server.WriteToPort(WriteCharOpCode+reverseHexString(connHandle)+"25000100"); 
 				Thread.sleep(500);
 				 server.WriteToPort(WriteCharOpCode+reverseHexString(connHandle)+"27003802"); 
+				 
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -63,6 +70,7 @@ public class Sensor {
 			ProcessMessage pr1 =null;
 		    int counter=0;
 		    Server.AUTODISCOVERY=false;
+		    Server.STATUS="Auto Discovering Characteristics...";
 		    try {
 		    	while(!Server.AUTODISCOVERY)
 				{
