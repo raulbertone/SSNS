@@ -10,8 +10,10 @@ public class Utils {
 	 * @author Elis
 	 * 
 	 * Method to convert a hex value to int value
+	 * 
 	 * @param String s 
 	 * 
+	 * @return int val
 	 * Example 
 	 * 
 	 * Utils.hex2decimal("FF00");
@@ -34,6 +36,7 @@ public class Utils {
 	  * method to reverse the hexadecimal string because we get the low parity bit first
 	  * 
 	  * @param String data
+	  * @return String reverseString
 	  * */
 	 public static  String reverseHexString(String data)
 	 {
