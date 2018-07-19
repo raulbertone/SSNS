@@ -75,7 +75,7 @@ public class Gyroskope{
 			}
 		}
 
-		//System.out.println((xAngle + " " + yAngle));
+		System.out.println((xAngle + " " + yAngle));
 
 		return (xAngle + yAngle) % 180 - 90;
 	}

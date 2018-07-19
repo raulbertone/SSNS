@@ -36,6 +36,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -148,6 +149,12 @@ public class mainController {
 
     @FXML
     private AnchorPane idGraphGyro;
+    
+    @FXML
+    private TextField txtPortName;
+	
+    @FXML
+    private Button btnOpenPort;
     /* End of IDs of mainView */
     
     /**
@@ -190,7 +197,7 @@ public class mainController {
     @FXML
     void FalseAlrm(ActionEvent event) {
     	FallNotificationService.notifyFalseAlarm();
-    	sr.activateButtons();
+    	//sr.activateButtons();
     }
     
     @FXML
@@ -244,6 +251,21 @@ public class mainController {
     
     }
     
+    @FXML
+    void openComPort(ActionEvent event) {
+
+    	String portName= this.txtPortName.getText();
+    	if(sr.openCOMPort(portName))
+    	{
+    		sr.DevInit(this);
+    	}
+    	else
+    	{
+    	 sr.STATUS=portName+"not correct";
+    	}
+    	
+    	
+    }
     
     /**End of Actions of main View Buttons */
     
@@ -256,7 +278,7 @@ public class mainController {
     	 initializeGyroGraph(idGraphGyro, Gyro1Serie, Gyro2Serie);
     	// set a reference to this controller so that the FallNotificationService can change the colour of labels
     	FallNotificationService.setMain(this);
-		sr.DevInit(this);
+		
 				
 		this.ddlAvSensors.getItems().add("Select a Sensor");
 		this.ddlAvSensors.getSelectionModel().selectFirst();
@@ -274,7 +296,9 @@ public class mainController {
         assert lblConnecting != null : "fx:id=\"lblConnecting\" was not injected: check your FXML file 'main.fxml'.";
         assert lblFallDet != null : "fx:id=\"lblFallDet\" was not injected: check your FXML file 'main.fxml'.";
         assert lblHelpReq != null : "fx:id=\"lblHelpReq\" was not injected: check your FXML file 'main.fxml'.";
-       
+        assert btnOpenPort != null : "fx:id=\"btnOpenPort\" was not injected: check your FXML file 'main.fxml'.";
+        assert txtPortName != null : "fx:id=\"txtPortName\" was not injected: check your FXML file 'main.fxml'.";
+
         
     }
 
@@ -378,8 +402,8 @@ public class mainController {
     
     private void initializeGraph(AnchorPane graphAnchorPane, XYChart.Series<Number, Number> Accel1Series,  XYChart.Series<Number, Number> Accel2Series) {
     	
-    	xAxis.setLabel("Time             ");
-        yAxis.setLabel("Acceleration");
+    	xAxis.setLabel("Time (ms) ");
+        yAxis.setLabel("Acceleration (g)");
          
          final LineChart<Number, Number> lineChart = new LineChart<Number, Number>(xAxis, yAxis) {
              // Override to remove symbols on each data point
@@ -403,7 +427,7 @@ public class mainController {
     
     private void initializeGyroGraph(AnchorPane graphAnchorPane,XYChart.Series<Number, Number> gyro1Serie,XYChart.Series<Number, Number> gyro2Serie)
     { 
-    	xGxis.setLabel("Time             ");
+    	xGxis.setLabel("Time (ms) ");
     	yGxis.setLabel("Degrees");
     	
     	final LineChart<Number, Number> lineChartGyro = new LineChart<Number, Number>(xGxis, yGxis) {

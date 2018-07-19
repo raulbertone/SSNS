@@ -24,7 +24,7 @@ public class Server {
 	public static Boolean LUNCHPAD_READY = false;
 	public static Boolean SCAN_COMPLETE = false;
 	public static Boolean AUTODISCOVERY = false;
-	public static String STATUS = "Starting...";
+	public static String STATUS = "Not connected To lauchpad";
 
 	public static Server instance;
 	public static SerialPort serialPort;
@@ -32,6 +32,10 @@ public class Server {
 	private static List<String> sensor1 = new ArrayList();
 	private static List<String> sensor2 = new ArrayList();
 
+	
+	public static ConcurrentLinkedQueue<String> sensor1DataForDb =  new ConcurrentLinkedQueue<>();
+	public static ConcurrentLinkedQueue<String> sensor2DataForDb =  new ConcurrentLinkedQueue<>();
+	
 	public static ConcurrentLinkedQueue<Number> absAcc1Queue = new ConcurrentLinkedQueue<>();
 	public static ConcurrentLinkedQueue<Number> absAcc2Queue = new ConcurrentLinkedQueue<>();
 	
@@ -43,31 +47,22 @@ public class Server {
 
 	private Server() {
 		// writing to port
-		serialPort = new SerialPort("COM7");
-		try {
-			serialPort.openPort();
-
-			serialPort.setParams(SerialPort.BAUDRATE_115200, SerialPort.DATABITS_8, SerialPort.STOPBITS_1,
-					SerialPort.PARITY_NONE);
-
-			serialPort.setFlowControlMode(SerialPort.FLOWCONTROL_RTSCTS_IN | SerialPort.FLOWCONTROL_RTSCTS_OUT);
-
-			serialPort.addEventListener(new PortReader(serialPort), SerialPort.MASK_RXCHAR);
-
-		} catch (Exception x) {
-			System.out.println("can not open the port");
-		}
-
+       Server.STATUS="Not connected To lauchpad";
 	}
 	
 	/**
 	 * @author Elis 
+	 *
+	 *Method to open a COM serial Port
+	 *
+	 *
+	 * @param String portName
 	 * 
-	 * Method to open a COM serial Port
 	 * */
-	public void openCOMPort(String portName)
+	public Boolean openCOMPort(String portName)
 	{
-		serialPort = new SerialPort("COM7");
+		
+		serialPort = new SerialPort(portName);
 		try {
 			instance.serialPort.openPort();
 
@@ -77,10 +72,16 @@ public class Server {
 			serialPort.setFlowControlMode(SerialPort.FLOWCONTROL_RTSCTS_IN | SerialPort.FLOWCONTROL_RTSCTS_OUT);
 
 			serialPort.addEventListener(new PortReader(serialPort), SerialPort.MASK_RXCHAR);
+			Server.STATUS="Ready";
+			
+			return true;
 
 		} catch (Exception x) {
+			Server.STATUS= "Make sure "+portName+"is right";
 			System.out.println("can not open the port");
+			return false;
 		}
+		
 	}
 
 	/**
@@ -102,7 +103,9 @@ public class Server {
 	/**
 	 * @author Elis 
 	 * 
-	 * Method to add values to the Accelerometer queue
+	 *  Method to add values to the Accelerometer queue
+	 * @param double val
+	 *
 	 * */
 	public void addToabsAcc1Queue(double val)
 	{
@@ -113,7 +116,10 @@ public class Server {
 	/**
 	 * @author Elis
 	 * 
-	 *         method to add a value to sensor1 Queue
+	 *  method to add a value to sensor1 Queue
+	 *  
+	 * @param String data
+	 *        
 	 * 
 	 */
 
@@ -137,7 +143,7 @@ public class Server {
 
 	/**
 	 * @author Elis
-	 * 
+	 * @param String data
 	 *         method to add a value to sensor2 Queue
 	 * 
 	 */
@@ -151,6 +157,7 @@ public class Server {
 	 * 
 	 *         method to remove a value from sensor1 Queue
 	 * 
+	 * @return String 
 	 */
 
 	public String getSensor1Data() {
@@ -172,6 +179,7 @@ public class Server {
 	 * 
 	 *         method to remove a value from sensor1 Queue
 	 * 
+	 * @return String 
 	 */
 
 	public String getSensor2Data() {
@@ -209,6 +217,8 @@ public class Server {
 	 * @author Elis
 	 * 
 	 *         method to write to port from everywhere in application
+	 *
+	 *@param String hexCommand
 	 */
 	public void WriteToPort(String hexCommand) {
 		try {
@@ -225,6 +235,8 @@ public class Server {
 	 * @author Elis
 	 * 
 	 *         Method to reset and prepare lunchpad
+	 *
+	 *@param mainController controller
 	 */
 	public void DevInit(mainController controller) {
 		try {
@@ -249,8 +261,9 @@ public class Server {
 	/**
 	 * @author Elis
 	 * 
-	 * @param slaveAdd
-	 *            - mac adress of sensor tag
+	 * @param String slaveAdd - mac adress of sensor tag
+	 *            
+	 *   @param  mainController controller
 	 */
 	public void connectTo(String slaveAdd, mainController controller) {
 		String connStr = "0109FE09000000";
@@ -259,6 +272,12 @@ public class Server {
 		new ProcessMessage(true, controller);
 
 	}
+	/**
+	 * @author Elis
+	 * 
+	 *         Method to dicsover available bluetooth devices
+	 *         @param mainController controller
+	 */
 
 	public void Scan(mainController controller) {
 
@@ -293,6 +312,11 @@ public class Server {
 
 		
 	}
+	/**
+	 * @author Elis
+	 * 
+	 *   Method to Activate I/O Sercive
+	 */
 	public void activateButtons()
 	{
 		for (Sensor s : connectedSlaves) {
