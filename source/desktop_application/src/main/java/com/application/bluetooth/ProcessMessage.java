@@ -167,6 +167,7 @@ public void run() {
 	 /**
 	  * @author Elis
 	  * 
+	  * @param String data
 	  * Method to create a new instance of Slave here on this part of system 
 	  * */
 	 public void CreateConnection(String data)
@@ -252,18 +253,22 @@ public  void addToQueue(String data)
 	{		
 		
 		this.countAcc1++;
-		//Server.acc1.add(Utils.reverseHexString(realValues));
+				
 		server.addToSensor1(Utils.reverseHexString(realValues));
 		
+		//this line add the value to the queue for database this is a dirty solution because we just dublicate data in memory
+		Server.sensor1DataForDb.add(Utils.reverseHexString(realValues));
 		//
 	}
 	else if(data.startsWith("1B050001"))
 	{
 		this.countAcc2++;
-		
-		//Server.acc2.add(Utils.reverseHexString(realValues));
+				
 		server.addToSensor2(Utils.reverseHexString(realValues));	
-		//System.out.println("S2: "+realValues);
+		
+		//this line add the value to the queue for database this is a dirty solution because we just dublicate data in main memory
+		Server.sensor2DataForDb.add(Utils.reverseHexString(realValues));
+		
 	}
 		
 	}
